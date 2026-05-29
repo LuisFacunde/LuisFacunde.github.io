@@ -1,1 +1,465 @@
-/* Estilos para a Página Inicial - Dossiê de Carreira Luis Facunde */
+:root {
+    --bg-app: #f5f7fa;
+    --bg-card: #ffffff;
+    --text-main: #1a1f26;
+    --text-muted: #5c6470;
+    --accent: #e0533c; /* Laranja Burnt Orange Editorial */
+    --accent-glow: rgba(224, 83, 60, 0.15);
+    --accent-light: #fff0ed;
+    --border: #e8ecef;
+    --border-hover: rgba(224, 83, 60, 0.3);
+    --font-head:
+        "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        sans-serif;
+    --font-body:
+        "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, sans-serif;
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 8px 24px rgba(26, 31, 38, 0.06);
+    --shadow-lg: 0 16px 48px rgba(26, 31, 38, 0.1);
+
+    --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    --border-radius: 16px;
+}
+
+/* Reset Geral & Configuração Base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-app);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+/* Container Principal */
+.app-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Linha superior de destaque estilo editorial */
+.top-accent-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent);
+}
+
+/* Header */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.header-logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: 0.08em;
+    color: var(--text-main);
+}
+
+.logo-subtext {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+.header-tag {
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    background-color: var(--accent-light);
+    padding: 6px 16px;
+    border-radius: 30px;
+}
+
+/* Layout Principal (Fluxo Vertical) */
+.home-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    margin: 40px 0;
+}
+
+/* Coluna 1: Banner Horizontal de Perfil */
+.profile-card {
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 350px 1fr; /* Foto na lateral esquerda (350px) e informações na direita (1fr) */
+    transition: var(--transition);
+}
+
+.profile-card:hover {
+    box-shadow: var(--shadow-lg);
+    border-color: var(--border-hover);
+}
+
+.profile-image-container {
+    width: 100%;
+    height: 100%; /* Preenche toda a altura da section calculada pelo conteúdo */
+    min-height: 420px; /* Garante uma excelente altura padrão para exibição da foto */
+    position: relative;
+    background-color: #e2e8f0;
+    overflow: hidden;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: var(--transition);
+}
+
+.profile-card:hover .profile-image {
+    transform: scale(1.03);
+}
+
+.profile-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(26, 31, 38, 0) 50%,
+        rgba(26, 31, 38, 0.7) 100%
+    );
+}
+
+.profile-info {
+    padding: 30px;
+}
+
+.profile-name {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    color: var(--text-main);
+}
+
+.profile-title {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+.profile-divider {
+    height: 1px;
+    background-color: var(--border);
+    margin: 24px 0;
+}
+
+.profile-bio h3,
+.profile-interests h3 {
+    font-family: var(--font-head);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-main);
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.profile-bio p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.profile-interests {
+    margin-top: 24px;
+}
+
+.interests-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.interest-tag {
+    font-size: 0.75rem;
+    background-color: var(--bg-app);
+    color: var(--text-muted);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.interest-tag:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background-color: var(--accent-light);
+}
+
+/* Links Sociais */
+.profile-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    border: 1px solid var(--border);
+    font-family: var(--font-head);
+}
+
+.social-link.linkedin {
+    background-color: #0077b5;
+    color: #ffffff;
+    border-color: #0077b5;
+}
+
+.social-link.linkedin:hover {
+    background-color: #006296;
+    box-shadow: 0 4px 12px rgba(0, 119, 181, 0.2);
+}
+
+.social-link.github {
+    background-color: #24292e;
+    color: #ffffff;
+    border-color: #24292e;
+}
+
+.social-link.github:hover {
+    background-color: #161b22;
+    box-shadow: 0 4px 12px rgba(36, 41, 46, 0.2);
+}
+
+.social-link.resume {
+    grid-column: span 2;
+    background-color: var(--bg-app);
+    color: var(--text-main);
+}
+
+.social-link.resume:hover {
+    background-color: var(--accent-light);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* Estilização para o Token de Placeholder LOREM IPSUM */
+.placeholder-tag {
+    font-size: 0.7rem;
+    color: var(--accent);
+    font-style: italic;
+    font-weight: 700;
+    opacity: 0.8;
+    margin-left: 2px;
+}
+
+/* Coluna 2: Dashboard Grid */
+.dashboard-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title {
+    font-family: var(--font-head);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--text-main);
+    line-height: 1.1;
+}
+
+.section-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+/* Grid de Cards */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+/* Cards do Grid (Interativos) */
+.grid-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+/* Efeito de Hover Tridimensional e Glow */
+.grid-card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        var(--shadow-lg),
+        0 10px 20px var(--accent-glow);
+    border-color: var(--accent);
+}
+
+.card-number {
+    font-family: var(--font-head);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 12px;
+    opacity: 0.9;
+    transition: var(--transition);
+}
+
+.grid-card:hover .card-number {
+    transform: scale(1.1);
+}
+
+/* Linha horizontal inspirada na imagem */
+.card-line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--border);
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+.grid-card:hover .card-line {
+    background-color: var(--accent);
+}
+
+.card-title {
+    font-family: var(--font-head);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.3;
+    margin-bottom: 10px;
+    transition: var(--transition);
+}
+
+.grid-card:hover .card-title {
+    color: var(--accent);
+}
+
+.card-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Footer */
+.main-footer {
+    border-top: 1px solid var(--border);
+    padding: 30px 0;
+    margin-top: auto;
+    text-align: center;
+}
+
+.main-footer p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   MÍDIA QUERIES - RESPONSIVIDADE
+   ========================================================================== */
+
+/* Telas de computadores pequenos ou tablets em paisagem */
+@media (max-width: 1100px) {
+    .profile-card {
+        grid-template-columns: 300px 1fr; /* Foto um pouco mais estreita em telas intermediárias */
+    }
+    
+    .profile-image-container {
+        min-height: 400px;
+    }
+}
+
+/* Telas mobile e tablets em retrato */
+@media (max-width: 900px) {
+    .profile-card {
+        grid-template-columns: 1fr; /* Foto em cima, conteúdo embaixo */
+    }
+
+    .profile-image-container {
+        height: 380px;
+        min-height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-container {
+        padding: 0 20px;
+    }
+
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 30px 0;
+    }
+
+    .header-tag {
+        align-self: flex-start;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
