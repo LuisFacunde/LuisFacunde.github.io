@@ -1,258 +1,227 @@
 <!doctype html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Dossiê de Carreira | Luis Facunde</title>
-        <!-- Google Fonts for elite, modern typography -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <div class="app-container">
-            <!-- Top orange brand accent line -->
-            <div class="top-accent-bar"></div>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Dossiê de Carreira | Luis Facunde</title>
+      <!-- Google Fonts for elite, modern typography -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <div class="app-container">
+         <!-- Top orange brand accent line -->
+         <div class="top-accent-bar"></div>
 
-            <!-- Main Header -->
-            <header class="main-header">
-                <div class="header-logo">
-                    <span class="logo-text">DOSSIÊ DE CARREIRA</span>
-                    <span class="logo-subtext"
-                        >Portfólio Profissional e Acadêmico</span
-                    >
-                </div>
-                <div class="header-tag">
-                    <span>Semestre Corrente • 2026.1</span>
-                </div>
-            </header>
+         <!-- Main Header -->
+         <header class="main-header">
+            <div class="header-logo">
+               <span class="logo-text">DOSSIÊ DE CARREIRA</span>
+               <span class="logo-subtext"
+                  >Portfólio Profissional e Acadêmico</span
+               >
+            </div>
+            <div class="header-tag">
+               <span>Semestre Corrente • 2026.1</span>
+            </div>
+         </header>
 
-            <!-- Main Layout (Two Column: Profile Sidebar + Index Grid Dashboard) -->
-            <main class="home-layout">
-                <!-- Profile Sidebar Section -->
-                <section class="profile-card">
-                    <div class="profile-image-container">
-                        <!-- Links to the uploaded photo-perfil.JPG inside assets/perfil -->
-                        <img
-                            src="assets/perfil/foto-perfil.JPG"
-                            alt="Foto de Perfil - Luis Facunde"
-                            class="profile-image"
-                        />
-                        <div class="profile-image-overlay"></div>
-                    </div>
+         <!-- Main Layout (Horizontal Tab System Navigation) -->
+         <main class="home-layout">
+            <!-- Fixed Tabs System for Navigation -->
+            <div class="tabs-system">
+               <!-- Sleek horizontal Tab Bar -->
+               <div class="tabs-nav-wrapper">
+                  <nav class="tabs-nav" id="portfolio-tabs">
+                     <button class="tab-btn active" data-tab="home">
+                        <span class="tab-label">Apresentação</span>
+                     </button>
+                     <button class="tab-btn" data-tab="01">
+                        <span class="tab-label">Perfil Profissional</span>
+                     </button>
+                     <button class="tab-btn" data-tab="02">
+                        <span class="tab-label">Diagnóstico Profissional</span>
+                     </button>
+                     <button class="tab-btn" data-tab="03">
+                        <span class="tab-label"
+                           >Contexto e Empregabilidade</span
+                        >
+                     </button>
+                     <button class="tab-btn" data-tab="04">
+                        <span class="tab-label"
+                           >Hipóteses de Desenvolvimento</span
+                        >
+                     </button>
+                     <button class="tab-btn" data-tab="05">
+                        <span class="tab-label">Experimentação Prática</span>
+                     </button>
+                     <button class="tab-btn" data-tab="06">
+                        <span class="tab-label">Evidências e Aprendizados</span>
+                     </button>
+                     <button class="tab-btn" data-tab="07">
+                        <span class="tab-label">Percurso Acadêmico</span>
+                     </button>
+                     <button class="tab-btn" data-tab="08">
+                        <span class="tab-label"
+                           >Planejamento Pós-Faculdade</span
+                        >
+                     </button>
+                     <button class="tab-btn" data-tab="09">
+                        <span class="tab-label">Síntese Final</span>
+                     </button>
+                  </nav>
+               </div>
 
-                    <div class="profile-info">
-                        <h1 class="profile-name">
-                            Luis Henrique Facunde da Silva
-                        </h1>
-                        <p class="profile-title">
-                            Análise e Desenvolvimento de Sistemas - 5º Período
-                        </p>
-
-                        <div class="profile-divider"></div>
-
-                        <div class="profile-bio">
-                            <h3>Apresentação</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Ut elit tellus, luctus nec
-                                ullamcorper mattis, pulvinar dapibus leo. Duis
-                                aute irure dolor in reprehenderit in voluptate
-                                velit esse cillum dolore eu fugiat nulla
-                                pariatur.
-                            </p>
+               <!-- Tabs Content Display area -->
+               <div class="tabs-content">
+                  <!-- Pane 0: Home (Profile Card) -->
+                  <div class="tab-pane active" id="pane-home">
+                     <!-- Profile Sidebar Section -->
+                     <section class="profile-card">
+                        <div class="profile-image-container">
+                           <img
+                              src="assets/perfil/foto-perfil.JPG"
+                              alt="Foto de Perfil - Luis Facunde"
+                              class="profile-image"
+                           />
+                           <div class="profile-image-overlay"></div>
                         </div>
 
-                        <div class="profile-interests">
-                            <h3>Áreas de Interesse</h3>
-                            <div class="interests-tags">
-                                <span class="interest-tag"
+                        <div class="profile-info">
+                           <h1 class="profile-name">
+                              Luis Henrique Facunde da Silva
+                           </h1>
+                           <p class="profile-title">
+                              Análise e Desenvolvimento de Sistemas - 5º Período
+                           </p>
+
+                           <div class="profile-divider"></div>
+
+                           <div class="profile-bio">
+                              <h3>Apresentação</h3>
+                              <p>
+                                 Lorem ipsum dolor sit amet, consectetur
+                                 adipiscing elit. Ut elit tellus, luctus nec
+                                 ullamcorper mattis, pulvinar dapibus leo. Duis
+                                 aute irure dolor in reprehenderit in voluptate
+                                 velit esse cillum dolore eu fugiat nulla
+                                 pariatur.
+                              </p>
+                           </div>
+
+                           <div class="profile-interests">
+                              <h3>Áreas de Interesse</h3>
+                              <div class="interests-tags">
+                                 <span class="interest-tag"
                                     >Desenvolvimento Web</span
-                                >
-                                <span class="interest-tag">Banco de Dados</span>
-                            </div>
+                                 >
+                                 <span class="interest-tag"
+                                    >Banco de Dados</span
+                                 >
+                              </div>
+                           </div>
+
+                           <div class="profile-links">
+                              <a
+                                 href="https://www.linkedin.com/in/luis-facunde/"
+                                 target="_blank"
+                                 class="social-link linkedin"
+                                 >LinkedIn</a
+                              >
+                              <a
+                                 href="https://github.com/LuisFacunde"
+                                 target="_blank"
+                                 class="social-link github"
+                                 >GitHub</a
+                              >
+                              <a href="#" class="social-link resume"
+                                 >Currículo</a
+                              >
+                           </div>
                         </div>
+                     </section>
+                  </div>
 
-                        <div class="profile-links">
-                            <a
-                                href="https://www.linkedin.com/in/luis-facunde/"
-                                target="_blank"
-                                class="social-link linkedin"
-                                >LinkedIn</a
-                            >
-                            <a
-                                href="https://github.com/LuisFacunde"
-                                target="_blank"
-                                class="social-link github"
-                                >GitHub</a
-                            >
-                            <a href="#" class="social-link resume">Currículo</a>
-                        </div>
-                    </div>
-                </section>
+                  <!-- Lazy Loaded Iframe Panes -->
+                  <div class="tab-pane" id="pane-01">
+                     <iframe
+                        class="portfolio-iframe"
+                        id="iframe-01"
+                        data-src="01-perfil-profissional/index.html"
+                     ></iframe>
+                  </div>
+                  <div class="tab-pane" id="pane-02">
+                     <iframe
+                        class="portfolio-iframe"
+                        id="iframe-02"
+                        data-src="02-diagnostico-profissional/index.html"
+                     ></iframe>
+                  </div>
+                  <div class="tab-pane" id="pane-03">
+                     <iframe
+                        class="portfolio-iframe"
+                        id="iframe-03"
+                        data-src="03-contexto-empregabilidade/index.html"
+                     ></iframe>
+                  </div>
+                  <div class="tab-pane" id="pane-04">
+                     <iframe
+                        class="portfolio-iframe"
+                        id="iframe-04"
+                        data-src="04-hipoteses-desenvolvimento/index.html"
+                     ></iframe>
+                  </div>
+                  <div class="tab-pane" id="pane-05">
+                     <iframe
+                        class="portfolio-iframe"
+                        id="iframe-05"
+                        data-src="05-experimentacao-pratica/index.html"
+                     ></iframe>
+                  </div>
+                  <div class="tab-pane" id="pane-06">
+                     <iframe
+                        class="portfolio-iframe"
+                        id="iframe-06"
+                        data-src="06-evidencias-aprendizados/index.html"
+                     ></iframe>
+                  </div>
+                  <div class="tab-pane" id="pane-07">
+                     <iframe
+                        class="portfolio-iframe"
+                        id="iframe-07"
+                        data-src="07-projetos-percurso-academico/index.html"
+                     ></iframe>
+                  </div>
+                  <div class="tab-pane" id="pane-08">
+                     <iframe
+                        class="portfolio-iframe"
+                        id="iframe-08"
+                        data-src="08-planejamento-pos-faculdade/index.html"
+                     ></iframe>
+                  </div>
+                  <div class="tab-pane" id="pane-09">
+                     <iframe
+                        class="portfolio-iframe"
+                        id="iframe-09"
+                        data-src="09-sintese-final/index.html"
+                     ></iframe>
+                  </div>
+               </div>
+            </div>
+         </main>
 
-                <!-- Dashboard Navigation Grid (Main Menu) -->
-                <section class="dashboard-menu">
-                    <h2 class="section-title">Índice de Navegação</h2>
-                    <p class="section-subtitle"></p>
-
-                    <div class="grid-container">
-                        <!-- Card 01 -->
-                        <a
-                            href="01-perfil-profissional/index.html"
-                            class="grid-card"
-                        >
-                            <div class="card-number">01</div>
-                            <div class="card-line"></div>
-                            <h3 class="card-title">Perfil Profissional</h3>
-                            <p class="card-desc">
-                                Formação acadêmica, competências técnicas e
-                                comportamentais, projetos relevantes e
-                                habilidades utilizadas.
-                            </p>
-                        </a>
-
-                        <!-- Card 02 -->
-                        <a
-                            href="02-diagnostico-profissional/index.html"
-                            class="grid-card"
-                        >
-                            <div class="card-number">02</div>
-                            <div class="card-line"></div>
-                            <h3 class="card-title">Diagnóstico Profissional</h3>
-                            <p class="card-desc">
-                                Autoavaliação abordando como me vejo, minhas
-                                maiores facilidades, dificuldades e
-                                oportunidades de melhoria.
-                            </p>
-                        </a>
-
-                        <!-- Card 03 -->
-                        <a
-                            href="03-contexto-empregabilidade/index.html"
-                            class="grid-card"
-                        >
-                            <div class="card-number">03</div>
-                            <div class="card-line"></div>
-                            <h3 class="card-title">
-                                Contexto e Empregabilidade
-                            </h3>
-                            <p class="card-desc">
-                                Pesquisa e análise de vagas reais do mercado,
-                                perfil de habilidades demandadas e mapa de
-                                networking.
-                            </p>
-                        </a>
-
-                        <!-- Card 04 -->
-                        <a
-                            href="04-hipoteses-desenvolvimento/index.html"
-                            class="grid-card"
-                        >
-                            <div class="card-number">04</div>
-                            <div class="card-line"></div>
-                            <h3 class="card-title">
-                                Hipóteses de Desenvolvimento
-                            </h3>
-                            <p class="card-desc">
-                                Objetivos de carreira de curto, médio e longo
-                                prazo, com Plano de Desenvolvimento Individual
-                                (PDI).
-                            </p>
-                        </a>
-
-                        <!-- Card 05 -->
-                        <a
-                            href="05-experimentacao-pratica/index.html"
-                            class="grid-card"
-                        >
-                            <div class="card-number">05</div>
-                            <div class="card-line"></div>
-                            <h3 class="card-title">Experimentação Prática</h3>
-                            <p class="card-desc">
-                                Participação no Projeto Integrador detalhando a
-                                distribuição de papéis, entregas coletivas e
-                                reflexões soft skills.
-                            </p>
-                        </a>
-
-                        <!-- Card 06 -->
-                        <a
-                            href="06-evidencias-aprendizados/index.html"
-                            class="grid-card"
-                        >
-                            <div class="card-number">06</div>
-                            <div class="card-line"></div>
-                            <h3 class="card-title">
-                                Evidências e Aprendizados
-                            </h3>
-                            <p class="card-desc">
-                                Banco de evidências com prints, certificados,
-                                cronogramas de projetos e análises críticas de
-                                aprendizado.
-                            </p>
-                        </a>
-
-                        <!-- Card 07 -->
-                        <a
-                            href="07-projetos-percurso-academico/index.html"
-                            class="grid-card"
-                        >
-                            <div class="card-number">07</div>
-                            <div class="card-line"></div>
-                            <h3 class="card-title">
-                                Projetos e Percurso Acadêmico
-                            </h3>
-                            <p class="card-desc">
-                                Linha do tempo acadêmica registrando as
-                                principais disciplinas, evolução técnica e
-                                projetos extracurriculares.
-                            </p>
-                        </a>
-
-                        <!-- Card 08 -->
-                        <a
-                            href="08-planejamento-pos-faculdade/index.html"
-                            class="grid-card"
-                        >
-                            <div class="card-number">08</div>
-                            <div class="card-line"></div>
-                            <h3 class="card-title">
-                                Planejamento Pós-Faculdade
-                            </h3>
-                            <p class="card-desc">
-                                Planejamento estratégico pós-graduação: mercado,
-                                pós-graduação, mestrado, concursos ou
-                                empreendedorismo.
-                            </p>
-                        </a>
-
-                        <!-- Card 09 -->
-                        <a href="09-sintese-final/index.html" class="grid-card">
-                            <div class="card-number">09</div>
-                            <div class="card-line"></div>
-                            <h3 class="card-title">Síntese Final</h3>
-                            <p class="card-desc">
-                                Comparação de competências entre o início e o
-                                fim do semestre, e a carta de profissional que
-                                quero me tornar.
-                            </p>
-                        </a>
-                    </div>
-                </section>
-            </main>
-
-            <!-- Main Footer -->
-            <footer class="main-footer">
-                <p>
-                    Dossiê de Carreira Acadêmica e Profissional • Luis Facunde ©
-                    2026
-                </p>
-            </footer>
-        </div>
-    </body>
+         <!-- Main Footer -->
+         <footer class="main-footer">
+            <p>
+               Dossiê de Carreira Acadêmica e Profissional • Luis Facunde © 2026
+            </p>
+         </footer>
+      </div>
+      <script src="script.js" defer></script>
+   </body>
 </html>
