@@ -1,11 +1,227 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>Meu Primeiro Site</title>
-</head>
-<body>
-    <h1>Olá, Mundo!</h1>
-    <p>Este é o meu site hospedado no GitHub Pages.</p>
-</body>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Dossiê de Carreira | Luis Facunde</title>
+      <!-- Google Fonts for elite, modern typography -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <div class="app-container">
+         <!-- Top orange brand accent line -->
+         <div class="top-accent-bar"></div>
+
+         <!-- Main Header -->
+         <header class="main-header">
+            <div class="header-logo">
+               <span class="logo-text">DOSSIÊ DE CARREIRA</span>
+               <span class="logo-subtext"
+                  >Portfólio Profissional e Acadêmico</span
+               >
+            </div>
+            <div class="header-tag">
+               <span>Semestre Corrente • 2026.1</span>
+            </div>
+         </header>
+
+         <!-- Main Layout (Horizontal Tab System Navigation) -->
+         <main class="home-layout">
+            <!-- Fixed Tabs System for Navigation -->
+            <div class="tabs-system">
+               <!-- Sleek horizontal Tab Bar -->
+               <div class="tabs-nav-wrapper">
+                  <nav class="tabs-nav" id="portfolio-tabs">
+                     <button class="tab-btn active" data-tab="home">
+                        <span class="tab-label">Apresentação</span>
+                     </button>
+                     <button class="tab-btn" data-tab="01">
+                        <span class="tab-label">Perfil Profissional</span>
+                     </button>
+                     <button class="tab-btn" data-tab="02">
+                        <span class="tab-label">Diagnóstico Profissional</span>
+                     </button>
+                     <button class="tab-btn" data-tab="03">
+                        <span class="tab-label"
+                           >Contexto e Empregabilidade</span
+                        >
+                     </button>
+                     <button class="tab-btn" data-tab="04">
+                        <span class="tab-label"
+                           >Hipóteses de Desenvolvimento</span
+                        >
+                     </button>
+                     <button class="tab-btn" data-tab="05">
+                        <span class="tab-label">Experimentação Prática</span>
+                     </button>
+                     <button class="tab-btn" data-tab="06">
+                        <span class="tab-label">Evidências e Aprendizados</span>
+                     </button>
+                     <button class="tab-btn" data-tab="07">
+                        <span class="tab-label">Percurso Acadêmico</span>
+                     </button>
+                     <button class="tab-btn" data-tab="08">
+                        <span class="tab-label"
+                           >Planejamento Pós-Faculdade</span
+                        >
+                     </button>
+                     <button class="tab-btn" data-tab="09">
+                        <span class="tab-label">Síntese Final</span>
+                     </button>
+                  </nav>
+               </div>
+
+               <!-- Tabs Content Display area -->
+               <div class="tabs-content">
+                  <!-- Pane 0: Home (Profile Card) -->
+                  <div class="tab-pane active" id="pane-home">
+                     <!-- Profile Sidebar Section -->
+                     <section class="profile-card">
+                        <div class="profile-image-container">
+                           <img
+                              src="assets/perfil/foto-perfil.JPG"
+                              alt="Foto de Perfil - Luis Facunde"
+                              class="profile-image"
+                           />
+                           <div class="profile-image-overlay"></div>
+                        </div>
+
+                        <div class="profile-info">
+                           <h1 class="profile-name">
+                              Luis Henrique Facunde da Silva
+                           </h1>
+                           <p class="profile-title">
+                              Análise e Desenvolvimento de Sistemas - 5º Período
+                           </p>
+
+                           <div class="profile-divider"></div>
+
+                           <div class="profile-bio">
+                              <h3>Apresentação</h3>
+                              <p>
+                                 Lorem ipsum dolor sit amet, consectetur
+                                 adipiscing elit. Ut elit tellus, luctus nec
+                                 ullamcorper mattis, pulvinar dapibus leo. Duis
+                                 aute irure dolor in reprehenderit in voluptate
+                                 velit esse cillum dolore eu fugiat nulla
+                                 pariatur.
+                              </p>
+                           </div>
+
+                           <div class="profile-interests">
+                              <h3>Áreas de Interesse</h3>
+                              <div class="interests-tags">
+                                 <span class="interest-tag"
+                                    >Desenvolvimento Web</span
+                                 >
+                                 <span class="interest-tag"
+                                    >Banco de Dados</span
+                                 >
+                              </div>
+                           </div>
+
+                           <div class="profile-links">
+                              <a
+                                 href="https://www.linkedin.com/in/luis-facunde/"
+                                 target="_blank"
+                                 class="social-link linkedin"
+                                 >LinkedIn</a
+                              >
+                              <a
+                                 href="https://github.com/LuisFacunde"
+                                 target="_blank"
+                                 class="social-link github"
+                                 >GitHub</a
+                              >
+                              <a href="#" class="social-link resume"
+                                 >Currículo</a
+                              >
+                           </div>
+                        </div>
+                     </section>
+                  </div>
+
+                  <!-- Lazy Loaded Iframe Panes -->
+                  <div class="tab-pane" id="pane-01">
+                     <iframe
+                        class="portfolio-iframe"
+                        id="iframe-01"
+                        data-src="01-perfil-profissional/index.html"
+                     ></iframe>
+                  </div>
+                  <div class="tab-pane" id="pane-02">
+                     <iframe
+                        class="portfolio-iframe"
+                        id="iframe-02"
+                        data-src="02-diagnostico-profissional/index.html"
+                     ></iframe>
+                  </div>
+                  <div class="tab-pane" id="pane-03">
+                     <iframe
+                        class="portfolio-iframe"
+                        id="iframe-03"
+                        data-src="03-contexto-empregabilidade/index.html"
+                     ></iframe>
+                  </div>
+                  <div class="tab-pane" id="pane-04">
+                     <iframe
+                        class="portfolio-iframe"
+                        id="iframe-04"
+                        data-src="04-hipoteses-desenvolvimento/index.html"
+                     ></iframe>
+                  </div>
+                  <div class="tab-pane" id="pane-05">
+                     <iframe
+                        class="portfolio-iframe"
+                        id="iframe-05"
+                        data-src="05-experimentacao-pratica/index.html"
+                     ></iframe>
+                  </div>
+                  <div class="tab-pane" id="pane-06">
+                     <iframe
+                        class="portfolio-iframe"
+                        id="iframe-06"
+                        data-src="06-evidencias-aprendizados/index.html"
+                     ></iframe>
+                  </div>
+                  <div class="tab-pane" id="pane-07">
+                     <iframe
+                        class="portfolio-iframe"
+                        id="iframe-07"
+                        data-src="07-projetos-percurso-academico/index.html"
+                     ></iframe>
+                  </div>
+                  <div class="tab-pane" id="pane-08">
+                     <iframe
+                        class="portfolio-iframe"
+                        id="iframe-08"
+                        data-src="08-planejamento-pos-faculdade/index.html"
+                     ></iframe>
+                  </div>
+                  <div class="tab-pane" id="pane-09">
+                     <iframe
+                        class="portfolio-iframe"
+                        id="iframe-09"
+                        data-src="09-sintese-final/index.html"
+                     ></iframe>
+                  </div>
+               </div>
+            </div>
+         </main>
+
+         <!-- Main Footer -->
+         <footer class="main-footer">
+            <p>
+               Dossiê de Carreira Acadêmica e Profissional • Luis Facunde © 2026
+            </p>
+         </footer>
+      </div>
+      <script src="script.js" defer></script>
+   </body>
 </html>
