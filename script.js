@@ -1,29 +1,6 @@
-let activeTab = 'home';
-
-function switchTab(tabId) {
-    activeTab = tabId;
-
-    // Alternar estado das abas
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-        if (btn.getAttribute('data-tab') === tabId) {
-            btn.classList.add('active');
-        } else {
-            btn.classList.remove('active');
-        }
-    });
-
-    // Alternar exibição dos painéis de conteúdo
-    document.querySelectorAll('.tab-pane').forEach(pane => {
-        if (pane.id === `pane-${tabId}`) {
-            pane.classList.add('active');
-        } else {
-            pane.classList.remove('active');
-        }
-    });
-
-    // Carregar iframe sob demanda (Lazy Loading de alto desempenho)
-    if (tabId !== 'home') {
-        const iframe = document.getElementById(`iframe-${tabId}`);
+function loadIframe(sectionId) {
+    if (sectionId !== 'home') {
+        const iframe = document.getElementById(`iframe-${sectionId}`);
         if (iframe && !iframe.src) {
             iframe.src = iframe.getAttribute('data-src');
             
@@ -51,7 +28,7 @@ function switchTab(tabId) {
                     `;
                     doc.head.appendChild(style);
 
-                    // Mapear links internos nas páginas filhas para navegar nas abas do pai
+                    // Mapear links internos nas páginas filhas para navegar nas seções do pai
                     doc.querySelectorAll('a').forEach(link => {
                         const href = link.getAttribute('href');
                         if (href && href.includes('../')) {
@@ -61,9 +38,9 @@ function switchTab(tabId) {
                                 const folder = parts.find(p => p.match(/^\d{2}-/));
                                 if (folder) {
                                     const num = folder.split('-')[0];
-                                    switchTab(num);
+                                    toggleSection(num, true); // Força a abertura da seção target
                                 } else if (href.includes('index.html') && parts.length === 1) {
-                                    switchTab('home');
+                                    toggleSection('home', true);
                                 }
                             });
                         }
@@ -74,66 +51,70 @@ function switchTab(tabId) {
             };
         }
     }
+}
 
-    // Sincronizar o URL real com query param (?tab=XX) de forma invisível
-    const newUrl = tabId === 'home' 
-        ? window.location.pathname 
-        : `?tab=${tabId}`;
-    window.history.replaceState(null, '', newUrl);
+function toggleSection(sectionId, forceOpen = false) {
+    const section = document.getElementById(`section-${sectionId}`);
+    if (!section) return;
 
-    // Rolar a página suavemente para focar na aba se o usuário já estiver navegando
-    if (tabId !== 'home') {
-        document.querySelector('.tabs-system').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const isExpanded = section.classList.contains('expanded');
+
+    if (isExpanded && !forceOpen) {
+        // Se já está aberto e não foi forçado a abrir, colapsa a seção
+        section.classList.remove('expanded');
+        section.querySelector('.section-trigger').setAttribute('aria-expanded', 'false');
+        updateUrl('home');
+    } else {
+        // Recolher todas as outras seções abertas
+        document.querySelectorAll('.collapsible-section').forEach(s => {
+            if (s.id !== `section-${sectionId}`) {
+                s.classList.remove('expanded');
+                s.querySelector('.section-trigger').setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Expandir a seção desejada
+        section.classList.add('expanded');
+        section.querySelector('.section-trigger').setAttribute('aria-expanded', 'true');
+
+        // Carregar o iframe correspondente
+        loadIframe(sectionId);
+
+        // Atualizar URL query param (?tab=XX) mantendo retrocompatibilidade
+        updateUrl(sectionId);
+
+        // Rolar a página suavemente para focar no cabeçalho da seção expandida
+        setTimeout(() => {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 150);
     }
+}
+
+function updateUrl(sectionId) {
+    const newUrl = sectionId === 'home' 
+        ? window.location.pathname 
+        : `?tab=${sectionId}`;
+    window.history.replaceState(null, '', newUrl);
 }
 
 // Inicializar e configurar escutas
 document.addEventListener('DOMContentLoaded', () => {
-    // Cliques nas abas fixas
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const tabId = btn.getAttribute('data-tab');
-            switchTab(tabId);
+    // Cliques nos gatilhos das seções
+    document.querySelectorAll('.section-trigger').forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            const sectionId = trigger.getAttribute('data-section');
+            toggleSection(sectionId);
         });
     });
-
-    // Arrastar com o mouse para rolar as abas horizontalmente (desktop click-to-drag)
-    const tabsNav = document.getElementById('portfolio-tabs');
-    if (tabsNav) {
-        let isDown = false;
-        let startX;
-        let scrollLeft;
-
-        tabsNav.addEventListener('mousedown', (e) => {
-            isDown = true;
-            tabsNav.classList.add('dragging');
-            startX = e.pageX - tabsNav.offsetLeft;
-            scrollLeft = tabsNav.scrollLeft;
-        });
-
-        tabsNav.addEventListener('mouseleave', () => {
-            isDown = false;
-            tabsNav.classList.remove('dragging');
-        });
-
-        tabsNav.addEventListener('mouseup', () => {
-            isDown = false;
-            tabsNav.classList.remove('dragging');
-        });
-
-        tabsNav.addEventListener('mousemove', (e) => {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - tabsNav.offsetLeft;
-            const walk = (x - startX) * 1.5; // Ajuste de velocidade de arrasto
-            tabsNav.scrollLeft = scrollLeft - walk;
-        });
-    }
 
     // Ler parâmetros de inicialização (?tab=0X) na carga da página
     const urlParams = new URLSearchParams(window.location.search);
     const initialTab = urlParams.get('tab');
     if (initialTab && ['01','02','03','04','05','06','07','08','09'].includes(initialTab)) {
-        switchTab(initialTab);
+        // Se houver parâmetro, abre a seção indicada e colapsa a de Apresentação
+        toggleSection(initialTab, true);
+    } else {
+        // Caso contrário, garante que a de Apresentação inicia aberta
+        toggleSection('home', true);
     }
 });

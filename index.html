@@ -31,187 +31,289 @@
             </div>
          </header>
 
-         <!-- Main Layout (Horizontal Tab System Navigation) -->
+         <!-- Main Layout (Collapsible Accordion System Navigation) -->
          <main class="home-layout">
-            <!-- Fixed Tabs System for Navigation -->
-            <div class="tabs-system">
-               <!-- Sleek horizontal Tab Bar -->
-               <div class="tabs-nav-wrapper">
-                  <nav class="tabs-nav" id="portfolio-tabs">
-                     <button class="tab-btn active" data-tab="home">
-                        <span class="tab-label">Apresentação</span>
-                     </button>
-                     <button class="tab-btn" data-tab="01">
-                        <span class="tab-label">Perfil Profissional</span>
-                     </button>
-                     <button class="tab-btn" data-tab="02">
-                        <span class="tab-label">Diagnóstico Profissional</span>
-                     </button>
-                     <button class="tab-btn" data-tab="03">
-                        <span class="tab-label"
-                           >Contexto e Empregabilidade</span
-                        >
-                     </button>
-                     <button class="tab-btn" data-tab="04">
-                        <span class="tab-label"
-                           >Hipóteses de Desenvolvimento</span
-                        >
-                     </button>
-                     <button class="tab-btn" data-tab="05">
-                        <span class="tab-label">Experimentação Prática</span>
-                     </button>
-                     <button class="tab-btn" data-tab="06">
-                        <span class="tab-label">Evidências e Aprendizados</span>
-                     </button>
-                     <button class="tab-btn" data-tab="07">
-                        <span class="tab-label">Percurso Acadêmico</span>
-                     </button>
-                     <button class="tab-btn" data-tab="08">
-                        <span class="tab-label"
-                           >Planejamento Pós-Faculdade</span
-                        >
-                     </button>
-                     <button class="tab-btn" data-tab="09">
-                        <span class="tab-label">Síntese Final</span>
-                     </button>
-                  </nav>
-               </div>
-
-               <!-- Tabs Content Display area -->
-               <div class="tabs-content">
-                  <!-- Pane 0: Home (Profile Card) -->
-                  <div class="tab-pane active" id="pane-home">
-                     <!-- Profile Sidebar Section -->
-                     <section class="profile-card">
-                        <div class="profile-image-container">
-                           <img
-                              src="assets/perfil/foto-perfil.JPG"
-                              alt="Foto de Perfil - Luis Facunde"
-                              class="profile-image"
-                           />
-                           <div class="profile-image-overlay"></div>
-                        </div>
-
-                        <div class="profile-info">
-                           <h1 class="profile-name">
-                              Luis Henrique Facunde da Silva
-                           </h1>
-                           <p class="profile-title">
-                              Análise e Desenvolvimento de Sistemas - 5º Período
-                           </p>
-
-                           <div class="profile-divider"></div>
-
-                           <div class="profile-bio">
-                              <h3>Apresentação</h3>
-                              <p>
-                                 Lorem ipsum dolor sit amet, consectetur
-                                 adipiscing elit. Ut elit tellus, luctus nec
-                                 ullamcorper mattis, pulvinar dapibus leo. Duis
-                                 aute irure dolor in reprehenderit in voluptate
-                                 velit esse cillum dolore eu fugiat nulla
-                                 pariatur.
-                              </p>
+            <div class="collapsible-system">
+               <!-- Seção 0: Apresentação -->
+               <section class="collapsible-section expanded" id="section-home">
+                  <button class="section-trigger" data-section="home" aria-expanded="true">
+                     <div class="trigger-left">
+                        <span class="section-badge">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="badge-icon"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        </span>
+                        <span class="section-title">Apresentação</span>
+                     </div>
+                     <span class="chevron-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                     </span>
+                  </button>
+                  <div class="section-content-wrapper">
+                     <div class="section-content-inner">
+                        <!-- Profile Card -->
+                        <section class="profile-card">
+                           <div class="profile-image-container">
+                              <img
+                                 src="assets/perfil/foto-perfil.JPG"
+                                 alt="Foto de Perfil - Luis Facunde"
+                                 class="profile-image"
+                              />
+                              <div class="profile-image-overlay"></div>
                            </div>
 
-                           <div class="profile-interests">
-                              <h3>Áreas de Interesse</h3>
-                              <div class="interests-tags">
-                                 <span class="interest-tag"
-                                    >Desenvolvimento Web</span
+                           <div class="profile-info">
+                              <h1 class="profile-name">
+                                 Luis Henrique Facunde da Silva
+                              </h1>
+                              <p class="profile-title">
+                                 Análise e Desenvolvimento de Sistemas - 5º Período
+                              </p>
+
+                              <div class="profile-divider"></div>
+
+                              <div class="profile-bio">
+                                 <h3>Apresentação</h3>
+                                 <p>
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Ut elit tellus, luctus nec
+                                    ullamcorper mattis, pulvinar dapibus leo. Duis
+                                    aute irure dolor in reprehenderit in voluptate
+                                    velit esse cillum dolore eu fugiat nulla
+                                    pariatur.
+                                 </p>
+                              </div>
+
+                              <div class="profile-interests">
+                                 <h3>Áreas de Interesse</h3>
+                                 <div class="interests-tags">
+                                    <span class="interest-tag"
+                                       >Desenvolvimento Web</span
+                                    >
+                                    <span class="interest-tag"
+                                       >Banco de Dados</span
+                                    >
+                                 </div>
+                              </div>
+
+                              <div class="profile-links">
+                                 <a
+                                    href="https://www.linkedin.com/in/luis-facunde/"
+                                    target="_blank"
+                                    class="social-link linkedin"
+                                    >LinkedIn</a
                                  >
-                                 <span class="interest-tag"
-                                    >Banco de Dados</span
+                                 <a
+                                    href="https://github.com/LuisFacunde"
+                                    target="_blank"
+                                    class="social-link github"
+                                    >GitHub</a
+                                 >
+                                 <a href="#" class="social-link resume"
+                                    >Currículo</a
                                  >
                               </div>
                            </div>
+                        </section>
+                     </div>
+                  </div>
+               </section>
 
-                           <div class="profile-links">
-                              <a
-                                 href="https://www.linkedin.com/in/luis-facunde/"
-                                 target="_blank"
-                                 class="social-link linkedin"
-                                 >LinkedIn</a
-                              >
-                              <a
-                                 href="https://github.com/LuisFacunde"
-                                 target="_blank"
-                                 class="social-link github"
-                                 >GitHub</a
-                              >
-                              <a href="#" class="social-link resume"
-                                 >Currículo</a
-                              >
-                           </div>
-                        </div>
-                     </section>
+               <!-- Seção 01: Perfil Profissional -->
+               <section class="collapsible-section" id="section-01">
+                  <button class="section-trigger" data-section="01" aria-expanded="false">
+                     <div class="trigger-left">
+                        <span class="section-badge">01</span>
+                        <span class="section-title">Perfil Profissional</span>
+                     </div>
+                     <span class="chevron-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                     </span>
+                  </button>
+                  <div class="section-content-wrapper">
+                     <div class="section-content-inner">
+                        <iframe
+                           class="portfolio-iframe"
+                           id="iframe-01"
+                           data-src="01-perfil-profissional/index.html"
+                        ></iframe>
+                     </div>
                   </div>
+               </section>
 
-                  <!-- Lazy Loaded Iframe Panes -->
-                  <div class="tab-pane" id="pane-01">
-                     <iframe
-                        class="portfolio-iframe"
-                        id="iframe-01"
-                        data-src="01-perfil-profissional/index.html"
-                     ></iframe>
+               <!-- Seção 02: Diagnóstico Profissional -->
+               <section class="collapsible-section" id="section-02">
+                  <button class="section-trigger" data-section="02" aria-expanded="false">
+                     <div class="trigger-left">
+                        <span class="section-badge">02</span>
+                        <span class="section-title">Diagnóstico Profissional</span>
+                     </div>
+                     <span class="chevron-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                     </span>
+                  </button>
+                  <div class="section-content-wrapper">
+                     <div class="section-content-inner">
+                        <iframe
+                           class="portfolio-iframe"
+                           id="iframe-02"
+                           data-src="02-diagnostico-profissional/index.html"
+                        ></iframe>
+                     </div>
                   </div>
-                  <div class="tab-pane" id="pane-02">
-                     <iframe
-                        class="portfolio-iframe"
-                        id="iframe-02"
-                        data-src="02-diagnostico-profissional/index.html"
-                     ></iframe>
+               </section>
+
+               <!-- Seção 03: Contexto e Empregabilidade -->
+               <section class="collapsible-section" id="section-03">
+                  <button class="section-trigger" data-section="03" aria-expanded="false">
+                     <div class="trigger-left">
+                        <span class="section-badge">03</span>
+                        <span class="section-title">Contexto e Empregabilidade</span>
+                     </div>
+                     <span class="chevron-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                     </span>
+                  </button>
+                  <div class="section-content-wrapper">
+                     <div class="section-content-inner">
+                        <iframe
+                           class="portfolio-iframe"
+                           id="iframe-03"
+                           data-src="03-contexto-empregabilidade/index.html"
+                        ></iframe>
+                     </div>
                   </div>
-                  <div class="tab-pane" id="pane-03">
-                     <iframe
-                        class="portfolio-iframe"
-                        id="iframe-03"
-                        data-src="03-contexto-empregabilidade/index.html"
-                     ></iframe>
+               </section>
+
+               <!-- Seção 04: Hipóteses de Desenvolvimento -->
+               <section class="collapsible-section" id="section-04">
+                  <button class="section-trigger" data-section="04" aria-expanded="false">
+                     <div class="trigger-left">
+                        <span class="section-badge">04</span>
+                        <span class="section-title">Hipóteses de Desenvolvimento</span>
+                     </div>
+                     <span class="chevron-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                     </span>
+                  </button>
+                  <div class="section-content-wrapper">
+                     <div class="section-content-inner">
+                        <iframe
+                           class="portfolio-iframe"
+                           id="iframe-04"
+                           data-src="04-hipoteses-desenvolvimento/index.html"
+                        ></iframe>
+                     </div>
                   </div>
-                  <div class="tab-pane" id="pane-04">
-                     <iframe
-                        class="portfolio-iframe"
-                        id="iframe-04"
-                        data-src="04-hipoteses-desenvolvimento/index.html"
-                     ></iframe>
+               </section>
+
+               <!-- Seção 05: Experimentação Prática -->
+               <section class="collapsible-section" id="section-05">
+                  <button class="section-trigger" data-section="05" aria-expanded="false">
+                     <div class="trigger-left">
+                        <span class="section-badge">05</span>
+                        <span class="section-title">Experimentação Prática</span>
+                     </div>
+                     <span class="chevron-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                     </span>
+                  </button>
+                  <div class="section-content-wrapper">
+                     <div class="section-content-inner">
+                        <iframe
+                           class="portfolio-iframe"
+                           id="iframe-05"
+                           data-src="05-experimentacao-pratica/index.html"
+                        ></iframe>
+                     </div>
                   </div>
-                  <div class="tab-pane" id="pane-05">
-                     <iframe
-                        class="portfolio-iframe"
-                        id="iframe-05"
-                        data-src="05-experimentacao-pratica/index.html"
-                     ></iframe>
+               </section>
+
+               <!-- Seção 06: Evidências e Aprendizados -->
+               <section class="collapsible-section" id="section-06">
+                  <button class="section-trigger" data-section="06" aria-expanded="false">
+                     <div class="trigger-left">
+                        <span class="section-badge">06</span>
+                        <span class="section-title">Evidências e Aprendizados</span>
+                     </div>
+                     <span class="chevron-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                     </span>
+                  </button>
+                  <div class="section-content-wrapper">
+                     <div class="section-content-inner">
+                        <iframe
+                           class="portfolio-iframe"
+                           id="iframe-06"
+                           data-src="06-evidencias-aprendizados/index.html"
+                        ></iframe>
+                     </div>
                   </div>
-                  <div class="tab-pane" id="pane-06">
-                     <iframe
-                        class="portfolio-iframe"
-                        id="iframe-06"
-                        data-src="06-evidencias-aprendizados/index.html"
-                     ></iframe>
+               </section>
+
+               <!-- Seção 07: Percurso Acadêmico -->
+               <section class="collapsible-section" id="section-07">
+                  <button class="section-trigger" data-section="07" aria-expanded="false">
+                     <div class="trigger-left">
+                        <span class="section-badge">07</span>
+                        <span class="section-title">Percurso Acadêmico</span>
+                     </div>
+                     <span class="chevron-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                     </span>
+                  </button>
+                  <div class="section-content-wrapper">
+                     <div class="section-content-inner">
+                        <iframe
+                           class="portfolio-iframe"
+                           id="iframe-07"
+                           data-src="07-projetos-percurso-academico/index.html"
+                        ></iframe>
+                     </div>
                   </div>
-                  <div class="tab-pane" id="pane-07">
-                     <iframe
-                        class="portfolio-iframe"
-                        id="iframe-07"
-                        data-src="07-projetos-percurso-academico/index.html"
-                     ></iframe>
+               </section>
+
+               <!-- Seção 08: Planejamento Pós-Faculdade -->
+               <section class="collapsible-section" id="section-08">
+                  <button class="section-trigger" data-section="08" aria-expanded="false">
+                     <div class="trigger-left">
+                        <span class="section-badge">08</span>
+                        <span class="section-title">Planejamento Pós-Faculdade</span>
+                     </div>
+                     <span class="chevron-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                     </span>
+                  </button>
+                  <div class="section-content-wrapper">
+                     <div class="section-content-inner">
+                        <iframe
+                           class="portfolio-iframe"
+                           id="iframe-08"
+                           data-src="08-planejamento-pos-faculdade/index.html"
+                        ></iframe>
+                     </div>
                   </div>
-                  <div class="tab-pane" id="pane-08">
-                     <iframe
-                        class="portfolio-iframe"
-                        id="iframe-08"
-                        data-src="08-planejamento-pos-faculdade/index.html"
-                     ></iframe>
+               </section>
+
+               <!-- Seção 09: Síntese Final -->
+               <section class="collapsible-section" id="section-09">
+                  <button class="section-trigger" data-section="09" aria-expanded="false">
+                     <div class="trigger-left">
+                        <span class="section-badge">09</span>
+                        <span class="section-title">Síntese Final</span>
+                     </div>
+                     <span class="chevron-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                     </span>
+                  </button>
+                  <div class="section-content-wrapper">
+                     <div class="section-content-inner">
+                        <iframe
+                           class="portfolio-iframe"
+                           id="iframe-09"
+                           data-src="09-sintese-final/index.html"
+                        ></iframe>
+                     </div>
                   </div>
-                  <div class="tab-pane" id="pane-09">
-                     <iframe
-                        class="portfolio-iframe"
-                        id="iframe-09"
-                        data-src="09-sintese-final/index.html"
-                     ></iframe>
-                  </div>
-               </div>
+               </section>
             </div>
          </main>
 
