@@ -231,6 +231,44 @@ body {
     background-color: var(--accent-light);
 }
 
+.profile-objectives {
+    margin-top: 24px;
+}
+
+.objectives-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.objective-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.objective-item:hover {
+    color: var(--accent);
+    transform: translateX(4px);
+}
+
+.objective-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.objective-item:hover .objective-icon {
+    transform: scale(1.2);
+}
+
 /* Links Sociais */
 .profile-links {
     display: grid;
