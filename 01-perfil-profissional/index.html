@@ -1,78 +1,523 @@
 <!doctype html>
 <html lang="pt-BR">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Página 1 — Perfil Profissional | Luis Facunde</title>
-      <link rel="stylesheet" href="style.css" />
-      <script src="script.js" defer></script>
-   </head>
-   <body>
-      <header>
-         <h1>Dossiê de Carreira — Luis Facunde</h1>
-      </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil Profissional | Luis Facunde</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Cabeçalho visível apenas na visualização isolada -->
+    <header class="section-isolated-header">
+      <div class="isolated-logo">
+        <span class="logo-text">DOSSIÊ DE CARREIRA</span>
+        <span class="logo-subtext">Luis Henrique Facunde da Silva</span>
+      </div>
+    </header>
 
-      <main>
-         <section>
-            <h2>Página 1 — Perfil Profissional</h2>
-            <p>Esqueleto básico para a página de Perfil Profissional.</p>
-         </section>
+    <main class="profile-main-content">
+      <!-- Título Interno Editorial -->
+      <div class="section-editorial-title">
+        <h1 class="editorial-heading">Perfil Profissional</h1>
+      </div>
 
-         <nav>
-            <h3>Navegação</h3>
-            <ul>
-               <li><a href="../index.html">Página Inicial</a></li>
-               <li>
-                  <a href="../01-perfil-profissional/index.html"
-                     >Página 1 — Perfil Profissional</a
-                  >
-               </li>
-               <li>
-                  <a href="../02-diagnostico-profissional/index.html"
-                     >Página 2 — Diagnóstico Profissional</a
-                  >
-               </li>
-               <li>
-                  <a href="../03-contexto-empregabilidade/index.html"
-                     >Página 3 — Contexto e Empregabilidade</a
-                  >
-               </li>
-               <li>
-                  <a href="../04-hipoteses-desenvolvimento/index.html"
-                     >Página 4 — Hipóteses de Desenvolvimento</a
-                  >
-               </li>
-               <li>
-                  <a href="../05-experimentacao-pratica/index.html"
-                     >Página 5 — Experimentação Prática</a
-                  >
-               </li>
-               <li>
-                  <a href="../06-evidencias-aprendizados/index.html"
-                     >Página 6 — Evidências e Aprendizados</a
-                  >
-               </li>
-               <li>
-                  <a href="../07-projetos-percurso-academico/index.html"
-                     >Página 7 — Projetos e Percurso Acadêmico</a
-                  >
-               </li>
-               <li>
-                  <a href="../08-planejamento-pos-faculdade/index.html"
-                     >Página 8 — Planejamento Pós-Faculdade</a
-                  >
-               </li>
-               <li>
-                  <a href="../09-sintese-final/index.html"
-                     >Página 9 — Síntese Final</a
-                  >
-               </li>
-            </ul>
-         </nav>
-      </main>
+      <!-- Seção 1: Formação Acadêmica -->
+      <section class="profile-section-card" id="formacao-academica">
+        <div class="card-header">
+          <h2 class="card-title">Formação Acadêmica</h2>
+        </div>
 
-      <footer>
-         <p>© 2026 Luis Facunde. Todos os direitos reservados.</p>
-      </footer>
-   </body>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2024 - Presente</span>
+              <h3 class="timeline-institution">CESAR School</h3>
+              <p class="timeline-degree">
+                Tecnólogo em Análise e Desenvolvimento de Sistemas (ADS)
+              </p>
+              <p class="timeline-details">
+                Foco no desenvolvimento de software voltado ao mercado,
+                metodologias ágeis, projetos com clientes reais e fundamentos
+                sólidos de engenharia de software.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2020 - 2024</span>
+              <h3 class="timeline-institution">
+                Universidade Federal de Pernambuco (UFPE)
+              </h3>
+              <p class="timeline-degree">Bacharelado em Nutrição</p>
+              <p class="timeline-details">
+                Formação em saúde com ênfase em Nutrição Clínica, Administração
+                de Unidade de Alimentação e Nutrição (UAN) e Saúde Pública.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção 2: Competências -->
+      <section class="profile-section-card" id="competencias">
+        <div class="card-header">
+          <h2 class="card-title">Competências</h2>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Competências Técnicas -->
+          <div class="skills-column">
+            <h3 class="skills-subtitle">Técnicas (Hard Skills)</h3>
+
+            <div class="skills-group">
+              <h4 class="group-title">Desenvolvimento & Frameworks</h4>
+              <div class="tags-container">
+                <span class="skill-tag tech">React.js</span>
+                <span class="skill-tag tech">React Native</span>
+                <span class="skill-tag tech">Node.js</span>
+                <span class="skill-tag tech">JavaScript (ES6+)</span>
+                <span class="skill-tag tech">TypeScript</span>
+                <span class="skill-tag tech">HTML5 & CSS3</span>
+                <span class="skill-tag tech">Python</span>
+              </div>
+            </div>
+
+            <div class="skills-group">
+              <h4 class="group-title">Banco de Dados</h4>
+              <div class="tags-container">
+                <span class="skill-tag tech">Oracle DB</span>
+                <span class="skill-tag tech">PL/SQL</span>
+                <span class="skill-tag tech">ERP SoulMV</span>
+                <span class="skill-tag tech">Modelagem de Dados</span>
+              </div>
+            </div>
+
+            <div class="skills-group">
+              <h4 class="group-title">Ferramentas</h4>
+              <div class="tags-container">
+                <span class="skill-tag tech">Git & Versionamento</span>
+                <span class="skill-tag tech">Metodologias Ágeis</span>
+                <span class="skill-tag tech">APIs RESTful</span>
+                <span class="skill-tag tech">Integração de IA</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Competências Comportamentais -->
+          <div class="skills-column">
+            <h3 class="skills-subtitle">Comportamentais (Soft Skills)</h3>
+
+            <div class="soft-skills-list">
+              <div class="soft-skill-item">
+                <div class="soft-skill-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <path
+                      d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
+                    />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
+                </div>
+                <div class="soft-skill-content">
+                  <strong>Resolução de Problemas:</strong> Capacidade analítica
+                  para identificar gargalos e desenvolver soluções eficazes e
+                  otimizadas em código.
+                </div>
+              </div>
+
+              <div class="soft-skill-item">
+                <div class="soft-skill-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <path
+                      d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
+                    />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
+                </div>
+                <div class="soft-skill-content">
+                  <strong>Trabalho em Equipe:</strong> Colaboração ágil com
+                  times multidisciplinares (designers, médicos, analistas de
+                  negócios) em projetos de inovação.
+                </div>
+              </div>
+
+              <div class="soft-skill-item">
+                <div class="soft-skill-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <path
+                      d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
+                    />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
+                </div>
+                <div class="soft-skill-content">
+                  <strong>Comunicação Efetiva:</strong> Habilidade para traduzir
+                  requisitos complexos de negócios e saúde em especificações
+                  técnicas e código funcional.
+                </div>
+              </div>
+
+              <div class="soft-skill-item">
+                <div class="soft-skill-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <path
+                      d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
+                    />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
+                </div>
+                <div class="soft-skill-content">
+                  <strong>Adaptabilidade & Autonomia:</strong> Facilidade para
+                  transitar entre diferentes ecossistemas (desenvolvimento web,
+                  mobile e queries em PL/SQL).
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção 3: Projetos Relevantes -->
+      <section class="profile-section-card" id="projetos-relevantes">
+        <div class="card-header">
+          <h2 class="card-title">Projetos Atuais</h2>
+        </div>
+
+        <!-- Projeto 1 -->
+        <div class="project-detail-card">
+          <div class="project-grid">
+            <div class="project-info">
+              <span class="project-tag">Iniciação Científica</span>
+              <h3 class="project-name">AppCardio</h3>
+              <p class="project-lead-text">
+                Aplicativo móvel de monitoramento cardiológico integrado à
+                modelo de Inteligência Artificial.
+              </p>
+
+              <div class="project-topic">
+                <strong>Objetivo:</strong>
+                <p>
+                  Criar uma aplicação mobile que utilize um modelo de
+                  inteligência artificial pré-treinado para analise da derivação
+                  DII em imagens de eletrocardiograma. Com o objetivo de
+                  auxiliar no diagnóstico de saúde cardiaca.
+                </p>
+              </div>
+
+              <div class="project-topic">
+                <strong>Participação:</strong>
+                <p>
+                  Atuação atual como desenvolvedor Frontend Mobile utilizado
+                  Framework React Native, criação do design das telas do
+                  aplicativo e integração do frondend com backend desenvolvido
+                  em python que gerencia o modelo de para análise das imagen
+                  enviadas.
+                </p>
+              </div>
+            </div>
+
+            <!-- Lado Direito: Template de Imagem -->
+            <div class="project-image-column">
+              <!-- Template de Imagem Premium com Efeito Blur/Placeholder -->
+              <div class="image-placeholder-container">
+                <div class="placeholder-visual">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    class="placeholder-icon"
+                  >
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <polyline points="21 15 16 10 5 21" />
+                  </svg>
+                  <span class="placeholder-title">Mockup do AppCardio</span>
+                  <span class="placeholder-subtitle"
+                    >Insira a imagem do seu projeto aqui</span
+                  >
+                  <div class="placeholder-instructions">
+                    <code>assets/imagens/appcardio.png</code>
+                  </div>
+                </div>
+                <!-- Imagem real comentada pronta para ativação -->
+                <!-- <img src="../assets/imagens/appcardio.png" alt="Interface do AppCardio" class="project-real-image" /> -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Linha Horizontal Divisória Interna -->
+          <div class="project-card-divider"></div>
+
+          <!-- Tópicos de Desenvolvimento e Aprendizado -->
+          <div class="project-expansion-details">
+            <div class="detail-block">
+              <h4 class="detail-block-title">Desenvolvimento Técnico</h4>
+              <p>
+                A aplicação foi construída com foco em ser simples e intuitiva
+                com uso de processamento assíncrono e comunicação com a rede
+                neural profunda por meio de payloads e requisições HTTP.
+              </p>
+            </div>
+
+            <div class="detail-block">
+              <h4 class="detail-block-title">Dificuldades Superadas</h4>
+              <p>
+                <strong>Desafio:</strong> Desenvolver uma interface Mobile mesmo
+                sem experiência<br /><strong>Solução:</strong>Como estou
+                cursandoa disciplina de Desenvolvimento Mobile em Paralelo. Os
+                conhecimentos adquiridos durante a disciplina foram sendo
+                aplicados aos projeto. Assim, fortalecendo a minha base na
+                tecnologia utilizada.
+              </p>
+            </div>
+
+            <div class="detail-block">
+              <h4 class="detail-block-title">Aprendizados</h4>
+              <p>
+                Aprendizado sobre integração com API de inteligência artificial
+                em ambientes móveis, definição de objetivos e atividades de
+                sprints, colaboração no desenvolvimento utilizando metodologia
+                GitFLow, Design System e desenvolvimento com React Native.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-skills-used">
+            <strong>Habilidades Utilizadas:</strong>
+            <div class="tags-container">
+              <span class="skill-tag used">UX/UI</span>
+              <span class="skill-tag used">React Native</span>
+              <span class="skill-tag used">Consumo de APIs de IA</span>
+              <span class="skill-tag used">Colaboração com equipe</span>
+              <span class="skill-tag used">Git & Versionamento</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto 2 -->
+        <div class="project-detail-card" style="margin-top: 30px">
+          <div class="project-grid">
+            <!-- Lado Esquerdo: Info Técnica -->
+            <div class="project-info">
+              <span class="project-tag">Atuação em Estágio • FAV</span>
+              <h3 class="project-name">Automação e Integração Hospitalar</h3>
+              <p class="project-lead-text">
+                Otimização operacional, queries analíticas e portais internos
+                para a Fundação Altino Ventura.
+              </p>
+
+              <div class="project-topic">
+                <strong>🎯 Objetivo:</strong>
+                <p>
+                  Eliminar processos de conferência manuais e integrar fluxos
+                  operacionais de larga escala do ERP SoulMV, unificando dados,
+                  criando triggers de alerta em tempo real e disponibilizando
+                  portais internos de consulta rápida para o time
+                  administrativo.
+                </p>
+              </div>
+
+              <div class="project-topic">
+                <strong>👥 Participação:</strong>
+                <p>
+                  Responsável pelo mapeamento das regras de negócio do banco
+                  Oracle, desenvolvimento de triggers e procedures PL/SQL
+                  críticas, criação de scripts em Python para automação de
+                  tarefas manuais e auxílio na codificação do portal web em
+                  React.js e Node.js.
+                </p>
+              </div>
+            </div>
+
+            <!-- Lado Direito: Template de Imagem -->
+            <div class="project-image-column">
+              <!-- Template de Imagem Premium com Efeito Blur/Placeholder -->
+              <div class="image-placeholder-container">
+                <div class="placeholder-visual">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    class="placeholder-icon"
+                  >
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <polyline points="21 15 16 10 5 21" />
+                  </svg>
+                  <span class="placeholder-title"
+                    >Mockup da Automação & ERP</span
+                  >
+                  <span class="placeholder-subtitle"
+                    >Insira a imagem do seu projeto aqui</span
+                  >
+                  <div class="placeholder-instructions">
+                    <code>assets/imagens/automacao-fav.png</code>
+                  </div>
+                </div>
+                <!-- Imagem real comentada pronta para ativação -->
+                <!-- <img src="../assets/imagens/automacao-fav.png" alt="Interface da Automação Hospitalar" class="project-real-image" /> -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Linha Horizontal Divisória Interna -->
+          <div class="project-card-divider"></div>
+
+          <!-- Tópicos de Desenvolvimento e Aprendizado -->
+          <div class="project-expansion-details">
+            <div class="detail-block">
+              <h4 class="detail-block-title">🚀 Desenvolvimento Técnico</h4>
+              <p>
+                Desenvolvimento focado em scripts e bancos relacionais Oracle
+                corporativos. Procedures em PL/SQL foram reestruturadas com uso
+                de bulk collects e índices específicos, otimizando consultas
+                complexas que antes travavam o sistema hospitalar, reduzindo o
+                tempo de resposta em até 80%.
+              </p>
+            </div>
+
+            <div class="detail-block">
+              <h4 class="detail-block-title">💡 Dificuldades Superadas</h4>
+              <p>
+                <strong>Desafio:</strong> Mapear tabelas e relacionamentos não
+                documentados no gigantesco e complexo schema do ERP SoulMV.
+                <br /><strong>Solução:</strong> Engenharia reversa cuidadosa de
+                queries, monitoramento de logs de transação com DBA sênior e
+                compilação de um dicionário de dados interno para a equipe de
+                desenvolvimento.
+              </p>
+            </div>
+
+            <div class="detail-block">
+              <h4 class="detail-block-title">📚 Aprendizados Coletados</h4>
+              <p>
+                Domínio avançado em PL/SQL Oracle e performance de queries.
+                Compreensão aprofundada de fluxos operacionais de saúde pública
+                e privada de alta complexidade e a importância da integridade e
+                governança de dados sensíveis sob as diretrizes da LGPD.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-skills-used">
+            <strong>Habilidades Utilizadas:</strong>
+            <div class="tags-container">
+              <span class="skill-tag used">Oracle PL/SQL</span>
+              <span class="skill-tag used">Python Automations</span>
+              <span class="skill-tag used">ERP SoulMV</span>
+              <span class="skill-tag used">Node.js & React</span>
+              <span class="skill-tag used">Otimização de Query</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Menu de Navegação Local (Visível isoladamente e escondido no iframe principal) -->
+      <nav class="subpage-isolated-nav">
+        <h3>Menu Dossiê</h3>
+        <ul>
+          <li><a href="../index.html">Página Inicial</a></li>
+          <li>
+            <a href="../01-perfil-profissional/index.html" class="active"
+              >01 — Perfil Profissional</a
+            >
+          </li>
+          <li>
+            <a href="../02-diagnostico-profissional/index.html"
+              >02 — Diagnóstico Profissional</a
+            >
+          </li>
+          <li>
+            <a href="../03-contexto-empregabilidade/index.html"
+              >03 — Contexto e Empregabilidade</a
+            >
+          </li>
+          <li>
+            <a href="../04-hipoteses-desenvolvimento/index.html"
+              >04 — Hipóteses de Desenvolvimento</a
+            >
+          </li>
+          <li>
+            <a href="../05-experimentacao-pratica/index.html"
+              >05 — Experimentação Prática</a
+            >
+          </li>
+          <li>
+            <a href="../06-evidencias-aprendizados/index.html"
+              >06 — Evidências e Aprendizados</a
+            >
+          </li>
+          <li>
+            <a href="../07-projetos-percurso-academico/index.html"
+              >07 — Percurso Acadêmico</a
+            >
+          </li>
+          <li>
+            <a href="../08-planejamento-pos-faculdade/index.html"
+              >08 — Planejamento Pós-Faculdade</a
+            >
+          </li>
+          <li>
+            <a href="../09-sintese-final/index.html">09 — Síntese Final</a>
+          </li>
+        </ul>
+      </nav>
+    </main>
+
+    <!-- Rodapé visível apenas na visualização isolada -->
+    <footer class="section-isolated-footer">
+      <p>© 2026 Luis Facunde. Dossiê de Carreira Acadêmica e Profissional.</p>
+    </footer>
+  </body>
 </html>
