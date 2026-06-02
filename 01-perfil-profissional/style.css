@@ -1,1 +1,713 @@
-/* Estilos locais para Página 1 - Perfil Profissional */
+/* ==========================================================================
+   VARIÁVEIS E CONFIGURAÇÃO DO DESIGN SYSTEM
+   ========================================================================== */
+:root {
+    --bg-app: #f5f7fa;
+    --bg-card: #ffffff;
+    --text-main: #1a1f26;
+    --text-muted: #5c6470;
+    --accent: #e0533c; /* Laranja Burnt Orange Editorial */
+    --accent-glow: rgba(224, 83, 60, 0.15);
+    --accent-light: #fff0ed;
+    --border: #e8ecef;
+    --border-hover: rgba(224, 83, 60, 0.3);
+    
+    --font-head: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-body: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 8px 24px rgba(26, 31, 38, 0.06);
+    --shadow-lg: 0 16px 48px rgba(26, 31, 38, 0.1);
+
+    --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    --border-radius: 16px;
+}
+
+/* Reset Geral */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   ESTILOS DE VISUALIZAÇÃO ISOLADA (Ocultados dinamicamente no portal principal)
+   ========================================================================== */
+.section-isolated-header {
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border);
+    padding: 24px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.isolated-logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.isolated-logo .logo-text {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: 0.08em;
+    color: var(--text-main);
+}
+
+.isolated-logo .logo-subtext {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+.section-isolated-footer {
+    border-top: 1px solid var(--border);
+    padding: 30px 0;
+    margin-top: 60px;
+    text-align: center;
+    background-color: var(--bg-app);
+}
+
+.section-isolated-footer p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* Menu de Navegação na Visão Isolada */
+.subpage-isolated-nav {
+    margin-top: 60px;
+    padding: 30px;
+    background-color: var(--bg-app);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border);
+}
+
+.subpage-isolated-nav h3 {
+    font-family: var(--font-head);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-main);
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.subpage-isolated-nav ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.subpage-isolated-nav a {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    display: block;
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+}
+
+.subpage-isolated-nav a:hover,
+.subpage-isolated-nav a.active {
+    color: var(--accent);
+    background-color: var(--accent-light);
+    border-color: rgba(224, 83, 60, 0.2);
+}
+
+/* ==========================================================================
+   CONTEÚDO PRINCIPAL (Main & Estrutura Editorial)
+   ========================================================================== */
+.profile-main-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 0 60px 0;
+}
+
+/* Título de Seção estilo Editorial */
+.section-editorial-title {
+    margin-bottom: 40px;
+    position: relative;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 24px;
+}
+
+.editorial-badge {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    background-color: var(--accent-light);
+    padding: 4px 12px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.editorial-heading {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 2.2rem;
+    color: var(--text-main);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+.editorial-lead {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 800px;
+}
+
+/* Card Genérico de Seção */
+.profile-section-card {
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    padding: 36px;
+    margin-bottom: 30px;
+    transition: var(--transition);
+}
+
+.profile-section-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-hover);
+}
+
+/* Cabeçalho do Card */
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 16px;
+}
+
+.header-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    background-color: var(--accent-light);
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+}
+
+.card-title {
+    font-family: var(--font-head);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+/* ==========================================================================
+   SEÇÃO 1: TIMELINE DE FORMAÇÃO ACADÊMICA
+   ========================================================================== */
+.timeline {
+    position: relative;
+    padding-left: 28px;
+}
+
+/* Linha central da timeline */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 7px;
+    width: 2px;
+    height: calc(100% - 12px);
+    background-color: var(--border);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Marcador (Bolinha) na timeline */
+.timeline-marker {
+    position: absolute;
+    top: 6px;
+    left: -28px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--bg-card);
+    border: 3px solid var(--accent);
+    transition: var(--transition);
+    z-index: 2;
+}
+
+.timeline-item:hover .timeline-marker {
+    transform: scale(1.3);
+    background-color: var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-glow);
+}
+
+.timeline-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.timeline-date {
+    font-family: var(--font-head);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    background-color: var(--accent-light);
+    padding: 2px 10px;
+    border-radius: 30px;
+    align-self: flex-start;
+}
+
+.timeline-institution {
+    font-family: var(--font-head);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.timeline-degree {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-top: -2px;
+}
+
+.timeline-details {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-top: 4px;
+}
+
+/* ==========================================================================
+   SEÇÃO 2: GRID DE COMPETÊNCIAS
+   ========================================================================== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Coluna técnica um pouco maior */
+    gap: 40px;
+}
+
+.skills-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.skills-subtitle {
+    font-family: var(--font-head);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-main);
+    border-left: 3px solid var(--accent);
+    padding-left: 12px;
+}
+
+.skills-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.group-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    font-size: 0.78rem;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+/* Hard Skills Tags */
+.skill-tag.tech {
+    background-color: var(--bg-app);
+    color: var(--text-muted);
+}
+
+.skill-tag.tech:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background-color: var(--accent-light);
+    transform: translateY(-2px);
+}
+
+/* Soft Skills List */
+.soft-skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.soft-skill-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.soft-skill-icon {
+    color: var(--accent);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+}
+
+.soft-skill-content {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.soft-skill-content strong {
+    color: var(--text-main);
+    display: block;
+    font-size: 0.92rem;
+    margin-bottom: 2px;
+}
+
+/* ==========================================================================
+   SEÇÃO 3: PROJETOS RELEVANTES
+   ========================================================================== */
+.project-detail-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+    transition: var(--transition);
+}
+
+.project-detail-card:hover {
+    border-color: rgba(224, 83, 60, 0.35);
+    box-shadow: var(--shadow-md);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 28px;
+    align-items: start;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.project-tag {
+    font-family: var(--font-head);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    background-color: var(--accent-light);
+    padding: 4px 10px;
+    border-radius: 30px;
+    align-self: flex-start;
+}
+
+.project-name {
+    font-family: var(--font-head);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.2;
+}
+
+.project-lead-text {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-top: -6px;
+}
+
+.project-topic {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.project-topic strong {
+    font-size: 0.85rem;
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.project-topic p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* Divisores internos dos projetos */
+.project-card-divider {
+    height: 1px;
+    background-color: var(--border);
+    margin: 24px 0;
+}
+
+/* Detalhes expandidos (Desenvolvimento, Dificuldade, Aprendizados) */
+.project-expansion-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.detail-block {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.detail-block-title {
+    font-family: var(--font-head);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.detail-block p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* Habilidades no rodapé do projeto */
+.project-skills-used {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    background-color: var(--bg-app);
+    padding: 12px 18px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.project-skills-used strong {
+    font-size: 0.82rem;
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.skill-tag.used {
+    background-color: var(--bg-card);
+    color: var(--accent);
+    border-color: rgba(224, 83, 60, 0.15);
+    font-size: 0.74rem;
+    padding: 4px 10px;
+}
+
+.skill-tag.used:hover {
+    background-color: var(--accent-light);
+    border-color: var(--accent);
+}
+
+/* ==========================================================================
+   TEMPLATE DE INSERÇÃO DE IMAGEM (PLACEHOLDER)
+   ========================================================================== */
+.project-image-column {
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+}
+
+.image-placeholder-container {
+    width: 100%;
+    min-height: 220px;
+    background: linear-gradient(135deg, #ffffff 0%, var(--bg-app) 100%);
+    border: 2px dashed rgba(224, 83, 60, 0.25);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.image-placeholder-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent);
+    opacity: 0;
+    transition: var(--transition);
+    z-index: 1;
+}
+
+.image-placeholder-container:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(224, 83, 60, 0.08);
+}
+
+.placeholder-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    z-index: 2;
+    transition: var(--transition);
+}
+
+.placeholder-icon {
+    color: var(--accent);
+    opacity: 0.6;
+    transition: var(--transition);
+}
+
+.image-placeholder-container:hover .placeholder-icon {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.placeholder-title {
+    font-family: var(--font-head);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.placeholder-subtitle {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.placeholder-instructions {
+    margin-top: 10px;
+    padding: 4px 10px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.placeholder-instructions code {
+    font-family: Consolas, Monaco, Lucida Console, monospace;
+    font-size: 0.72rem;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* Suporte para quando uma imagem for ativada no projeto */
+.project-real-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    z-index: 3;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE E ADAPTAÇÕES DE TELA
+   ========================================================================== */
+@media (max-width: 900px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-image-column {
+        height: auto;
+    }
+
+    .image-placeholder-container {
+        min-height: 200px;
+    }
+
+    .project-expansion-details {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-isolated-header {
+        padding: 20px;
+    }
+
+    .profile-section-card {
+        padding: 24px;
+    }
+
+    .editorial-heading {
+        font-size: 1.8rem;
+    }
+    
+    .timeline {
+        padding-left: 20px;
+    }
+    
+    .timeline::before {
+        left: 3px;
+    }
+
+    .timeline-marker {
+        left: -20px;
+        width: 12px;
+        height: 12px;
+        border-width: 2px;
+    }
+}
