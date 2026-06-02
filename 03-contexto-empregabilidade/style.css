@@ -263,6 +263,16 @@ body {
     line-height: 1.2;
 }
 
+.job-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.job-title a:hover {
+    color: var(--accent);
+}
+
 .job-detail-section {
     display: flex;
     flex-direction: column;
