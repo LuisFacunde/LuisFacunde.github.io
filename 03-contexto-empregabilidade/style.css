@@ -1,1 +1,459 @@
-/* Estilos locais para Página 3 - Contexto e Empregabilidade */
+/* ==========================================================================
+   VARIÁVEIS E CONFIGURAÇÃO DO DESIGN SYSTEM
+   ========================================================================== */
+:root {
+    --bg-app: #f5f7fa;
+    --bg-card: #ffffff;
+    --text-main: #1a1f26;
+    --text-muted: #5c6470;
+    --accent: #e0533c; /* Laranja Burnt Orange Editorial */
+    --accent-glow: rgba(224, 83, 60, 0.15);
+    --accent-light: #fff0ed;
+    --border: #e8ecef;
+    --border-hover: rgba(224, 83, 60, 0.3);
+    
+    --font-head: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-body: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 8px 24px rgba(26, 31, 38, 0.06);
+    --shadow-lg: 0 16px 48px rgba(26, 31, 38, 0.1);
+
+    --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    --border-radius: 16px;
+
+    /* Cores Temáticas das Colunas de Autoanálise (Sem ícones/selos) */
+    --color-possess: #2e7d32;
+    --bg-possess: #f1f8f3;
+    --border-possess: rgba(46, 125, 50, 0.15);
+
+    --color-develop: #d32f2f;
+    --bg-develop: #fdf5f5;
+    --border-develop: rgba(211, 47, 47, 0.12);
+
+    --color-patterns: #1565c0;
+    --bg-patterns: #f0f7fc;
+    --border-patterns: rgba(21, 101, 192, 0.12);
+}
+
+/* Reset Geral */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   ESTILOS DE VISUALIZAÇÃO ISOLADA (Ocultados dinamicamente no portal principal)
+   ========================================================================== */
+.section-isolated-header {
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border);
+    padding: 24px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.isolated-logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.isolated-logo .logo-text {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: 0.08em;
+    color: var(--text-main);
+}
+
+.isolated-logo .logo-subtext {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+.section-isolated-footer {
+    border-top: 1px solid var(--border);
+    padding: 30px 0;
+    margin-top: 60px;
+    text-align: center;
+    background-color: var(--bg-app);
+}
+
+.section-isolated-footer p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* Menu de Navegação na Visão Isolada */
+.subpage-isolated-nav {
+    margin-top: 60px;
+    padding: 30px;
+    background-color: var(--bg-app);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border);
+}
+
+.subpage-isolated-nav h3 {
+    font-family: var(--font-head);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-main);
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.subpage-isolated-nav ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.subpage-isolated-nav a {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    display: block;
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+}
+
+.subpage-isolated-nav a:hover,
+.subpage-isolated-nav a.active {
+    color: var(--accent);
+    background-color: var(--accent-light);
+    border-color: rgba(224, 83, 60, 0.2);
+}
+
+/* ==========================================================================
+   CONTEÚDO PRINCIPAL (Main & Estrutura Editorial)
+   ========================================================================== */
+.context-main-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 0 60px 0;
+}
+
+/* Título de Seção estilo Editorial (Sem selos gráficos) */
+.section-editorial-title {
+    margin-bottom: 40px;
+    position: relative;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 24px;
+}
+
+.editorial-badge {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.editorial-heading {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 2.2rem;
+    color: var(--text-main);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+.editorial-lead {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 800px;
+}
+
+/* Títulos de Seção Internos */
+.context-section {
+    margin-bottom: 50px;
+}
+
+.context-section-title {
+    font-family: var(--font-head);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+}
+
+/* ==========================================================================
+   GRID DE VAGAS (CARDS SEM SELOS OU ÍCONES)
+   ========================================================================== */
+.jobs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.job-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    padding: 30px;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.job-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-hover);
+    transform: translateY(-3px);
+}
+
+/* Se for a primeira vaga (MV), ganha um destaque elegante na borda superior */
+.job-card:first-child {
+    border-top: 4px solid var(--accent);
+}
+
+.job-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--font-head);
+}
+
+.job-company {
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-main);
+}
+
+.job-location {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.job-title {
+    font-family: var(--font-head);
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--text-main);
+    line-height: 1.2;
+}
+
+.job-detail-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.job-detail-title {
+    font-family: var(--font-head);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    font-weight: 700;
+}
+
+.job-detail-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Listas internas das vagas */
+.job-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.job-list li {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    position: relative;
+    padding-left: 16px;
+    line-height: 1.5;
+}
+
+.job-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--text-muted);
+}
+
+/* Tags de tecnologias - puramente textual e formatado sem pílulas */
+.job-tags-text {
+    font-size: 0.9rem;
+    color: var(--text-main);
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   PAINEL DE AUTOANÁLISE
+   ========================================================================== */
+.analysis-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.analysis-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    padding: 24px;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.analysis-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+}
+
+.analysis-card-title {
+    font-family: var(--font-head);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-main);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+}
+
+/* customização das cores por card de análise usando borda esquerda e fundo sutil */
+.analysis-card.possess {
+    background-color: var(--bg-possess);
+    border-color: var(--border-possess);
+    border-left: 5px solid var(--color-possess);
+}
+.analysis-card.possess:hover {
+    border-color: var(--color-possess);
+    box-shadow: 0 8px 24px rgba(46, 125, 50, 0.05);
+}
+.analysis-card.possess .analysis-card-title {
+    color: var(--color-possess);
+}
+
+.analysis-card.develop {
+    background-color: var(--bg-develop);
+    border-color: var(--border-develop);
+    border-left: 5px solid var(--color-develop);
+}
+.analysis-card.develop:hover {
+    border-color: var(--color-develop);
+    box-shadow: 0 8px 24px rgba(211, 47, 47, 0.04);
+}
+.analysis-card.develop .analysis-card-title {
+    color: var(--color-develop);
+}
+
+.analysis-card.patterns {
+    background-color: var(--bg-patterns);
+    border-color: var(--border-patterns);
+    border-left: 5px solid var(--color-patterns);
+}
+.analysis-card.patterns:hover {
+    border-color: var(--color-patterns);
+    box-shadow: 0 8px 24px rgba(21, 101, 192, 0.04);
+}
+.analysis-card.patterns .analysis-card-title {
+    color: var(--color-patterns);
+}
+
+/* Listas internas do Painel de Autoanálise */
+.analysis-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.analysis-list li {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    position: relative;
+    padding-left: 14px;
+}
+
+.analysis-list li::before {
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 2px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+}
+
+.possess .analysis-list li::before { background-color: var(--color-possess); }
+.develop .analysis-list li::before { background-color: var(--color-develop); }
+.patterns .analysis-list li::before { background-color: var(--color-patterns); }
+
+.analysis-list li strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE
+   ========================================================================== */
+@media (max-width: 900px) {
+    .jobs-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .analysis-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-isolated-header {
+        padding: 20px;
+    }
+
+    .job-card {
+        padding: 24px;
+    }
+
+    .analysis-card {
+        padding: 20px;
+    }
+
+    .editorial-heading {
+        font-size: 1.8rem;
+    }
+}
