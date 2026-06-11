@@ -3,76 +3,460 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Página 4 — Hipóteses de Desenvolvimento | Luis Facunde</title>
+      <title>Hipóteses de Desenvolvimento | Luis Facunde</title>
+      <meta
+         name="description"
+         content="Objetivos profissionais em curto, médio e longo prazo, plano de desenvolvimento com ações práticas e prazos, e hipóteses de carreira explorando possibilidades."
+      />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+         rel="stylesheet"
+      />
       <link rel="stylesheet" href="style.css" />
       <script src="script.js" defer></script>
    </head>
    <body>
-      <header>
-         <h1>Dossiê de Carreira — Luis Facunde</h1>
+      <!-- Cabeçalho visível apenas na visualização isolada -->
+      <header class="section-isolated-header">
+         <div class="isolated-logo">
+            <span class="logo-text">DOSSIÊ DE CARREIRA</span>
+            <span class="logo-subtext">Luis Henrique Facunde da Silva</span>
+         </div>
       </header>
 
-      <main>
-         <section>
-            <h2>Página 4 — Hipóteses de Desenvolvimento</h2>
-            <p>Esqueleto básico para a página de Hipóteses de Desenvolvimento.</p>
+      <main class="hypotheses-main-content">
+
+         <!-- Título Editorial -->
+         <div class="section-editorial-title">
+            <h1 class="editorial-heading">Hipóteses de Desenvolvimento</h1>
+            <p class="editorial-lead">
+               Objetivos profissionais em curto, médio e longo prazo, plano de
+               desenvolvimento com ações práticas e prazos, e hipóteses de
+               carreira explorando possibilidades.
+            </p>
+         </div>
+
+         <!-- =========================================================
+              SEÇÃO 1: OBJETIVOS PROFISSIONAIS POR PRAZO
+              ========================================================= -->
+         <section class="hyp-section" id="objetivos-por-prazo">
+            <h2 class="section-title">Objetivos Profissionais</h2>
+            <p class="section-lead">
+               Uma visão estruturada de onde quero estar e o que quero conquistar
+               em cada fase da minha trajetória.
+            </p>
+
+            <div class="timeline-grid">
+
+               <!-- Curto Prazo -->
+               <div class="timeline-card curto-prazo">
+                  <div class="timeline-card-label">
+                     <span class="timeline-period">Curto Prazo</span>
+                     <span class="timeline-range">0 — 6 meses</span>
+                  </div>
+                  <h3 class="timeline-card-title">Consolidar a base técnica e profissional</h3>
+                  <ul class="timeline-list">
+                     <li>Entregar com qualidade as demandas do estágio na FAV e do projeto AppCardio na iniciação científica.</li>
+                     <li>Aprofundar conhecimento em testes automatizados (Jest/Vitest) aplicados aos projetos atuais.</li>
+                     <li>Melhorar a comunicação e postura em apresentações do Projeto Integrador.</li>
+                     <li>Estruturar e organizar o portfólio no GitHub com projetos documentados e READMEs profissionais.</li>
+                     <li>Criar uma rotina de estudos semanais com blocos fixos de 2h por dia.</li>
+                  </ul>
+               </div>
+
+               <!-- Médio Prazo -->
+               <div class="timeline-card medio-prazo">
+                  <div class="timeline-card-label">
+                     <span class="timeline-period">Médio Prazo</span>
+                     <span class="timeline-range">6 — 18 meses</span>
+                  </div>
+                  <h3 class="timeline-card-title">Conquistar a primeira vaga como Desenvolvedor Júnior</h3>
+                  <ul class="timeline-list">
+                     <li>Conseguir um contrato de trabalho como Desenvolvedor de Software Júnior (Web ou Mobile) após a formatura.</li>
+                     <li>Desenvolver habilidades em DevOps: Docker, CI/CD e deploy em nuvem (AWS ou Azure).</li>
+                     <li>Estudar e aplicar Design Patterns e Clean Architecture em projetos pessoais.</li>
+                     <li>Publicar conteúdo técnico regularmente no LinkedIn para construir presença profissional.</li>
+                     <li>Participar de ao menos 1 hackathon ou projeto colaborativo externo.</li>
+                  </ul>
+               </div>
+
+               <!-- Longo Prazo -->
+               <div class="timeline-card longo-prazo">
+                  <div class="timeline-card-label">
+                     <span class="timeline-period">Longo Prazo</span>
+                     <span class="timeline-range">2 — 5 anos</span>
+                  </div>
+                  <h3 class="timeline-card-title">Evoluir para um perfil Fullstack sólido e de referência</h3>
+                  <ul class="timeline-list">
+                     <li>Alcançar o nível Pleno como desenvolvedor, com domínio de frontend, backend e infraestrutura.</li>
+                     <li>Liderar tecnicamente um projeto ou equipe pequena, atuando como ponto de referência.</li>
+                     <li>Contribuir com projetos open source ou criar uma ferramenta/produto próprio publicado.</li>
+                     <li>Especializar-me em uma área de alto impacto: IA aplicada à saúde, plataformas mobile ou sistemas distribuídos.</li>
+                     <li>Construir uma rede profissional sólida na área de tecnologia no Recife e no Brasil.</li>
+                  </ul>
+               </div>
+
+            </div>
          </section>
 
-         <nav>
-            <h3>Navegação</h3>
+         <!-- =========================================================
+              SEÇÃO 2: PLANO DE DESENVOLVIMENTO
+              ========================================================= -->
+         <section class="hyp-section" id="plano-desenvolvimento">
+            <h2 class="section-title">Plano de Desenvolvimento</h2>
+            <p class="section-lead">
+               Ações práticas e prazos definidos para fechar as principais lacunas
+               técnicas e comportamentais identificadas no diagnóstico.
+            </p>
+
+            <div class="plan-grid">
+
+               <!-- Área 1: Habilidades Técnicas -->
+               <div class="plan-card">
+                  <div class="plan-card-header">
+                     <span class="plan-area-label">Técnico</span>
+                     <h3 class="plan-card-title">Habilidades de Engenharia</h3>
+                  </div>
+                  <div class="plan-actions">
+                     <div class="plan-action-item">
+                        <div class="action-meta">
+                           <span class="action-tag">Testes Automatizados</span>
+                           <span class="action-deadline">1 mês</span>
+                        </div>
+                        <p class="action-description">Implementar cobertura de testes unitários no projeto AppCardio usando Jest/Vitest. Meta: 70% de cobertura nos componentes principais.</p>
+                     </div>
+                     <div class="plan-action-item">
+                        <div class="action-meta">
+                           <span class="action-tag">Docker</span>
+                           <span class="action-deadline">2–3 meses</span>
+                        </div>
+                        <p class="action-description">Conteinerizar ao menos um projeto pessoal com Docker e Docker Compose. Estudar o curso "Docker para Desenvolvedores" e aplicar no dia a dia.</p>
+                     </div>
+                     <div class="plan-action-item">
+                        <div class="action-meta">
+                           <span class="action-tag">CI/CD e Cloud</span>
+                           <span class="action-deadline">4–6 meses</span>
+                        </div>
+                        <p class="action-description">Criar um pipeline de CI/CD com GitHub Actions para deploy automático de um projeto em AWS (Free Tier). Documentar o processo como artigo técnico.</p>
+                     </div>
+                     <div class="plan-action-item">
+                        <div class="action-meta">
+                           <span class="action-tag">Design Patterns</span>
+                           <span class="action-deadline">Contínuo</span>
+                        </div>
+                        <p class="action-description">Ler "Clean Code" e aplicar os princípios SOLID em refatorações do código existente no AppCardio e nos scripts do estágio.</p>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Área 2: Comportamental / Soft Skills -->
+               <div class="plan-card">
+                  <div class="plan-card-header">
+                     <span class="plan-area-label">Comportamental</span>
+                     <h3 class="plan-card-title">Comunicação e Postura</h3>
+                  </div>
+                  <div class="plan-actions">
+                     <div class="plan-action-item">
+                        <div class="action-meta">
+                           <span class="action-tag">Apresentações</span>
+                           <span class="action-deadline">Imediato</span>
+                        </div>
+                        <p class="action-description">Assumir o papel de porta-voz técnico nas próximas 3 apresentações do Projeto Integrador. Preparar slides e script antes de cada entrega.</p>
+                     </div>
+                     <div class="plan-action-item">
+                        <div class="action-meta">
+                           <span class="action-tag">LinkedIn</span>
+                           <span class="action-deadline">Recorrente</span>
+                        </div>
+                        <p class="action-description">Publicar 2 posts técnicos por mês sobre aprendizados do estágio e da faculdade. Formato: problema encontrado → abordagem → resultado.</p>
+                     </div>
+                     <div class="plan-action-item">
+                        <div class="action-meta">
+                           <span class="action-tag">Assertividade</span>
+                           <span class="action-deadline">2 meses</span>
+                        </div>
+                        <p class="action-description">Praticar a comunicação de decisões técnicas em code reviews no estágio. Registrar semanalmente situações onde poderia ter sido mais assertivo.</p>
+                     </div>
+                     <div class="plan-action-item">
+                        <div class="action-meta">
+                           <span class="action-tag">Networking</span>
+                           <span class="action-deadline">Semestral</span>
+                        </div>
+                        <p class="action-description">Participar de ao menos 1 evento de tecnologia por semestre (meetups, CESAR talks, hackathons). Conectar-se com ao menos 5 profissionais da área por evento.</p>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Área 3: Organização Pessoal -->
+               <div class="plan-card plan-card-wide">
+                  <div class="plan-card-header">
+                     <span class="plan-area-label">Organização</span>
+                     <h3 class="plan-card-title">Gestão de Tempo e Rotina</h3>
+                  </div>
+                  <div class="plan-actions plan-actions-horizontal">
+                     <div class="plan-action-item">
+                        <div class="action-meta">
+                           <span class="action-tag">Rotina de Estudos</span>
+                           <span class="action-deadline">Esta semana</span>
+                        </div>
+                        <p class="action-description">Definir 3 blocos semanais fixos de 2h para estudo técnico (ex: terça, quinta e sábado de manhã). Usar o Notion para registrar o progresso semanal.</p>
+                     </div>
+                     <div class="plan-action-item">
+                        <div class="action-meta">
+                           <span class="action-tag">Priorização</span>
+                           <span class="action-deadline">Contínuo</span>
+                        </div>
+                        <p class="action-description">Manter um backlog pessoal com as 3 prioridades da semana entre estágio, faculdade e projetos. Revisar toda segunda-feira.</p>
+                     </div>
+                     <div class="plan-action-item">
+                        <div class="action-meta">
+                           <span class="action-tag">Portfólio</span>
+                           <span class="action-deadline">1 mês</span>
+                        </div>
+                        <p class="action-description">Completar o README do AppCardio e do pdf-compressor no GitHub com descrição, tecnologias, print e instruções de execução. Organizar os repositórios.</p>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+         </section>
+
+         <!-- =========================================================
+              SEÇÃO 3: HIPÓTESES DE CARREIRA
+              ========================================================= -->
+         <section class="hyp-section" id="hipoteses">
+            <h2 class="section-title">Hipóteses de Carreira</h2>
+            <p class="section-lead">
+               Apostas direcionadas para explorar possibilidades de trajetória —
+               cada uma com justificativa, impacto esperado e primeiros passos concretos.
+            </p>
+
+            <!-- Hipótese 1 -->
+            <article class="hypothesis-card" id="hipotese-1">
+               <div class="hypothesis-header">
+                  <span class="hypothesis-number">H1</span>
+                  <div class="hypothesis-title-block">
+                     <span class="hypothesis-label">Hipótese de Carreira</span>
+                     <h3 class="hypothesis-title">
+                        Fortalecer a Comunicação e Postura Profissional
+                     </h3>
+                  </div>
+               </div>
+
+               <div class="hypothesis-body">
+                  <div class="hypothesis-detail">
+                     <h4 class="detail-title">Por que é importante</h4>
+                     <p class="detail-text">
+                        A capacidade técnica por si só não define quem cresce nas organizações. Em
+                        entrevistas, reuniões de equipe e apresentações de projetos, a forma como me
+                        comunico define minha credibilidade. Vagas de desenvolvedor júnior
+                        frequentemente eliminam candidatos não por falta de código, mas por falta de
+                        clareza e postura. Comunicação é uma competência técnica disfarçada de soft skill.
+                     </p>
+                  </div>
+
+                  <div class="hypothesis-detail">
+                     <h4 class="detail-title">Como impacta minha trajetória</h4>
+                     <p class="detail-text">
+                        Melhora meu desempenho em dinâmicas de processo seletivo, facilita a
+                        colaboração com times multidisciplinares (como médicos e gestores no contexto
+                        da FAV), e abre espaço para assumir papéis de referência técnica a médio prazo.
+                        Um desenvolvedor que sabe explicar o que faz vira um ativo muito mais valioso
+                        do que um que só entrega código.
+                     </p>
+                  </div>
+
+                  <div class="hypothesis-detail">
+                     <h4 class="detail-title">Como pretendo começar</h4>
+                     <ul class="action-list">
+                        <li>Documentar e apresentar projetos de forma estruturada: problema → solução → resultado.</li>
+                        <li>Assumir o papel de porta-voz técnico nas apresentações do Projeto Integrador.</li>
+                        <li>Praticar explicação de decisões técnicas em code reviews e reuniões de sprint.</li>
+                        <li>Registrar reflexões semanais sobre situações de comunicação que poderiam ter sido melhores.</li>
+                     </ul>
+                  </div>
+               </div>
+
+               <div class="hypothesis-footer">
+                  <span class="hypothesis-tag">Soft Skill</span>
+                  <span class="hypothesis-tag">Curto Prazo</span>
+                  <span class="hypothesis-tag">Comunicação</span>
+                  <span class="hypothesis-tag">Postura Profissional</span>
+               </div>
+            </article>
+
+            <!-- Hipótese 2 -->
+            <article class="hypothesis-card" id="hipotese-2">
+               <div class="hypothesis-header">
+                  <span class="hypothesis-number">H2</span>
+                  <div class="hypothesis-title-block">
+                     <span class="hypothesis-label">Hipótese de Carreira</span>
+                     <h3 class="hypothesis-title">
+                        Organizar uma Rotina de Estudos Técnicos Consistente
+                     </h3>
+                  </div>
+               </div>
+
+               <div class="hypothesis-body">
+                  <div class="hypothesis-detail">
+                     <h4 class="detail-title">Por que é importante</h4>
+                     <p class="detail-text">
+                        O mercado de desenvolvimento evolui rápido e as lacunas técnicas identificadas
+                        — testes automatizados, DevOps, arquitetura de software — não serão
+                        preenchidas por osmose. Sem uma estrutura de estudo intencional, meu
+                        crescimento técnico fica refém apenas do que aparece no trabalho ou na
+                        faculdade, limitando minha competitividade para vagas de nível mais sênior.
+                     </p>
+                  </div>
+
+                  <div class="hypothesis-detail">
+                     <h4 class="detail-title">Como impacta minha trajetória</h4>
+                     <p class="detail-text">
+                        Uma rotina de estudos de 5 a 7 horas semanais fora do trabalho, focada em
+                        lacunas específicas, pode acelerar minha evolução de Júnior para Pleno em 18
+                        a 24 meses. Também fortalece meu portfólio com projetos mais robustos e
+                        demonstra autodisciplina — característica valorizada em processos seletivos e
+                        avaliações de desempenho.
+                     </p>
+                  </div>
+
+                  <div class="hypothesis-detail">
+                     <h4 class="detail-title">Como pretendo começar</h4>
+                     <ul class="action-list">
+                        <li>Definir 3 blocos de estudo semanais fixos de ~2h (terça, quinta e sábado).</li>
+                        <li>Priorizar testes automatizados com Jest/Vitest aplicados ao AppCardio primeiro.</li>
+                        <li>Seguir um roadmap progressivo: testes → Docker → CI/CD → Cloud (AWS Free Tier).</li>
+                        <li>Registrar o progresso semanal em um log no repositório pessoal do GitHub.</li>
+                     </ul>
+                  </div>
+               </div>
+
+               <div class="hypothesis-footer">
+                  <span class="hypothesis-tag">Hard Skill</span>
+                  <span class="hypothesis-tag">Médio Prazo</span>
+                  <span class="hypothesis-tag">Organização</span>
+                  <span class="hypothesis-tag">Estudo Técnico</span>
+               </div>
+            </article>
+
+            <!-- Hipótese 3 -->
+            <article class="hypothesis-card" id="hipotese-3">
+               <div class="hypothesis-header">
+                  <span class="hypothesis-number">H3</span>
+                  <div class="hypothesis-title-block">
+                     <span class="hypothesis-label">Hipótese de Carreira</span>
+                     <h3 class="hypothesis-title">
+                        Participar Mais Ativamente dos Projetos e Fortalecer o Networking
+                     </h3>
+                  </div>
+               </div>
+
+               <div class="hypothesis-body">
+                  <div class="hypothesis-detail">
+                     <h4 class="detail-title">Por que é importante</h4>
+                     <p class="detail-text">
+                        Grande parte das oportunidades de emprego chega por indicação e visibilidade
+                        dentro de comunidades técnicas. Participar ativamente de projetos —
+                        contribuindo além das tarefas mínimas — e construir relacionamentos genuínos
+                        com colegas, professores e profissionais da área são diferenciais que o
+                        currículo sozinho não entrega. O mercado de TI no Recife é relativamente
+                        pequeno, e reputação técnica se constrói com presença e contribuição.
+                     </p>
+                  </div>
+
+                  <div class="hypothesis-detail">
+                     <h4 class="detail-title">Como impacta minha trajetória</h4>
+                     <p class="detail-text">
+                        Aumenta a probabilidade de ser lembrado para vagas e indicações. Gera
+                        aprendizados práticos que livros e cursos não substituem — gestão de
+                        conflito, tomada de decisão sob pressão, colaboração assíncrona. Também
+                        fortalece o portfólio com projetos reais e colaborativos, que pesam muito
+                        mais em entrevistas do que projetos solo.
+                     </p>
+                  </div>
+
+                  <div class="hypothesis-detail">
+                     <h4 class="detail-title">Como pretendo começar</h4>
+                     <ul class="action-list">
+                        <li>Assumir uma tarefa de maior responsabilidade a cada sprint no Projeto Integrador — não apenas cumprir o mínimo.</li>
+                        <li>Publicar no LinkedIn ao menos 2 posts por mês sobre aprendizados técnicos e projetos em andamento.</li>
+                        <li>Participar de pelo menos 1 evento de tecnologia no semestre (meetups, hackathons, CESAR talks).</li>
+                        <li>Contribuir com um projeto open source ou criar e publicar um projeto pessoal no GitHub com documentação completa.</li>
+                     </ul>
+                  </div>
+               </div>
+
+               <div class="hypothesis-footer">
+                  <span class="hypothesis-tag">Soft Skill</span>
+                  <span class="hypothesis-tag">Longo Prazo</span>
+                  <span class="hypothesis-tag">Networking</span>
+                  <span class="hypothesis-tag">Protagonismo</span>
+               </div>
+            </article>
+
+         </section>
+
+         <!-- Menu de Navegação Local -->
+         <nav class="subpage-isolated-nav">
+            <h3>Menu Dossiê</h3>
             <ul>
                <li><a href="../index.html">Página Inicial</a></li>
                <li>
                   <a href="../01-perfil-profissional/index.html"
-                     >Página 1 — Perfil Profissional</a
+                     >01 — Perfil Profissional</a
                   >
                </li>
                <li>
                   <a href="../02-diagnostico-profissional/index.html"
-                     >Página 2 — Diagnóstico Profissional</a
+                     >02 — Diagnóstico Profissional</a
                   >
                </li>
                <li>
                   <a href="../03-contexto-empregabilidade/index.html"
-                     >Página 3 — Contexto e Empregabilidade</a
+                     >03 — Contexto e Empregabilidade</a
                   >
                </li>
                <li>
-                  <a href="../04-hipoteses-desenvolvimento/index.html"
-                     >Página 4 — Hipóteses de Desenvolvimento</a
+                  <a
+                     href="../04-hipoteses-desenvolvimento/index.html"
+                     class="active"
+                     >04 — Hipóteses de Desenvolvimento</a
                   >
                </li>
                <li>
                   <a href="../05-experimentacao-pratica/index.html"
-                     >Página 5 — Experimentação Prática</a
+                     >05 — Experimentação Prática</a
                   >
                </li>
                <li>
                   <a href="../06-evidencias-aprendizados/index.html"
-                     >Página 6 — Evidências e Aprendizados</a
+                     >06 — Evidências e Aprendizados</a
                   >
                </li>
                <li>
                   <a href="../07-projetos-percurso-academico/index.html"
-                     >Página 7 — Projetos e Percurso Acadêmico</a
+                     >07 — Percurso Acadêmico</a
                   >
                </li>
                <li>
                   <a href="../08-planejamento-pos-faculdade/index.html"
-                     >Página 8 — Planejamento Pós-Faculdade</a
+                     >08 — Planejamento Pós-Faculdade</a
                   >
                </li>
                <li>
                   <a href="../09-sintese-final/index.html"
-                     >Página 9 — Síntese Final</a
+                     >09 — Síntese Final</a
                   >
                </li>
             </ul>
          </nav>
       </main>
 
-      <footer>
-         <p>© 2026 Luis Facunde. Todos os direitos reservados.</p>
+      <!-- Rodapé visível apenas na visualização isolada -->
+      <footer class="section-isolated-footer">
+         <p>© 2026 Luis Facunde. Dossiê de Carreira Acadêmica e Profissional.</p>
       </footer>
    </body>
 </html>
