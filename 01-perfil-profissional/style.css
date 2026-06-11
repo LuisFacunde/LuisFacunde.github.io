@@ -427,7 +427,12 @@ body {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
     gap: 28px;
-    align-items: start;
+    align-items: stretch;
+}
+
+/* Variante para projetos com imagem mobile (21:9 portrait) */
+.project-grid.has-mobile-image {
+    grid-template-columns: 1fr 1fr;
 }
 
 .project-info {
@@ -574,6 +579,29 @@ body {
     transition: var(--transition);
 }
 
+/* Container com imagem mobile (screenshot de smartphone) */
+.image-placeholder-container.mobile-screenshot {
+    min-height: 420px;
+    padding: 0;
+    background: var(--bg-app);
+    border: 1px solid var(--border);
+}
+
+/* Container com screenshot desktop/landscape (terminal, app web) */
+.image-placeholder-container.desktop-screenshot {
+    min-height: 280px;
+    padding: 0;
+    background: #0d0d0d;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.image-placeholder-container.desktop-screenshot:hover {
+    transform: none;
+    box-shadow: var(--shadow-md);
+    border-color: var(--border);
+}
+
 .image-placeholder-container::before {
     content: '';
     position: absolute;
@@ -653,6 +681,42 @@ body {
     left: 0;
     border-radius: 10px;
     z-index: 3;
+}
+
+/* Screenshot mobile: contain sem corte, centralizado */
+.project-real-image.contain {
+    object-fit: contain;
+    background: var(--bg-app);
+}
+
+/* Crop alinhado à esquerda: preenche o container, corte no lado direito */
+.project-real-image.crop-left {
+    object-fit: cover;
+    object-position: left center;
+}
+
+/* Crop alinhado ao topo: preenche o container, corte na parte de baixo */
+.project-real-image.crop-top {
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* Ajustes no container quando a imagem real está ativa */
+.image-placeholder-container:has(.project-real-image) {
+    border: 1px solid var(--border);
+    background: var(--bg-app);
+    padding: 0;
+}
+
+.image-placeholder-container:has(.project-real-image) .placeholder-visual {
+    display: none;
+}
+
+/* Container mobile com imagem: remove borda tracejada e hover */
+.image-placeholder-container.mobile-screenshot:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--border);
 }
 
 /* ==========================================================================
