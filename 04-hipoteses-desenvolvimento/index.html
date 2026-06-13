@@ -3,76 +3,312 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Página 4 — Hipóteses de Desenvolvimento | Luis Facunde</title>
+      <title>Hipóteses de Desenvolvimento | Luis Facunde</title>
+      <meta
+         name="description"
+         content="Objetivos profissionais em curto, médio e longo prazo, plano de desenvolvimento com ações práticas e prazos, e hipóteses de carreira explorando possibilidades."
+      />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+         rel="stylesheet"
+      />
       <link rel="stylesheet" href="style.css" />
       <script src="script.js" defer></script>
    </head>
    <body>
-      <header>
-         <h1>Dossiê de Carreira — Luis Facunde</h1>
+      <!-- Cabeçalho visível apenas na visualização isolada -->
+      <header class="section-isolated-header">
+         <div class="isolated-logo">
+            <span class="logo-text">DOSSIÊ DE CARREIRA</span>
+            <span class="logo-subtext">Luis Henrique Facunde da Silva</span>
+         </div>
       </header>
 
-      <main>
-         <section>
-            <h2>Página 4 — Hipóteses de Desenvolvimento</h2>
-            <p>Esqueleto básico para a página de Hipóteses de Desenvolvimento.</p>
+      <main class="hypotheses-main-content">
+         <!-- Título Editorial -->
+         <!-- <div class="section-editorial-title">
+            <h1 class="editorial-heading">Hipóteses de Desenvolvimento</h1>
+            <p class="editorial-lead">
+               Objetivos profissionais em curto, médio e longo prazo, plano de
+               desenvolvimento com ações práticas e prazos, e hipóteses de
+               carreira explorando possibilidades.
+            </p>
+         </div> -->
+
+         <!-- =========================================================
+              SEÇÃO 1: OBJETIVOS PROFISSIONAIS POR PRAZO
+              ========================================================= -->
+         <section class="hyp-section" id="objetivos-por-prazo">
+            <h2 class="section-title">Objetivos Profissionais</h2>
+
+            <div class="timeline-grid">
+               <!-- Curto Prazo -->
+               <div class="timeline-card curto-prazo">
+                  <div class="timeline-card-label">
+                     <span class="timeline-period">Curto Prazo</span>
+                     <span class="timeline-range">0 — 6 meses</span>
+                  </div>
+                  <h3 class="timeline-card-title">
+                     Consolidar a base técnica e profissional
+                  </h3>
+                  <ul class="timeline-list">
+                     <li>
+                        Criar um cronograma e rotina de estudos semanais com
+                        blocos fixos por dia
+                     </li>
+                     <li>
+                        Iniciar meus estudos e construção de projetos em Java.
+                        Com objetivo de consolidar meus conhecimentos em POO e
+                        buscar vagas em grandes empresas
+                     </li>
+                     <li>
+                        Tirar proveito do escopo da iniciação científica e
+                        adquirir mais conhecimentos de machine learning e
+                        construção de aplicações mobile
+                     </li>
+                     <li>
+                        Me dedicar nos meus últimos meses de estágio e deixar um
+                        sistema relevante como legado
+                     </li>
+                     <li>
+                        Estruturar e organizar os meus projeto no GitHub para
+                        gerar o portfólio documentado profissionalmente.
+                     </li>
+                  </ul>
+               </div>
+
+               <!-- Médio Prazo -->
+               <div class="timeline-card medio-prazo">
+                  <div class="timeline-card-label">
+                     <span class="timeline-period">Médio Prazo</span>
+                     <span class="timeline-range">6 — 18 meses</span>
+                  </div>
+                  <h3 class="timeline-card-title">
+                     Conquistar a primeira vaga como Desenvolvedor Júnior
+                  </h3>
+                  <ul class="timeline-list">
+                     <li>
+                        Conseguir um contrato de trabalho como Desenvolvedor de
+                        Software Júnior (Web ou Mobile) após a formatura
+                     </li>
+                     <li>
+                        Desenvolver habilidades na utilização do Docker,
+                        conterinização e deploy em nuvem (AWS ou Azure) em
+                        projetos reais ou para de estudo
+                     </li>
+                     <li>
+                        Participar de eventos para conhecer novas pessoas e
+                        adquirir novos insights, ferramentas e formas de
+                        desenvolver
+                     </li>
+                     <li>
+                        Ter o uso mais corriqueiro e intensivo de ferramentas de
+                        organização. Busco ter maior prioridade para extender o
+                        uso de ferramentas que já utilizo como planner para
+                        organização de tarefas e agenda e Notion para
+                        arquivamente de ideias e conhecimentos.
+                     </li>
+                  </ul>
+               </div>
+
+               <!-- Longo Prazo -->
+               <div class="timeline-card longo-prazo">
+                  <div class="timeline-card-label">
+                     <span class="timeline-period">Longo Prazo</span>
+                     <span class="timeline-range">2 — 5 anos</span>
+                  </div>
+                  <h3 class="timeline-card-title">
+                     Evoluir para um perfil sólido
+                  </h3>
+                  <ul class="timeline-list">
+                     <li>
+                        Alcançar o nível Pleno como desenvolvedor com domínio da stack que estiver trabalhando
+                     </li>
+                     <li>
+                        Ter capacidade de auxiliar e orientar desenvolvedores mais juniors em processos de desenvolvimento
+                     </li>
+                     <li>
+                        Construir projetos com maior organização e conhecimento em padrões de projetos em consolidação e boas práticas
+                     </li>
+                     <li>
+                        Ter uma boa fluência de inglês para melhorar o meu aprendizado com novos cursos e conhecer pessoas que atuam no mercado internacional
+                     </li>
+                  </ul>
+               </div>
+            </div>
          </section>
 
-         <nav>
-            <h3>Navegação</h3>
+         <!-- =========================================================
+              SEÇÃO 2: PLANO DE DESENVOLVIMENTO
+              ========================================================= -->
+         <section class="hyp-section" id="plano-desenvolvimento">
+            <h2 class="section-title">Plano de Desenvolvimento</h2>
+
+            <div class="plan-grid">
+               <!-- Área 1: Habilidades Técnicas -->
+               <div class="plan-card">
+                  <div class="plan-card-header">
+                     <span class="plan-area-label">Técnico</span>
+                  </div>
+                  <div class="plan-actions">
+                     <div class="plan-action-item">
+                        <div class="action-meta">
+                           <span class="action-tag">Docker</span>
+                           <span class="action-deadline">3 meses</span>
+                        </div>
+                        <p class="action-description">
+                           Criar ao menos um projeto pessoal que utilize Docker
+                           e Docker Compose.
+                        </p>
+                     </div>
+                     <div class="plan-action-item">
+                        <div class="action-meta">
+                           <span class="action-tag">Java</span>
+                           <span class="action-deadline">6 meses</span>
+                        </div>
+                        <p class="action-description">
+                           Criar uma plano de estudos e fazer um curso para entendimento da linguagem. 
+                           Criar ao menos um projeto utilizando o Java
+                        </p>
+                     </div>
+                     <div class="plan-action-item">
+                        <div class="action-meta">
+                           <span class="action-tag">Algoritmos e Estrutura de dados</span>
+                           <span class="action-deadline">6 meses</span>
+                        </div>
+                        <p class="action-description">
+                           Ler o livro "Entendendo Algoritmos" e colocar em prática os conhecimentos aprendidos durante a leitura. 
+                           Estudar de uma forma diferente e mais ativa com livros.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Área 2: Comportamental / Soft Skills -->
+               <div class="plan-card">
+                  <div class="plan-card-header">
+                     <span class="plan-area-label">Comportamental</span>
+                  </div>
+                  <div class="plan-actions">
+                     <div class="plan-action-item">
+                        <div class="action-meta">
+                           <span class="action-tag">Apresentações</span>
+                           <span class="action-deadline">Imediato</span>
+                        </div>
+                        <p class="action-description">
+                           Assumir o papel de porta-voz técnico na próxima
+                           apresentações do Projeto Integrador. Preparar slides
+                           e script para a apresentação
+                        </p>
+                     </div>
+                     <div class="plan-action-item">
+                        <div class="action-meta">
+                           <span class="action-tag">LinkedIn</span>
+                           <span class="action-deadline">Recorrente</span>
+                        </div>
+                        <p class="action-description">
+                           Publicar 1 posts técnico por mês sobre aprendizados
+                           do estágio e da faculdade. Seguindo o formato: problema
+                           encontrado → abordagem → resultado
+                        </p>
+                     </div>
+                     <div class="plan-action-item">
+                        <div class="action-meta">
+                           <span class="action-tag">Leitura</span>
+                           <span class="action-deadline">6 meses</span>
+                        </div>
+                        <p class="action-description">
+                           Ler pelo menos 2 livros durante os últimos meses do ano para criar um novo hábito para a vida
+                        </p>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Área 3: Organização Pessoal -->
+               <div class="plan-card">
+                  <div class="plan-card-header">
+                     <span class="plan-area-label">Organização</span>
+                  </div>
+                  <div class="plan-actions">
+                     <div class="plan-action-item">
+                        <div class="action-meta">
+                           <span class="action-tag">Rotina de Estudos</span>
+                           <span class="action-deadline">Esta semana</span>
+                        </div>
+                        <p class="action-description">
+                           Definir 3 blocos semanais fixos de 2h para estudo
+                           técnico (ex: terça, quinta e sábado de manhã). Usar o
+                           Notion para registrar o progresso semanal.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- Menu de Navegação Local -->
+         <nav class="subpage-isolated-nav">
+            <h3>Menu Dossiê</h3>
             <ul>
                <li><a href="../index.html">Página Inicial</a></li>
                <li>
                   <a href="../01-perfil-profissional/index.html"
-                     >Página 1 — Perfil Profissional</a
+                     >01 — Perfil Profissional</a
                   >
                </li>
                <li>
                   <a href="../02-diagnostico-profissional/index.html"
-                     >Página 2 — Diagnóstico Profissional</a
+                     >02 — Diagnóstico Profissional</a
                   >
                </li>
                <li>
                   <a href="../03-contexto-empregabilidade/index.html"
-                     >Página 3 — Contexto e Empregabilidade</a
+                     >03 — Contexto e Empregabilidade</a
                   >
                </li>
                <li>
-                  <a href="../04-hipoteses-desenvolvimento/index.html"
-                     >Página 4 — Hipóteses de Desenvolvimento</a
+                  <a
+                     href="../04-hipoteses-desenvolvimento/index.html"
+                     class="active"
+                     >04 — Hipóteses de Desenvolvimento</a
                   >
                </li>
                <li>
                   <a href="../05-experimentacao-pratica/index.html"
-                     >Página 5 — Experimentação Prática</a
+                     >05 — Experimentação Prática</a
                   >
                </li>
                <li>
                   <a href="../06-evidencias-aprendizados/index.html"
-                     >Página 6 — Evidências e Aprendizados</a
+                     >06 — Evidências e Aprendizados</a
                   >
                </li>
                <li>
                   <a href="../07-projetos-percurso-academico/index.html"
-                     >Página 7 — Projetos e Percurso Acadêmico</a
+                     >07 — Percurso Acadêmico</a
                   >
                </li>
                <li>
                   <a href="../08-planejamento-pos-faculdade/index.html"
-                     >Página 8 — Planejamento Pós-Faculdade</a
+                     >08 — Planejamento Pós-Faculdade</a
                   >
                </li>
                <li>
                   <a href="../09-sintese-final/index.html"
-                     >Página 9 — Síntese Final</a
+                     >09 — Síntese Final</a
                   >
                </li>
             </ul>
          </nav>
       </main>
 
-      <footer>
-         <p>© 2026 Luis Facunde. Todos os direitos reservados.</p>
+      <!-- Rodapé visível apenas na visualização isolada -->
+      <footer class="section-isolated-footer">
+         <p>
+            © 2026 Luis Facunde. Dossiê de Carreira Acadêmica e Profissional.
+         </p>
       </footer>
    </body>
 </html>

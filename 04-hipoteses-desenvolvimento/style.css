@@ -1,1 +1,966 @@
-/* Estilos locais para Página 4 - Hipóteses de Desenvolvimento */
+/* ==========================================================================
+   VARIÁVEIS E CONFIGURAÇÃO DO DESIGN SYSTEM
+   ========================================================================== */
+:root {
+    --bg-app: #f5f7fa;
+    --bg-card: #ffffff;
+    --text-main: #1a1f26;
+    --text-muted: #5c6470;
+    --accent: #e0533c;
+    --accent-glow: rgba(224, 83, 60, 0.15);
+    --accent-light: #fff0ed;
+    --border: #e8ecef;
+    --border-hover: rgba(224, 83, 60, 0.3);
+
+    --font-head: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-body: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 8px 24px rgba(26, 31, 38, 0.06);
+    --shadow-lg: 0 16px 48px rgba(26, 31, 38, 0.1);
+
+    --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    --border-radius: 16px;
+
+    /* Cores semânticas dos cards de identidade */
+    --color-vision: #1565c0;
+    --bg-vision: #f0f7fc;
+    --border-vision: rgba(21, 101, 192, 0.15);
+
+    --color-interests: #2e7d32;
+    --bg-interests: #f1f8f3;
+    --border-interests: rgba(46, 125, 50, 0.15);
+
+    --color-barriers: #d32f2f;
+    --bg-barriers: #fdf5f5;
+    --border-barriers: rgba(211, 47, 47, 0.15);
+
+    --color-skills: #6a1b9a;
+    --bg-skills: #f8f3fd;
+    --border-skills: rgba(106, 27, 154, 0.15);
+}
+
+/* Reset Geral */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   VISUALIZAÇÃO ISOLADA
+   ========================================================================== */
+.section-isolated-header {
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border);
+    padding: 24px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.isolated-logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.isolated-logo .logo-text {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: 0.08em;
+    color: var(--text-main);
+}
+
+.isolated-logo .logo-subtext {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+.section-isolated-footer {
+    border-top: 1px solid var(--border);
+    padding: 30px 0;
+    margin-top: 60px;
+    text-align: center;
+    background-color: var(--bg-app);
+}
+
+.section-isolated-footer p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* Menu de Navegação na Visão Isolada */
+.subpage-isolated-nav {
+    margin-top: 60px;
+    padding: 30px;
+    background-color: var(--bg-app);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border);
+}
+
+.subpage-isolated-nav h3 {
+    font-family: var(--font-head);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-main);
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.subpage-isolated-nav ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.subpage-isolated-nav a {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    display: block;
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+}
+
+.subpage-isolated-nav a:hover,
+.subpage-isolated-nav a.active {
+    color: var(--accent);
+    background-color: var(--accent-light);
+    border-color: rgba(224, 83, 60, 0.2);
+}
+
+/* ==========================================================================
+   CONTEÚDO PRINCIPAL
+   ========================================================================== */
+.hypotheses-main-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 0 60px 0;
+}
+
+/* Título Editorial */
+.section-editorial-title {
+    margin-bottom: 40px;
+    position: relative;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 24px;
+}
+
+.editorial-badge {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.editorial-heading {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 2.2rem;
+    color: var(--text-main);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+.editorial-lead {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 800px;
+}
+
+/* Seções internas */
+.hyp-section {
+    margin-bottom: 56px;
+}
+
+.section-title {
+    font-family: var(--font-head);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+}
+
+.section-lead {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+
+/* ==========================================================================
+   SEÇÃO 1: TIMELINE DE OBJETIVOS POR PRAZO
+   ========================================================================== */
+.timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.timeline-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
+    border-top: 4px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: var(--transition);
+}
+
+.timeline-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+
+.timeline-card.curto-prazo  { border-top-color: #2e7d32; }
+.timeline-card.medio-prazo  { border-top-color: var(--accent); }
+.timeline-card.longo-prazo  { border-top-color: #1565c0; }
+
+.timeline-card-label {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.timeline-period {
+    font-family: var(--font-head);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.curto-prazo  .timeline-period { color: #2e7d32; }
+.medio-prazo  .timeline-period { color: var(--accent); }
+.longo-prazo  .timeline-period { color: #1565c0; }
+
+.timeline-range {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.timeline-card-title {
+    font-family: var(--font-head);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.3;
+}
+
+.timeline-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.timeline-list li {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    padding-left: 16px;
+    position: relative;
+}
+
+.timeline-list li::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 2px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+
+.curto-prazo .timeline-list li::before  { background-color: #2e7d32; }
+.medio-prazo .timeline-list li::before  { background-color: var(--accent); }
+.longo-prazo .timeline-list li::before  { background-color: #1565c0; }
+
+/* ==========================================================================
+   SEÇÃO 2: PLANO DE DESENVOLVIMENTO
+   ========================================================================== */
+.plan-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.plan-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: var(--transition);
+}
+
+.plan-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+}
+
+/* Card largo que ocupa as 2 colunas */
+.plan-card.plan-card-wide {
+    grid-column: span 2;
+}
+
+.plan-card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 14px;
+}
+
+.plan-area-label {
+    font-family: var(--font-head);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+}
+
+.plan-card-title {
+    font-family: var(--font-head);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.25;
+}
+
+.plan-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.plan-actions-horizontal {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.plan-action-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 14px;
+    background-color: var(--bg-app);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.plan-action-item:hover {
+    border-color: rgba(224, 83, 60, 0.25);
+    background-color: var(--accent-light);
+}
+
+.action-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.action-tag {
+    font-family: var(--font-head);
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.action-deadline {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background-color: var(--bg-card);
+    padding: 2px 8px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.action-description {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   CARDS DE HIPÓTESES DE CARREIRA
+   ========================================================================== */
+.hypothesis-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    padding: 32px;
+    margin-bottom: 28px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.hypothesis-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--accent) 0%, rgba(224, 83, 60, 0.3) 100%);
+}
+
+.hypothesis-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+}
+
+.hypothesis-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.hypothesis-number {
+    font-family: var(--font-head);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    background-color: var(--accent-light);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: -0.02em;
+}
+
+.hypothesis-title-block {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hypothesis-label {
+    font-family: var(--font-head);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+}
+
+.hypothesis-title {
+    font-family: var(--font-head);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.25;
+}
+
+.hypothesis-body {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-bottom: 24px;
+}
+
+.hypothesis-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.detail-title {
+    font-family: var(--font-head);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-main);
+    margin-bottom: 6px;
+}
+
+.detail-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.action-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.action-list li {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    padding-left: 20px;
+    position: relative;
+}
+
+.action-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.hypothesis-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.hypothesis-tag {
+    font-size: 0.73rem;
+    font-weight: 600;
+    font-family: var(--font-head);
+    padding: 4px 12px;
+    border-radius: 30px;
+    background-color: var(--bg-app);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+    transition: var(--transition);
+}
+
+.hypothesis-tag:hover {
+    background-color: var(--accent-light);
+    border-color: rgba(224, 83, 60, 0.2);
+    color: var(--accent);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE
+   ========================================================================== */
+@media (max-width: 900px) {
+    .timeline-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .plan-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .plan-card.plan-card-wide {
+        grid-column: span 1;
+    }
+
+    .plan-actions-horizontal {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-isolated-header {
+        padding: 20px;
+    }
+
+    .editorial-heading {
+        font-size: 1.8rem;
+    }
+
+    .hypothesis-card {
+        padding: 24px;
+    }
+
+    .hypothesis-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hypothesis-number {
+        width: 44px;
+        height: 44px;
+        font-size: 1.4rem;
+    }
+
+    .hypothesis-title {
+        font-size: 1.15rem;
+    }
+}
+
+.identity-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
+    border-left: 5px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition: var(--transition);
+}
+
+.identity-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+
+/* Variantes de cor por card */
+.identity-card.vision {
+    background-color: var(--bg-vision);
+    border-color: var(--border-vision);
+    border-left-color: var(--color-vision);
+}
+.identity-card.vision:hover { box-shadow: 0 8px 24px rgba(21, 101, 192, 0.08); }
+
+.identity-card.interests {
+    background-color: var(--bg-interests);
+    border-color: var(--border-interests);
+    border-left-color: var(--color-interests);
+}
+.identity-card.interests:hover { box-shadow: 0 8px 24px rgba(46, 125, 50, 0.08); }
+
+.identity-card.barriers {
+    background-color: var(--bg-barriers);
+    border-color: var(--border-barriers);
+    border-left-color: var(--color-barriers);
+}
+.identity-card.barriers:hover { box-shadow: 0 8px 24px rgba(211, 47, 47, 0.08); }
+
+.identity-card.skills-needed {
+    background-color: var(--bg-skills);
+    border-color: var(--border-skills);
+    border-left-color: var(--color-skills);
+}
+.identity-card.skills-needed:hover { box-shadow: 0 8px 24px rgba(106, 27, 154, 0.08); }
+
+/* Cabeçalho dos cards de identidade */
+.identity-card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.identity-card-title {
+    font-family: var(--font-head);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.3;
+}
+
+.vision .identity-card-title { color: var(--color-vision); }
+.interests .identity-card-title { color: var(--color-interests); }
+.barriers .identity-card-title { color: var(--color-barriers); }
+.skills-needed .identity-card-title { color: var(--color-skills); }
+
+.identity-card-text {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.identity-card-text strong {
+    color: var(--text-main);
+}
+
+/* Lista interna dos cards de identidade */
+.identity-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.identity-list li {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    padding-left: 16px;
+    position: relative;
+}
+
+.identity-list li::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 2px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: currentColor;
+    opacity: 0.5;
+}
+
+.vision .identity-list li::before { background-color: var(--color-vision); opacity: 0.6; }
+.interests .identity-list li::before { background-color: var(--color-interests); opacity: 0.6; }
+.barriers .identity-list li::before { background-color: var(--color-barriers); opacity: 0.6; }
+.skills-needed .identity-list li::before { background-color: var(--color-skills); opacity: 0.6; }
+
+.identity-list li strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   CARDS DE HIPÓTESES
+   ========================================================================== */
+.hypothesis-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    padding: 32px;
+    margin-bottom: 28px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.hypothesis-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--accent) 0%, rgba(224, 83, 60, 0.3) 100%);
+}
+
+.hypothesis-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+}
+
+/* Cabeçalho da hipótese */
+.hypothesis-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.hypothesis-number {
+    font-family: var(--font-head);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    background-color: var(--accent-light);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: -0.02em;
+}
+
+.hypothesis-title-block {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hypothesis-label {
+    font-family: var(--font-head);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+}
+
+.hypothesis-title {
+    font-family: var(--font-head);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.25;
+}
+
+/* Corpo da hipótese */
+.hypothesis-body {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-bottom: 24px;
+}
+
+.hypothesis-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.detail-title {
+    font-family: var(--font-head);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-main);
+    margin-bottom: 6px;
+}
+
+.detail-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* Lista de ações */
+.action-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.action-list li {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    padding-left: 20px;
+    position: relative;
+}
+
+.action-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+/* Rodapé da hipótese com tags */
+.hypothesis-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.hypothesis-tag {
+    font-size: 0.73rem;
+    font-weight: 600;
+    font-family: var(--font-head);
+    padding: 4px 12px;
+    border-radius: 30px;
+    background-color: var(--bg-app);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+    transition: var(--transition);
+}
+
+.hypothesis-tag:hover {
+    background-color: var(--accent-light);
+    border-color: rgba(224, 83, 60, 0.2);
+    color: var(--accent);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE
+   ========================================================================== */
+@media (max-width: 900px) {
+    .identity-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-isolated-header {
+        padding: 20px;
+    }
+
+    .editorial-heading {
+        font-size: 1.8rem;
+    }
+
+    .hypothesis-card {
+        padding: 24px;
+    }
+
+    .hypothesis-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hypothesis-number {
+        width: 44px;
+        height: 44px;
+        font-size: 1.4rem;
+    }
+
+    .hypothesis-title {
+        font-size: 1.15rem;
+    }
+
+    .hypothesis-detail {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .identity-card {
+        padding: 20px;
+    }
+}

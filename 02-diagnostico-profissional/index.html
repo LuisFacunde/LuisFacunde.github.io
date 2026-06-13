@@ -1,291 +1,303 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Diagnóstico Profissional | Luis Facunde</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <!-- Cabeçalho visível apenas na visualização isolada -->
-    <header class="section-isolated-header">
-      <div class="isolated-logo">
-        <span class="logo-text">DOSSIÊ DE CARREIRA</span>
-        <span class="logo-subtext">Luis Henrique Facunde da Silva</span>
-      </div>
-    </header>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Diagnóstico Profissional | Luis Facunde</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="style.css" />
+      <script src="script.js" defer></script>
+   </head>
+   <body>
+      <!-- Cabeçalho visível apenas na visualização isolada -->
+      <header class="section-isolated-header">
+         <div class="isolated-logo">
+            <span class="logo-text">DOSSIÊ DE CARREIRA</span>
+            <span class="logo-subtext">Luis Henrique Facunde da Silva</span>
+         </div>
+      </header>
 
     <main class="diagnostic-main-content">
       <!-- Título de Seção estilo Editorial -->
       <div class="section-editorial-title">
         <h1 class="editorial-heading">Diagnóstico Profissional</h1>
       </div>
+         <!-- Card de Destaque: Como me vejo hoje (Hero Block) -->
+         <section class="diagnostic-hero-card">
+            <div class="hero-card-content">
+               <h2 class="hero-title">Como me vejo hoje</h2>
+               <p class="hero-text">
+                  Atualmente, me vejo como uma pessoa com maior amadurecimento
+                  técnico, uma maior resiliência analítica voltada para
+                  desenvolvimento, análise de requisitos e organização e
+                  definição de papéis em equipes. Além disso, venho tendo
+                  contato com tecnologias atuais que envolve o ecosistema mobile
+                  e Inteligência artificial.
+               </p>
+               <p class="hero-text">
+                  Como meu foco atualmente está na utilização de PL/SQL, do ERP
+                  SoulMV e desenvolvimento com React e Node.js quando é
+                  necessário o desenvolvimento de uma solução interna. Eu tenho
+                  me aberto mais para leitura do problema e do que é necessário
+                  para resolve-lo. Assim, tendo uma mentalidade mais voltada ao
+                  problema que preciso resolver e de que forma poderei
+                  resolvê-lo utilizando o que está ao meu alcance.
+               </p>
+            </div>
+         </section>
 
-      <!-- Card de Destaque: Como me vejo hoje (Hero Block) -->
-      <section class="diagnostic-hero-card">
-        <div class="hero-card-content">
-          <h2 class="hero-title">Como me vejo hoje</h2>
-          <p class="hero-text">
-            Atualmente, me vejo como uma pessoa com maior amadurecimento
-            técnico, uma maior resiliência analítica voltada para
-            desenvolvimento, análise de requisitos e organização e definição de
-            papéis em equipes. Além disso, venho tendo contato com tecnologias
-            atuais que envolve o ecosistema mobile e Inteligência artificial.
-          </p>
-          <p class="hero-text">
-            Como meu foco atualmente está na utilização de PL/SQL, do ERP SoulMV
-            e desenvolvimento com React e Node.js quando é necessário o
-            desenvolvimento de uma solução interna. Eu tenho me aberto mais para
-            leitura do problema e do que é necessário para resolve-lo. Assim,
-            tendo uma mentalidade mais voltada ao problema que preciso resolver
-            e de que forma poderei resolvê-lo utilizando o que está ao meu
-            alcance.
-          </p>
-        </div>
-      </section>
+         <!-- Painel de Quadrantes de Diagnóstico (Grid de 4 Fatores) -->
+         <div class="diagnostic-grid">
+            <!-- 1. Forças (O que já faz bem) -->
+            <section class="diagnostic-quadrant-card strength">
+               <div class="quadrant-header">
+                  <span class="quadrant-icon">
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-check-circle"
+                     >
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                        <polyline points="22 4 12 14.01 9 11.01" />
+                     </svg>
+                  </span>
+                  <h3 class="quadrant-title">O que já faço bem</h3>
+               </div>
+               <div class="quadrant-content">
+                  <ul class="quadrant-list">
+                     <li>
+                        <strong>Consultas e estudo de Banco de Dados:</strong>
+                        Desenvolvimento de consultas (querys), otimização de
+                        rotinas e utilização e manutenção de procedures e
+                        triggers utilizando Oracle PL/SQL.
+                     </li>
+                     <li>
+                        <strong>Adaptabilidade agil:</strong> me apto de forma
+                        agil a tecnologias a frameworks. A exemplo do React
+                        Native no desenvolvimento do projeto AppCardio.
+                     </li>
+                     <li>
+                        <strong>Análise de requisitos:</strong> tenho tido maior
+                        facilidade analítica para interpretaR fluxos e
+                        traduzi-los em modelagens e código.
+                     </li>
+                  </ul>
+               </div>
+            </section>
 
-      <!-- Painel de Quadrantes de Diagnóstico (Grid de 4 Fatores) -->
-      <div class="diagnostic-grid">
-        <!-- 1. Forças (O que já faz bem) -->
-        <section class="diagnostic-quadrant-card strength">
-          <div class="quadrant-header">
-            <span class="quadrant-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-check-circle"
-              >
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                <polyline points="22 4 12 14.01 9 11.01" />
-              </svg>
-            </span>
-            <h3 class="quadrant-title">O que já faço bem</h3>
-          </div>
-          <div class="quadrant-content">
-            <ul class="quadrant-list">
-              <li>
-                <strong>Consultas e estudo de Banco de Dados:</strong>
-                Desenvolvimento de consultas (querys), otimização de rotinas e
-                utilização e manutenção de procedures e triggers utilizando
-                Oracle PL/SQL.
-              </li>
-              <li>
-                <strong>Adaptabilidade agil:</strong> me apto de forma agil a
-                tecnologias a frameworks. A exemplo do React Native no
-                desenvolvimento do projeto AppCardio.
-              </li>
-              <li>
-                <strong>Análise de requisitos:</strong> tenho tido maior
-                facilidade analítica para interpretaR fluxos e traduzi-los em
-                modelagens e código.
-              </li>
+            <!-- 2. Dificuldades (Maiores dificuldades) -->
+            <section class="diagnostic-quadrant-card difficulty">
+               <div class="quadrant-header">
+                  <span class="quadrant-icon">
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-alert-triangle"
+                     >
+                        <path
+                           d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"
+                        />
+                        <line x1="12" y1="9" x2="12" y2="13" />
+                        <line x1="12" y1="17" x2="12.01" y2="17" />
+                     </svg>
+                  </span>
+                  <h3 class="quadrant-title">Maiores dificuldades</h3>
+               </div>
+               <div class="quadrant-content">
+                  <ul class="quadrant-list">
+                     <li>
+                        <strong>Sistemas Legados de Grande Porte:</strong>
+                        Navegar por relacionamentos complexos e não documentados
+                        em schemas gigantescos nas semanas iniciais.
+                     </li>
+                     <li>
+                        <strong>Transição Rápida de Contexto:</strong> Alternar
+                        o foco de forma eficiente entre demandas. Definir a
+                        prinvipal prioridade quando as demandas não possuem um
+                        prazo especifico.
+                     </li>
+                     <li>
+                        <strong>Cobrar atividade de pessoas:</strong> Tenho
+                        dificuldade de cobrar atividades que não foram feitas ou
+                        estão com prazo apertado.
+                     </li>
+                  </ul>
+               </div>
+            </section>
+
+            <!-- 3. Colaboração em Grupo (Como se comporta em grupo) -->
+            <section class="diagnostic-quadrant-card group-behavior">
+               <div class="quadrant-header">
+                  <span class="quadrant-icon">
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-users"
+                     >
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                     </svg>
+                  </span>
+                  <h3 class="quadrant-title">Como me comporto em grupo</h3>
+               </div>
+               <div class="quadrant-content">
+                  <p class="quadrant-paragraph">
+                     Em contexto de projetos de inicio eu tento entender a
+                     maneira que cada pessoa trabalho, se comunica e no que ela
+                     pode contribuir. Eu tento me comunicar da forma mais
+                     acertiva possivel para que eu possa entender melhor o
+                     projeto e contribuir da melhor forma. Costumo comunicar
+                     bastante a maneira estou construindo ou melhorando minha
+                     parte do projeto, para que a equipe esteja ciente das
+                     minhas contribuições.
+                  </p>
+                  <p class="quadrant-paragraph">
+                     Ademais, costumo também descontrair com o grupo, bate-papo
+                     e conversar sobre coisas externas ao projeto para quebrar o
+                     gelo e tornar a minha comunicação com o grupo mais leve e
+                     descontraida.
+                  </p>
+               </div>
+            </section>
+
+            <!-- 4. Melhorias (O que precisa melhorar) -->
+            <section class="diagnostic-quadrant-card improvement">
+               <div class="quadrant-header">
+                  <span class="quadrant-icon">
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-trending-up"
+                     >
+                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                        <polyline points="17 6 23 6 23 12" />
+                     </svg>
+                  </span>
+                  <h3 class="quadrant-title">O que preciso melhorar</h3>
+               </div>
+               <div class="quadrant-content">
+                  <ul class="quadrant-list">
+                     <li>
+                        <strong>Infraestrutura & DevOps:</strong> Entender como
+                        utilizar conteinerização (Docker), aprender e implmentar
+                        CI/CD para deploys e conhecer mais como integrar
+                        serviços em nuvem (AWS/AZURE) para ter melhor contexto
+                        em aplicações modernas.
+                     </li>
+                     <li>
+                        <strong>Postura e Tom de fala:</strong> Preciso melhorar
+                        a minha postura e tom de fala para ser mais convicente e
+                        assertivo nas argumentações quando em reuniões em
+                        equipes ou entrevistas ou dinâmicas de grupo e seleções
+                        de emprego.
+                     </li>
+                     <li>
+                        <strong>Padrões de Projeto (Design Patterns):</strong>
+                        Aprofundar no estudo de padrões de software na prática
+                        para entender arquiteturas de backend cada vez mais
+                        robustas.
+                     </li>
+                  </ul>
+               </div>
+            </section>
+         </div>
+
+         <!-- Menu de Navegação Local (Visível isoladamente e escondido no iframe principal) -->
+         <nav class="subpage-isolated-nav">
+            <h3>Menu Dossiê</h3>
+            <ul>
+               <li><a href="../index.html">Página Inicial</a></li>
+               <li>
+                  <a href="../01-perfil-profissional/index.html"
+                     >01 — Perfil Profissional</a
+                  >
+               </li>
+               <li>
+                  <a
+                     href="../02-diagnostico-profissional/index.html"
+                     class="active"
+                     >02 — Diagnóstico Profissional</a
+                  >
+               </li>
+               <li>
+                  <a href="../03-contexto-empregabilidade/index.html"
+                     >03 — Contexto e Empregabilidade</a
+                  >
+               </li>
+               <li>
+                  <a href="../04-hipoteses-desenvolvimento/index.html"
+                     >04 — Hipóteses de Desenvolvimento</a
+                  >
+               </li>
+               <li>
+                  <a href="../05-experimentacao-pratica/index.html"
+                     >05 — Experimentação Prática</a
+                  >
+               </li>
+               <li>
+                  <a href="../06-evidencias-aprendizados/index.html"
+                     >06 — Evidências e Aprendizados</a
+                  >
+               </li>
+               <li>
+                  <a href="../07-projetos-percurso-academico/index.html"
+                     >07 — Percurso Acadêmico</a
+                  >
+               </li>
+               <li>
+                  <a href="../08-planejamento-pos-faculdade/index.html"
+                     >08 — Planejamento Pós-Faculdade</a
+                  >
+               </li>
+               <li>
+                  <a href="../09-sintese-final/index.html"
+                     >09 — Síntese Final</a
+                  >
+               </li>
             </ul>
-          </div>
-        </section>
+         </nav>
+      </main>
 
-        <!-- 2. Dificuldades (Maiores dificuldades) -->
-        <section class="diagnostic-quadrant-card difficulty">
-          <div class="quadrant-header">
-            <span class="quadrant-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-alert-triangle"
-              >
-                <path
-                  d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"
-                />
-                <line x1="12" y1="9" x2="12" y2="13" />
-                <line x1="12" y1="17" x2="12.01" y2="17" />
-              </svg>
-            </span>
-            <h3 class="quadrant-title">Maiores dificuldades</h3>
-          </div>
-          <div class="quadrant-content">
-            <ul class="quadrant-list">
-              <li>
-                <strong>Sistemas Legados de Grande Porte:</strong> Navegar por
-                relacionamentos complexos e não documentados em schemas
-                gigantescos nas semanas iniciais.
-              </li>
-              <li>
-                <strong>Transição Rápida de Contexto:</strong> Alternar o foco
-                de forma eficiente entre demandas. Definir a prinvipal
-                prioridade quando as demandas não possuem um prazo especifico.
-              </li>
-              <li>
-                <strong>Cobrar atividade de pessoas:</strong> Tenho dificuldade
-                de cobrar atividades que não foram feitas ou estão com prazo
-                apertado.
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- 3. Colaboração em Grupo (Como se comporta em grupo) -->
-        <section class="diagnostic-quadrant-card group-behavior">
-          <div class="quadrant-header">
-            <span class="quadrant-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-users"
-              >
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                <circle cx="9" cy="7" r="4" />
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-              </svg>
-            </span>
-            <h3 class="quadrant-title">Como me comporto em grupo</h3>
-          </div>
-          <div class="quadrant-content">
-            <p class="quadrant-paragraph">
-              Em contexto de projetos de inicio eu tento entender a maneira que
-              cada pessoa trabalho, se comunica e no que ela pode contribuir. Eu
-              tento me comunicar da forma mais acertiva possivel para que eu
-              possa entender melhor o projeto e contribuir da melhor forma.
-              Costumo comunicar bastante a maneira estou construindo ou
-              melhorando minha parte do projeto, para que a equipe esteja ciente
-              das minhas contribuições.
-            </p>
-            <p class="quadrant-paragraph">
-              Ademais, costumo também descontrair com o grupo, bate-papo e
-              conversar sobre coisas externas ao projeto para quebrar o gelo e
-              tornar a minha comunicação com o grupo mais leve e descontraida.
-            </p>
-          </div>
-        </section>
-
-        <!-- 4. Melhorias (O que precisa melhorar) -->
-        <section class="diagnostic-quadrant-card improvement">
-          <div class="quadrant-header">
-            <span class="quadrant-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-trending-up"
-              >
-                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
-                <polyline points="17 6 23 6 23 12" />
-              </svg>
-            </span>
-            <h3 class="quadrant-title">O que preciso melhorar</h3>
-          </div>
-          <div class="quadrant-content">
-            <ul class="quadrant-list">
-              <li>
-                <strong>Infraestrutura & DevOps:</strong> Entender como utilizar
-                conteinerização (Docker), aprender e implmentar CI/CD para
-                deploys e conhecer mais como integrar serviços em nuvem
-                (AWS/AZURE) para ter melhor contexto em aplicações modernas.
-              </li>
-              <li>
-                <strong>Postura e Tom de fala:</strong> Preciso melhorar a minha
-                postura e tom de fala para ser mais convicente e assertivo nas
-                argumentações quando em reuniões em equipes ou entrevistas ou
-                dinâmicas de grupo e seleções de emprego.
-              </li>
-              <li>
-                <strong>Padrões de Projeto (Design Patterns):</strong>
-                Aprofundar no estudo de padrões de software na prática para
-                entender arquiteturas de backend cada vez mais robustas.
-              </li>
-            </ul>
-          </div>
-        </section>
-      </div>
-
-      <!-- Menu de Navegação Local (Visível isoladamente e escondido no iframe principal) -->
-      <nav class="subpage-isolated-nav">
-        <h3>Menu Dossiê</h3>
-        <ul>
-          <li><a href="../index.html">Página Inicial</a></li>
-          <li>
-            <a href="../01-perfil-profissional/index.html"
-              >01 — Perfil Profissional</a
-            >
-          </li>
-          <li>
-            <a href="../02-diagnostico-profissional/index.html" class="active"
-              >02 — Diagnóstico Profissional</a
-            >
-          </li>
-          <li>
-            <a href="../03-contexto-empregabilidade/index.html"
-              >03 — Contexto e Empregabilidade</a
-            >
-          </li>
-          <li>
-            <a href="../04-hipoteses-desenvolvimento/index.html"
-              >04 — Hipóteses de Desenvolvimento</a
-            >
-          </li>
-          <li>
-            <a href="../05-experimentacao-pratica/index.html"
-              >05 — Experimentação Prática</a
-            >
-          </li>
-          <li>
-            <a href="../06-evidencias-aprendizados/index.html"
-              >06 — Evidências e Aprendizados</a
-            >
-          </li>
-          <li>
-            <a href="../07-projetos-percurso-academico/index.html"
-              >07 — Percurso Acadêmico</a
-            >
-          </li>
-          <li>
-            <a href="../08-planejamento-pos-faculdade/index.html"
-              >08 — Planejamento Pós-Faculdade</a
-            >
-          </li>
-          <li>
-            <a href="../09-sintese-final/index.html">09 — Síntese Final</a>
-          </li>
-        </ul>
-      </nav>
-    </main>
-
-    <!-- Rodapé visível apenas na visualização isolada -->
-    <footer class="section-isolated-footer">
-      <p>© 2026 Luis Facunde. Dossiê de Carreira Acadêmica e Profissional.</p>
-    </footer>
-  </body>
+      <!-- Rodapé visível apenas na visualização isolada -->
+      <footer class="section-isolated-footer">
+         <p>
+            © 2026 Luis Facunde. Dossiê de Carreira Acadêmica e Profissional.
+         </p>
+      </footer>
+   </body>
 </html>
