@@ -3,76 +3,146 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Página 9 — Síntese Final | Luis Facunde</title>
+      <title>Síntese Final | Luis Facunde</title>
+      <meta
+         name="description"
+         content="Comparação entre o início e o final do semestre letivo e a carta profissional respondendo a pergunta: Que profissional quero me tornar?"
+      />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+         rel="stylesheet"
+      />
       <link rel="stylesheet" href="style.css" />
       <script src="script.js" defer></script>
    </head>
    <body>
-      <header>
-         <h1>Dossiê de Carreira — Luis Facunde</h1>
+      <!-- Cabeçalho visível apenas na visualização isolada -->
+      <header class="section-isolated-header">
+         <div class="isolated-logo">
+            <span class="logo-text">DOSSIÊ DE CARREIRA</span>
+            <span class="logo-subtext">Luis Henrique Facunde da Silva</span>
+         </div>
       </header>
 
-      <main>
-         <section>
-            <h2>Página 9 — Síntese Final</h2>
-            <p>Esqueleto básico para a página de Síntese Final.</p>
+      <main class="synthesis-main-content">
+         <!-- Título Editorial
+         <div class="section-editorial-title">
+            <h1 class="editorial-heading">Síntese Final</h1>
+            <p class="editorial-lead">
+               Uma retrospectiva crítica sobre a evolução técnica e comportamental durante o semestre e a consolidação dos objetivos profissionais futuros.
+            </p>
+         </div> -->
+
+         <!-- =========================================================
+              SEÇÃO 1: EVOLUÇÃO SEMESTRAL
+              ========================================================= -->
+         <section class="synthesis-section" id="evolucao-semestral">
+            <h2 class="section-title">Evolução Semestral</h2>
+            <div class="prose-block">
+               <p>
+                  O decorrer deste semestre marcou um período de intensa evolução técnica e comportamental. No início do período, minhas atividades práticas de estágio na Fundação Altino Ventura (FAV) limitavam-se a consultas básicas de banco de dados e rotinas DML triviais. Havia também uma grande insegurança quanto ao desenvolvimento de procedimentos armazenados complexos (procedures) e triggers, além de pouco domínio sobre conceitos de conteinerização com Docker e CI/CD.
+               </p>
+               <p>
+                  Ao final do semestre, essa realidade se transformou por meio da execução de planos de estudos e ações práticas. Consolidei competências avançadas em <strong>Oracle PL/SQL</strong>, otimizando procedures e triggers de larga escala com o uso de bulk collects e índices, reduzindo significativamente tempos de consulta no ERP SoulMV. Paralelamente, iniciei estudos na linguagem Java e apliquei automações robustas em Python no ambiente profissional.
+               </p>
+               <p>
+                  No âmbito acadêmico e de pesquisa, a atuação no projeto de iniciação científica <strong>AppCardio</strong> permitiu transitar de conceitos elementares de desenvolvimento móvel para a consolidação e entrega de fluxos de telas responsivas em <strong>React Native</strong>, integrando com sucesso a interface mobile à API Python que executa modelos de rede neural profunda para análise de ECG.
+               </p>
+               <p>
+                  Comportamentalmente, o semestre viabilizou a transição de uma postura mais tímida e reservada em apresentações públicas para a liderança e comunicação assertiva como <strong>porta-voz técnico</strong> nos Projetos Integradores da CESAR School, além da construção de relevância e presença digital com postagens profissionais periódicas no LinkedIn.
+               </p>
+            </div>
          </section>
 
-         <nav>
-            <h3>Navegação</h3>
+         <!-- =========================================================
+              SEÇÃO 2: CARTA PROFISSIONAL
+              ========================================================= -->
+         <section class="synthesis-section" id="carta-profissional">
+            <h2 class="section-title">Carta Profissional: Que profissional quero me tornar?</h2>
+            <div class="prose-block">
+               <p>
+                  Ao olhar para a minha trajetória e realizar a síntese deste semestre letivo, percebo o quão decisivos têm sido estes meses para a consolidação da minha identidade como profissional de tecnologia. Minha jornada não é linear: trago comigo a sensibilidade clínica, o olhar atento e o método científico herdados da minha graduação em <strong>Nutrição na UFPE</strong>, combinados à capacidade analítica, engenharia de soluções e rigor prático desenvolvidos em <strong>Análise e Desenvolvimento de Sistemas na CESAR School</strong>.
+               </p>
+               <p>
+                  Quero me tornar um <strong>desenvolvedor de software focado em resolver problemas complexos com impacto real na vida das pessoas</strong>, com especial afinidade pela área de <strong>Saúde Digital (Digital Health)</strong>. Não desejo ser apenas um executor de tarefas, mas sim um engenheiro que compreende a fundo as regras de negócio, a jornada do usuário e a arquitetura técnica ideal para atendê-los. A minha atuação no desenvolvimento do AppCardio e na otimização de consultas PL/SQL hospitalares no ERP SoulMV na Fundação Altino Ventura me mostraram que a tecnologia atinge seu ápice quando serve de ponte para otimizar operações e melhorar diagnósticos em saúde.
+               </p>
+               <p>
+                  No aspecto técnico, meu objetivo é estruturar um <strong>perfil backend sólido, de alta performance e escalável</strong>. Quero aprofundar meu domínio no banco de dados Oracle que utilizo diariamente e expandir minhas habilidades de arquitetura para a stack Node.js/TypeScript e a linguagem Java. Em paralelo, busco integrar a cultura DevOps de forma natural ao meu fluxo de trabalho, garantindo que as aplicações que construo sejam facilmente conteinerizáveis (Docker) e implantadas com processos contínuos de entrega em nuvem (AWS/Azure).
+               </p>
+               <p>
+                  No aspecto comportamental, o profissional que quero me tornar é um <strong>colaborador empático e um comunicador assertivo</strong>. Entendi que softwares de qualidade surgem de alinhamentos claros, escuta ativa e respeito técnico dentro do time. No médio e longo prazo, aspiro a liderar equipes de forma colaborativa, servindo de mentoria para desenvolvedores mais juniores e ajudando a traduzir requisitos complexos de negócios e saúde em fluxos lógicos claros e código limpo.
+               </p>
+               <p>
+                  Por fim, pretendo ser um profissional conectado globalmente. Manterei o inglês como rotina diária para além da leitura técnica, abrindo caminhos para atuações no mercado internacional e para a absorção contínua das inovações mais avançadas do setor. Com compromisso ético e busca constante pela excelência, sigo determinado em construir essa carreira de valor.
+               </p>
+               
+               <p style="margin-top: 20px; font-style: italic; color: var(--text-muted);">
+                  junho de 2026.<br />
+                  <strong>Luis Henrique Facunde da Silva</strong><br />
+                  Estudante de ADS & Desenvolvedor de Software
+               </p>
+            </div>
+         </section>
+
+         <!-- Menu de Navegação Local -->
+         <nav class="subpage-isolated-nav">
+            <h3>Menu Dossiê</h3>
             <ul>
                <li><a href="../index.html">Página Inicial</a></li>
                <li>
                   <a href="../01-perfil-profissional/index.html"
-                     >Página 1 — Perfil Profissional</a
+                     >01 — Perfil Profissional</a
                   >
                </li>
                <li>
                   <a href="../02-diagnostico-profissional/index.html"
-                     >Página 2 — Diagnóstico Profissional</a
+                     >02 — Diagnóstico Profissional</a
                   >
                </li>
                <li>
                   <a href="../03-contexto-empregabilidade/index.html"
-                     >Página 3 — Contexto e Empregabilidade</a
+                     >03 — Contexto e Empregabilidade</a
                   >
                </li>
                <li>
                   <a href="../04-hipoteses-desenvolvimento/index.html"
-                     >Página 4 — Hipóteses de Desenvolvimento</a
+                     >04 — Hipóteses de Desenvolvimento</a
                   >
                </li>
                <li>
                   <a href="../05-experimentacao-pratica/index.html"
-                     >Página 5 — Experimentação Prática</a
+                     >05 — Experimentação Prática</a
                   >
                </li>
                <li>
                   <a href="../06-evidencias-aprendizados/index.html"
-                     >Página 6 — Evidências e Aprendizados</a
+                     >06 — Evidências e Aprendizados</a
                   >
                </li>
                <li>
                   <a href="../07-projetos-percurso-academico/index.html"
-                     >Página 7 — Projetos e Percurso Acadêmico</a
+                     >07 — Percurso Acadêmico</a
                   >
                </li>
                <li>
                   <a href="../08-planejamento-pos-faculdade/index.html"
-                     >Página 8 — Planejamento Pós-Faculdade</a
+                     >08 — Planejamento Pós-Faculdade</a
                   >
                </li>
                <li>
-                  <a href="../09-sintese-final/index.html"
-                     >Página 9 — Síntese Final</a
+                  <a href="../09-sintese-final/index.html" class="active"
+                     >09 — Síntese Final</a
                   >
                </li>
             </ul>
          </nav>
       </main>
 
-      <footer>
-         <p>© 2026 Luis Facunde. Todos os direitos reservados.</p>
+      <!-- Rodapé visível apenas na visualização isolada -->
+      <footer class="section-isolated-footer">
+         <p>© 2026 Luis Facunde. Dossiê de Carreira Acadêmica e Profissional.</p>
       </footer>
    </body>
 </html>
