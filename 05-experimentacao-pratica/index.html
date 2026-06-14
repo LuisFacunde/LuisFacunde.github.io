@@ -1,78 +1,391 @@
 <!doctype html>
 <html lang="pt-BR">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Página 5 — Experimentação Prática | Luis Facunde</title>
-      <link rel="stylesheet" href="style.css" />
-      <script src="script.js" defer></script>
-   </head>
-   <body>
-      <header>
-         <h1>Dossiê de Carreira — Luis Facunde</h1>
-      </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experimentação Prática | Luis Facunde</title>
+    <meta
+      name="description"
+      content="Relato da participação no Projeto Integrador da CESAR School: papéis desempenhados, entregas efetuadas, dinâmica de colaboração, dificuldades, organização e reflexões sobre soft skills."
+    />
+    <!-- Google Fonts for elite, modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Cabeçalho visível apenas na visualização isolada -->
+    <header class="section-isolated-header">
+      <div class="isolated-logo">
+        <span class="logo-text">DOSSIÊ DE CARREIRA</span>
+        <span class="logo-subtext">Luis Henrique Facunde da Silva</span>
+      </div>
+    </header>
 
-      <main>
-         <section>
-            <h2>Página 5 — Experimentação Prática</h2>
-            <p>Esqueleto básico para a página de Experimentação Prática.</p>
-         </section>
+    <main class="practice-main-content">
+      <!-- Seção 1: Papel que Executei -->
+      <section class="practice-section" id="papel-desempenhado">
+        <h2 class="practice-section-title">Papel que Executei no Projeto</h2>
+        <p class="practice-intro-text">
+          No Projeto Integrador (PI) da CESAR School, atuei de forma ativa na
+          intersecção entre o desenvolvimento técnico do software e a
+          articulação de requisitos. Minha atuação dividiu-se em duas frentes
+          fundamentais:
+        </p>
+        <p class="practice-role-text">
+          <strong>Desenvolvimento Técnico:</strong> Atuação direta na construção
+          de interfaces (Frontend com React e React Native) e lógica de
+          integração com APIs (Backend Node.js), além do consumo e estruturação
+          de queries e lógica de dados relacionais.
+        </p>
+        <p class="practice-role-text">
+          <strong>Porta-Voz Técnico (Liderança):</strong> Responsável por
+          traduzir as decisões complexas de arquitetura, banco de dados e fluxos
+          de código em apresentações claras e dinâmicas para os clientes
+          industriais parceiros (como Rede Globo e Sistema Jornal do Comércio).
+        </p>
+      </section>
 
-         <nav>
-            <h3>Navegação</h3>
-            <ul>
-               <li><a href="../index.html">Página Inicial</a></li>
-               <li>
-                  <a href="../01-perfil-profissional/index.html"
-                     >Página 1 — Perfil Profissional</a
-                  >
-               </li>
-               <li>
-                  <a href="../02-diagnostico-profissional/index.html"
-                     >Página 2 — Diagnóstico Profissional</a
-                  >
-               </li>
-               <li>
-                  <a href="../03-contexto-empregabilidade/index.html"
-                     >Página 3 — Contexto e Empregabilidade</a
-                  >
-               </li>
-               <li>
-                  <a href="../04-hipoteses-desenvolvimento/index.html"
-                     >Página 4 — Hipóteses de Desenvolvimento</a
-                  >
-               </li>
-               <li>
-                  <a href="../05-experimentacao-pratica/index.html"
-                     >Página 5 — Experimentação Prática</a
-                  >
-               </li>
-               <li>
-                  <a href="../06-evidencias-aprendizados/index.html"
-                     >Página 6 — Evidências e Aprendizados</a
-                  >
-               </li>
-               <li>
-                  <a href="../07-projetos-percurso-academico/index.html"
-                     >Página 7 — Projetos e Percurso Acadêmico</a
-                  >
-               </li>
-               <li>
-                  <a href="../08-planejamento-pos-faculdade/index.html"
-                     >Página 8 — Planejamento Pós-Faculdade</a
-                  >
-               </li>
-               <li>
-                  <a href="../09-sintese-final/index.html"
-                     >Página 9 — Síntese Final</a
-                  >
-               </li>
-            </ul>
-         </nav>
-      </main>
+      <!-- Seção 2: Entregas e Colaboração (Duas Colunas com Imagem) -->
+      <section class="practice-section" id="entregas-colaboracao">
+        <h2 class="practice-section-title">Entregas e Colaboração</h2>
+        <div class="collab-info">
+          <p>
+            O desenvolvimento do projeto ocorreu sob o framework de
+            metodologias ágeis (Scrum/Kanban), com iterações curtas e reuniões
+            periódicas para alinhamento técnico e de design.
+          </p>
+          <p>
+            Nossas principais entregas englobaram o mapeamento de requisitos,
+            protótipos navegáveis de alta fidelidade desenvolvidos junto à
+            equipe de design, diagramação lógica do banco de dados e a
+            implementação funcional do código integrado.
+          </p>
+          <h3 class="collab-subtitle">Gestão Visual do Fluxo</h3>
+          <p>
+            Para coordenar o trabalho da equipe multidisciplinar (designers,
+            analistas de negócios e desenvolvedores), utilizamos um fluxo
+            transparente e centralizado:
+          </p>
+          <ul class="collab-list">
+            <li>
+              <strong>Trello (Gestão Operacional):</strong> Utilizado como
+              quadro Kanban dinâmico para acompanhamento das atividades da
+              sprint (A Fazer, Em Desenvolvimento, Homologação e Concluído),
+              facilitando a visualização de gargalos e dependências.
+            </li>
+            <li>
+              <strong>Notion (Repositório de Conhecimento):</strong>
+              Centralizador da documentação do projeto, contendo atas de
+              reuniões com clientes, regras de negócios documentadas, scripts
+              SQL de referência e o diário de bordo técnico da equipe.
+            </li>
+          </ul>
+        </div>
 
-      <footer>
-         <p>© 2026 Luis Facunde. Todos os direitos reservados.</p>
-      </footer>
-   </body>
+        <!-- Espaço para as imagens uma ao lado da outra -->
+        <div class="collab-images-stacked">
+          <div class="simple-image-container">
+            <img
+              src="../assets/fotos/trello-kanban.png"
+              alt="Registro do Trello - Kanban do Projeto Integrador"
+              class="collab-simple-img"
+            />
+          </div>
+          <div class="simple-image-container">
+            <img
+              src="../assets/fotos/notion-wiki.png"
+              alt="Registro do Notion - Wiki do Projeto Integrador"
+              class="collab-simple-img"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção 3: Dificuldades e Organização -->
+      <section class="practice-section" id="dificuldades-organizacao">
+        <h2 class="practice-section-title">
+          Dificuldades Enfrentadas e Organização
+        </h2>
+        <div class="challenges-grid">
+          <!-- Cartão 1: As Dificuldades -->
+          <div class="challenge-card difficulty">
+            <div class="challenge-header">
+              <span class="challenge-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"
+                  ></path>
+                  <line x1="12" y1="9" x2="12" y2="13"></line>
+                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+              </span>
+              <h3 class="challenge-title">Desafios Encontrados</h3>
+            </div>
+            <div class="challenge-content">
+              <ul class="challenge-list">
+                <li>
+                  <strong>Transição Rápida de Contexto:</strong> Conciliar a
+                  rotina de estágio corporativo na FAV (consultas PL/SQL e
+                  SoulMV), as aulas e avaliações na CESAR School, e a Iniciação
+                  Científica (AppCardio).
+                </li>
+                <li>
+                  <strong>Gerenciamento de Escopo:</strong> Filtrar as demandas
+                  dinâmicas e alterações de requisitos feitas pelo cliente
+                  durante o semestre, mantendo o foco nas entregas viáveis de
+                  MVP.
+                </li>
+                <li>
+                  <strong>Dependências Técnicas:</strong> Resolver conflitos de
+                  integração entre o repositório frontend e as APIs que
+                  demandavam configuração específica de ambientes locais da
+                  equipe.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Cartão 2: A Organização -->
+          <div class="challenge-card solution">
+            <div class="challenge-header">
+              <span class="challenge-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </span>
+              <h3 class="challenge-title">Estratégias de Organização</h3>
+            </div>
+            <div class="challenge-content">
+              <ul class="challenge-list">
+                <li>
+                  <strong>Uso de Planner Pessoal:</strong> Implementação de
+                  agenda e planner diário de compromissos para alocação dedicada
+                  de blocos de estudo, estágio e desenvolvimento do projeto,
+                  reduzindo o estresse de prazos.
+                </li>
+                <li>
+                  <strong>Notion de Conhecimento Centralizado:</strong> Criação
+                  de páginas dedicadas no Notion para consolidar anotações
+                  rápidas das disciplinas e registros técnicos, evitando perda
+                  de dados e acelerando a retomada do foco.
+                </li>
+                <li>
+                  <strong>Sprints e Daily Status:</strong> Adoção de um
+                  alinhamento rápido e assíncrono interno na equipe para
+                  atualizar tarefas e prever impedimentos técnicos antes das
+                  reuniões semanais oficiais com o cliente.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção 4: Reflexões sobre Soft Skills -->
+      <section class="practice-section" id="soft-skills">
+        <h2 class="practice-section-title">Reflexões sobre Soft Skills</h2>
+        <div class="soft-skills-grid">
+          <!-- Skill 1: Comunicação Assertiva -->
+          <div class="skill-card text-card">
+            <div class="skill-header">
+              <span class="skill-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path
+                    d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                  ></path>
+                </svg>
+              </span>
+              <h3 class="skill-title">Comunicação Assertiva</h3>
+            </div>
+            <p class="skill-desc">
+              O papel de porta-voz técnico forçou a superação de uma postura
+              mais introvertida nas apresentações de sprints. Aprendi a focar
+              nas dores do cliente, expondo conquistas técnicas com vocabulário
+              simples e claro para stakeholders não técnicos.
+            </p>
+          </div>
+
+          <!-- Skill 2: Colaboração Multidisciplinar -->
+          <div class="skill-card text-card">
+            <div class="skill-header">
+              <span class="skill-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </span>
+              <h3 class="skill-title">Colaboração Multidisciplinar</h3>
+            </div>
+            <p class="skill-desc">
+              Interagir de perto com designers e estudantes do eixo de negócios
+              permitiu enxergar o produto de software além do código. Aprendi a
+              negociar a viabilidade técnica do layout sem ferir a experiência
+              de usuário proposta.
+            </p>
+          </div>
+
+          <!-- Skill 3: Escuta Ativa e Empatia -->
+          <div class="skill-card text-card">
+            <div class="skill-header">
+              <span class="skill-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                  <path
+                    d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"
+                  ></path>
+                </svg>
+              </span>
+              <h3 class="skill-title">Escuta Ativa e Empatia</h3>
+            </div>
+            <p class="skill-desc">
+              Nas reuniões de fechamento de sprint, exercitei a escuta ativa
+              para acolher feedbacks do cliente. Compreender suas reais
+              prioridades operacionais ajudou a equipe a priorizar o backlog
+              técnico com foco em gerar o maior impacto possível no produto.
+            </p>
+          </div>
+
+          <!-- Skill 4: Adaptabilidade -->
+          <div class="skill-card text-card">
+            <div class="skill-header">
+              <span class="skill-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path
+                    d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"
+                  ></path>
+                </svg>
+              </span>
+              <h3 class="skill-title">Adaptabilidade</h3>
+            </div>
+            <p class="skill-desc">
+              A transição entre o pensamento clínico da minha primeira formação
+              (Nutrição na UFPE) e o raciocínio lógico-analítico do
+              desenvolvimento de sistemas provou ser um diferencial de
+              adaptabilidade, enriquecendo minha habilidade de analisar
+              problemas complexos sob múltiplos prismas.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Menu de Navegação Local (Visível isoladamente e escondido no iframe principal) -->
+      <nav class="subpage-isolated-nav">
+        <h3>Menu Dossiê</h3>
+        <ul>
+          <li><a href="../index.html">Página Inicial</a></li>
+          <li>
+            <a href="../01-perfil-profissional/index.html"
+              >01 — Perfil Profissional</a
+            >
+          </li>
+          <li>
+            <a href="../02-diagnostico-profissional/index.html"
+              >02 — Diagnóstico Profissional</a
+            >
+          </li>
+          <li>
+            <a href="../03-contexto-empregabilidade/index.html"
+              >03 — Contexto e Empregabilidade</a
+            >
+          </li>
+          <li>
+            <a href="../04-hipoteses-desenvolvimento/index.html"
+              >04 — Hipóteses de Desenvolvimento</a
+            >
+          </li>
+          <li>
+            <a href="../05-experimentacao-pratica/index.html" class="active"
+              >05 — Experimentação Prática</a
+            >
+          </li>
+          <li>
+            <a href="../06-evidencias-aprendizados/index.html"
+              >06 — Evidências e Aprendizados</a
+            >
+          </li>
+          <li>
+            <a href="../07-projetos-percurso-academico/index.html"
+              >07 — Percurso Acadêmico</a
+            >
+          </li>
+          <li>
+            <a href="../08-planejamento-pos-faculdade/index.html"
+              >08 — Planejamento Pós-Faculdade</a
+            >
+          </li>
+          <li>
+            <a href="../09-sintese-final/index.html">09 — Síntese Final</a>
+          </li>
+        </ul>
+      </nav>
+    </main>
+
+    <!-- Rodapé visível apenas na visualização isolada -->
+    <footer class="section-isolated-footer">
+      <p>© 2026 Luis Facunde. Dossiê de Carreira Acadêmica e Profissional.</p>
+    </footer>
+  </body>
 </html>

@@ -1,1 +1,569 @@
-/* Estilos locais para Página 5 - Experimentação Prática */
+/* ==========================================================================
+   VARIÁVEIS E CONFIGURAÇÃO DO DESIGN SYSTEM
+   ========================================================================== */
+:root {
+    --bg-app: #f5f7fa;
+    --bg-card: #ffffff;
+    --text-main: #1a1f26;
+    --text-muted: #5c6470;
+    --accent: #e0533c; /* Laranja Burnt Orange Editorial */
+    --accent-glow: rgba(224, 83, 60, 0.15);
+    --accent-light: #fff0ed;
+    --border: #e8ecef;
+    --border-hover: rgba(224, 83, 60, 0.3);
+    
+    --font-head: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-body: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 8px 24px rgba(26, 31, 38, 0.06);
+    --shadow-lg: 0 16px 48px rgba(26, 31, 38, 0.1);
+
+    --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    --border-radius: 16px;
+
+    /* Cores Temáticas dos Cards */
+    --color-difficulty: #d32f2f;
+    --bg-difficulty: #fdf5f5;
+    --border-difficulty: rgba(211, 47, 47, 0.1);
+
+    --color-solution: #2e7d32;
+    --bg-solution: #f1f8f3;
+    --border-solution: rgba(46, 125, 50, 0.12);
+
+    --color-skill-accent: #6a1b9a;
+    --bg-skill-accent: #f9f2fc;
+    --border-skill-accent: rgba(106, 27, 154, 0.08);
+}
+
+/* Reset Geral */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   ESTILOS DE VISUALIZAÇÃO ISOLADA (Ocultados dinamicamente no portal principal)
+   ========================================================================== */
+.section-isolated-header {
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border);
+    padding: 24px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.isolated-logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.isolated-logo .logo-text {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: 0.08em;
+    color: var(--text-main);
+}
+
+.isolated-logo .logo-subtext {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+.section-isolated-footer {
+    border-top: 1px solid var(--border);
+    padding: 30px 0;
+    margin-top: 60px;
+    text-align: center;
+    background-color: var(--bg-app);
+}
+
+.section-isolated-footer p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* Menu de Navegação na Visão Isolada */
+.subpage-isolated-nav {
+    margin-top: 60px;
+    padding: 30px;
+    background-color: var(--bg-app);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border);
+}
+
+.subpage-isolated-nav h3 {
+    font-family: var(--font-head);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-main);
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.subpage-isolated-nav ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.subpage-isolated-nav a {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    display: block;
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+}
+
+.subpage-isolated-nav a:hover,
+.subpage-isolated-nav a.active {
+    color: var(--accent);
+    background-color: var(--accent-light);
+    border-color: rgba(224, 83, 60, 0.2);
+}
+
+/* ==========================================================================
+   CONTEÚDO PRINCIPAL (Main & Estrutura Editorial)
+   ========================================================================== */
+.practice-main-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 0 60px 0;
+}
+
+/* Título de Seção estilo Editorial */
+.section-editorial-title {
+    margin-bottom: 40px;
+    position: relative;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 24px;
+}
+
+.editorial-badge {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    background-color: var(--accent-light);
+    padding: 4px 12px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.editorial-heading {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 2.2rem;
+    color: var(--text-main);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+.editorial-lead {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 800px;
+}
+
+/* ==========================================================================
+   TEXTO DE INTRODUÇÃO: PAPEL DESEMPENHADO
+   ========================================================================== */
+.practice-intro-text {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+/* Parágrafos de Funções Técnicas */
+.practice-role-text {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 16px;
+    padding-left: 16px;
+    border-left: 2px solid var(--accent);
+}
+
+.practice-role-text:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   SEÇÕES DA PÁGINA (Layout Base)
+   ========================================================================== */
+.practice-section {
+    margin-bottom: 60px;
+}
+
+.practice-section-title {
+    font-family: var(--font-head);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+}
+
+/* ==========================================================================
+   SEÇÃO 2: ENTREGAS E COLABORAÇÃO
+   ========================================================================== */
+.collab-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.collab-info p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.collab-subtitle {
+    font-family: var(--font-head);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-top: 10px;
+}
+
+.collab-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.collab-list li {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    position: relative;
+    padding-left: 16px;
+}
+
+.collab-list li::before {
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 2px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--accent);
+}
+
+.collab-list li strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+/* Espaço para as imagens lado a lado */
+.collab-images-stacked {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 30px;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 600px) {
+    .collab-images-stacked {
+        grid-template-columns: 1fr;
+    }
+}
+
+.simple-image-container {
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    transition: var(--transition);
+    background-color: var(--bg-card);
+}
+
+.simple-image-container:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+}
+
+.collab-simple-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: var(--transition);
+}
+
+.simple-image-container:hover .collab-simple-img {
+    transform: scale(1.01);
+}
+
+/* ==========================================================================
+   SEÇÃO 3: DIFICULDADES E ORGANIZAÇÃO
+   ========================================================================== */
+.challenges-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.challenge-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    padding: 30px;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.challenge-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+}
+
+.challenge-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 14px;
+    transition: var(--transition);
+}
+
+.challenge-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.challenge-title {
+    font-family: var(--font-head);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+/* 1. Dificuldades (Red Theme) */
+.challenge-card.difficulty {
+    background-color: var(--bg-difficulty);
+    border-color: var(--border-difficulty);
+}
+
+.challenge-card.difficulty .challenge-icon {
+    background-color: rgba(211, 47, 47, 0.06);
+    color: var(--color-difficulty);
+}
+
+.challenge-card.difficulty:hover {
+    border-color: var(--color-difficulty);
+    box-shadow: 0 8px 24px rgba(211, 47, 47, 0.05);
+}
+
+/* 2. Solução / Organização (Green Theme) */
+.challenge-card.solution {
+    background-color: var(--bg-solution);
+    border-color: var(--border-solution);
+}
+
+.challenge-card.solution .challenge-icon {
+    background-color: rgba(46, 125, 50, 0.08);
+    color: var(--color-solution);
+}
+
+.challenge-card.solution:hover {
+    border-color: var(--color-solution);
+    box-shadow: 0 8px 24px rgba(46, 125, 50, 0.06);
+}
+
+/* Listas internas de Desafios/Soluções */
+.challenge-content {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.challenge-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.challenge-list li {
+    position: relative;
+    padding-left: 16px;
+    line-height: 1.6;
+}
+
+.challenge-list li::before {
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 2px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+
+.difficulty .challenge-list li::before { background-color: var(--color-difficulty); }
+.solution .challenge-list li::before { background-color: var(--color-solution); }
+
+.challenge-list li strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   SEÇÃO 4: REFLEXÕES SOBRE SOFT SKILLS
+   ========================================================================== */
+.soft-skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.skill-card {
+    background-color: var(--bg-skill-accent);
+    border: 1px solid var(--border-skill-accent);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    border-left: 5px solid var(--color-skill-accent);
+}
+
+.skill-card:hover {
+    background-color: var(--bg-card);
+    border-color: var(--color-skill-accent);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+}
+
+.skill-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+}
+
+.skill-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    background-color: rgba(106, 27, 154, 0.06);
+    color: var(--color-skill-accent);
+    transition: var(--transition);
+}
+
+.skill-card:hover .skill-icon {
+    transform: scale(1.1);
+}
+
+.skill-title {
+    font-family: var(--font-head);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-skill-accent);
+}
+
+.skill-desc {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE E ADAPTAÇÕES DE TELA
+   ========================================================================== */
+@media (max-width: 900px) {
+    .role-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .collab-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .collab-image-column {
+        max-width: 500px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .challenges-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .soft-skills-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-isolated-header {
+        padding: 20px;
+    }
+
+    .practice-hero-card {
+        padding: 24px;
+    }
+
+    .editorial-heading {
+        font-size: 1.8rem;
+    }
+
+    .practice-section-title {
+        font-size: 1.35rem;
+    }
+
+    .challenge-card {
+        padding: 24px;
+    }
+}
