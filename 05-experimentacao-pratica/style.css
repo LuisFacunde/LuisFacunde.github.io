@@ -310,6 +310,7 @@ body {
     overflow: hidden;
     transition: var(--transition);
     background-color: var(--bg-card);
+    display: flex;
 }
 
 .simple-image-container:hover {
@@ -320,9 +321,14 @@ body {
 
 .collab-simple-img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
     transition: var(--transition);
+}
+
+.collab-simple-img.crop-left {
+    object-position: left center;
 }
 
 .simple-image-container:hover .collab-simple-img {
