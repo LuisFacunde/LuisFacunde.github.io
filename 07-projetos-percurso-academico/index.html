@@ -1,78 +1,671 @@
 <!doctype html>
 <html lang="pt-BR">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Página 7 — Projetos e Percurso Acadêmico | Luis Facunde</title>
-      <link rel="stylesheet" href="style.css" />
-      <script src="script.js" defer></script>
-   </head>
-   <body>
-      <header>
-         <h1>Dossiê de Carreira — Luis Facunde</h1>
-      </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projetos e Percurso Acadêmico | Luis Facunde</title>
+    <meta
+      name="description"
+      content="Linha do tempo acadêmica com os 5 semestres da graduação na CESAR School: disciplinas cursadas, projetos desenvolvidos, experiências relevantes e evolução ao longo da jornada."
+    />
+    <!-- Google Fonts for elite, modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Cabeçalho visível apenas na visualização isolada -->
+    <header class="section-isolated-header">
+      <div class="isolated-logo">
+        <span class="logo-text">DOSSIÊ DE CARREIRA</span>
+        <span class="logo-subtext">Luis Henrique Facunde da Silva</span>
+      </div>
+    </header>
 
-      <main>
-         <section>
-            <h2>Página 7 — Percurso Acadêmico</h2>
-            <p>Esqueleto básico para a página de Percurso Acadêmico.</p>
-         </section>
+    <main class="academic-main-content">
+      <!-- ============================================================
+              LINHA DO TEMPO VERTICAL — 5 SEMESTRES
+              ============================================================ -->
+      <section class="timeline-section" id="linha-do-tempo">
+        <div class="timeline-container">
+          <!-- Linha vertical central -->
+          <div class="timeline-line"></div>
 
-         <nav>
-            <h3>Navegação</h3>
-            <ul>
-               <li><a href="../index.html">Página Inicial</a></li>
-               <li>
-                  <a href="../01-perfil-profissional/index.html"
-                     >Página 1 — Perfil Profissional</a
-                  >
-               </li>
-               <li>
-                  <a href="../02-diagnostico-profissional/index.html"
-                     >Página 2 — Diagnóstico Profissional</a
-                  >
-               </li>
-               <li>
-                  <a href="../03-contexto-empregabilidade/index.html"
-                     >Página 3 — Contexto e Empregabilidade</a
-                  >
-               </li>
-               <li>
-                  <a href="../04-hipoteses-desenvolvimento/index.html"
-                     >Página 4 — Hipóteses de Desenvolvimento</a
-                  >
-               </li>
-               <li>
-                  <a href="../05-experimentacao-pratica/index.html"
-                     >Página 5 — Experimentação Prática</a
-                  >
-               </li>
-               <li>
-                  <a href="../06-evidencias-aprendizados/index.html"
-                     >Página 6 — Evidências e Aprendizados</a
-                  >
-               </li>
-               <li>
-                  <a href="../07-projetos-percurso-academico/index.html"
-                     >Página 7 — Projetos e Percurso Acadêmico</a
-                  >
-               </li>
-               <li>
-                  <a href="../08-planejamento-pos-faculdade/index.html"
-                     >Página 8 — Planejamento Pós-Faculdade</a
-                  >
-               </li>
-               <li>
-                  <a href="../09-sintese-final/index.html"
-                     >Página 9 — Síntese Final</a
-                  >
-               </li>
-            </ul>
-         </nav>
-      </main>
+          <!-- ── SEMESTRE 1 ── -->
+          <article class="timeline-item" id="semestre-1">
+            <div class="timeline-marker">
+              <div class="marker-dot">
+                <span class="marker-number">1</span>
+              </div>
+            </div>
 
-      <footer>
-         <p>© 2026 Luis Facunde. Todos os direitos reservados.</p>
-      </footer>
-   </body>
+            <div class="timeline-card">
+              <!-- Cabeçalho do semestre -->
+              <div class="semester-card-header">
+                <div class="semester-title-block">
+                  <h2 class="semester-title">Fundamentos e Primeiros Passos</h2>
+                </div>
+                <span class="semester-badge sem-1">1º Semestre</span>
+              </div>
+
+              <!-- Bloco de imagem do semestre -->
+              <div class="semester-image-block">
+                <div class="semester-image-preview" id="preview-semestre-1">
+                  <img
+                    src="../assets/fotos/1-sem-DAVI-projeto.jpg"
+                    alt="Imagem do 1º Semestre"
+                    class="preview-img"
+                  />
+                </div>
+              </div>
+
+              <!-- Conteúdo do semestre -->
+              <div class="semester-content-grid">
+                <div class="semester-content-block">
+                  <h3 class="content-block-title">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                      <path
+                        d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"
+                      ></path>
+                    </svg>
+                    Disciplinas
+                  </h3>
+                  <ul class="semester-tags-list">
+                    <li class="tag">Projetos 1</li>
+                    <li class="tag">Introdução à Computação</li>
+                    <li class="tag">Matemática Para Computação</li>
+                    <li class="tag">Sistemas Digitais</li>
+                    <li class="tag">Fundamentos de Programação</li>
+                    <li class="tag">
+                      Fundamentos de Projetos 1: Gestão de Pessoas
+                    </li>
+                  </ul>
+                </div>
+                <div class="semester-content-block">
+                  <h3 class="content-block-title">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                      ></polygon>
+                    </svg>
+                    Destaques
+                  </h3>
+                  <ul class="semester-highlights-list">
+                    <li>Primeiro contato com lógica de programação</li>
+                    <li>Primeiros projetos desenvolvidos</li>
+                    <li>Início da nova graduação</li>
+                  </ul>
+                </div>
+              </div>
+              <p class="semester-reflection">
+                O primeiro semestre foi marcado pela introdução a nova faculdade
+                e conciliar a escrita do TCC em nutrição com os primeiros
+                fundamentos da facldade de ADS. Esse semestre foi marcado pela
+                empolgação de viver uma nova etapa e de começar a aprender a
+                como desenvolver o primeiro site. Dentre as disciplinas as que
+                mais se destacaram para mim foram Sistemas Digitais, por
+                apresentar os conceitos da computação física e palpavél,
+                Introdução a Computação e Fuundamentos da Programação,
+                disciplinas que me apresentaram a base fundamental para aprender
+                qualquer ferramenta na área de tecnologia atualmente. Durante
+                esse período também tive contato com os primeiros projetos em
+                equipe, onde desenvolvemos o DAVI (na imagem, uma lixeira que
+                abre a tampa por aproximação fisica) e a um projeto de ideação
+                desenvolvido durante a residência tecnológica do Porto Digital.
+                Ambas as experiências foram fundamentais paraq o meu
+                desenvolvimentos técnico e comportamentol, pois representaram os
+                primeiros desafios em lidar com a responsabilidade técnica de um
+                projeto, a necessidade de equilibrar diferentes interesses entre
+                os membros da equipe.
+              </p>
+            </div>
+          </article>
+
+          <!-- ── SEMESTRE 2 ── -->
+          <article class="timeline-item timeline-item-right" id="semestre-2">
+            <div class="timeline-marker">
+              <div class="marker-dot marker-dot-2">
+                <span class="marker-number">2</span>
+              </div>
+            </div>
+
+            <div class="timeline-card timeline-card-2">
+              <div class="semester-card-header">
+                <div class="semester-title-block">
+                  <h2 class="semester-title">
+                    Estruturas e Desenvolvimento Web
+                  </h2>
+                </div>
+                <span class="semester-badge sem-2">2º Semestre</span>
+              </div>
+
+              <!-- Bloco de imagem do semestre -->
+              <div class="semester-image-block">
+                <div class="semester-image-preview" id="preview-semestre-2">
+                  <img
+                    src="../assets/fotos/2-sem-Projeto-SJCC.jpg"
+                    alt="Imagem do 2º Semestre"
+                    class="preview-img"
+                  />
+                </div>
+              </div>
+
+              <div class="semester-content-grid">
+                <div class="semester-content-block">
+                  <h3 class="content-block-title">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                      <path
+                        d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"
+                      ></path>
+                    </svg>
+                    Disciplinas
+                  </h3>
+                  <ul class="semester-tags-list">
+                    <li class="tag tag-2">Projeto 2</li>
+                    <li class="tag tag-2">
+                      Programação Imperativa e Funcional
+                    </li>
+                    <li class="tag tag-2">Interface Humano Computador</li>
+                    <li class="tag tag-2">Lógica para computação</li>
+                    <li class="tag tag-2">
+                      Fundamentos de Desenvolvimento de Software
+                    </li>
+                    <li class="tag tag-2">
+                      Fundamentos de Projetos 2: Gestão de Projetos
+                    </li>
+                  </ul>
+                </div>
+                <div class="semester-content-block">
+                  <h3 class="content-block-title">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                      ></polygon>
+                    </svg>
+                    Destaques
+                  </h3>
+                  <ul class="semester-highlights-list">
+                    <li>Primeiro projeto web completo</li>
+                    <li>Trabalho em equipe sob metodologia ágil</li>
+                    <li>O projeto sendo mais do que apenas código</li>
+                  </ul>
+                </div>
+              </div>
+
+              <p class="semester-reflection">
+                O segundo semestre aprofundou o conhecimento técnico e foi o
+                ponto de virada para entender o desenvolvimento de software de
+                ponta a ponta. Nesse semestre tive a oportunidade de aprender a
+                linguagem C, extremamente técnica e desafiadora, bem como
+                entender os fundamentos de desenvolvimento de um software e os
+                padrões para planejar um software da melhor forma possível. Em
+                paralelo com esse novos conhecimentos também pude desenvolver o
+                projeot I.D.E.I.A. em conjunto com toda a minha turma. O projeto
+                foi desenvolvido para um cliente real, o Sistema Jornal do
+                Comércio de Comunicação (SJCC). Durante o projeto atuei como
+                desenvolvedor front-end e foi marcado por ter que aprender uma
+                nova tecnologia, um framework chamado de
+                <strong>React.js</strong>. Apesar de ser desafiador, o resultado
+                e o que aprendi com ele perduram até hoje e refletem nas minhas
+                decisões sobre as equipes em como é desafiador coordenar um
+                equipe grande e atribuir responsabilidades.
+              </p>
+            </div>
+          </article>
+
+          <!-- ── SEMESTRE 3 ── -->
+          <article class="timeline-item" id="semestre-3">
+            <div class="timeline-marker">
+              <div class="marker-dot marker-dot-3">
+                <span class="marker-number">3</span>
+              </div>
+            </div>
+
+            <div class="timeline-card timeline-card-3">
+              <div class="semester-card-header">
+                <div class="semester-title-block">
+                  <h2 class="semester-title">Engenharia de Software</h2>
+                </div>
+                <span class="semester-badge sem-3">3º Semestre</span>
+              </div>
+
+              <!-- Bloco de imagem do semestre -->
+              <div class="semester-image-block">
+                <div class="semester-image-preview" id="preview-semestre-3">
+                  <img
+                    src="../assets/fotos/3-sem-admissao-FAV.jpg"
+                    alt="Imagem do 3º Semestre"
+                    class="preview-img"
+                  />
+                </div>
+              </div>
+
+              <div class="semester-content-grid">
+                <div class="semester-content-block">
+                  <h3 class="content-block-title">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                      <path
+                        d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"
+                      ></path>
+                    </svg>
+                    Disciplinas
+                  </h3>
+                  <ul class="semester-tags-list">
+                    <li class="tag tag-3">Projeto 3</li>
+                    <li class="tag tag-3">Programação Orientada a Objetos</li>
+                    <li class="tag tag-3">Infraestrutura de Software</li>
+                    <li class="tag tag-3">Infraestrutura de Comunicação</li>
+                    <li class="tag tag-3">Algorirmos e Estrutura de Dados</li>
+                    <li class="tag tag-3">Estatística e Probabilidade</li>
+                  </ul>
+                </div>
+                <div class="semester-content-block">
+                  <h3 class="content-block-title">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                      ></polygon>
+                    </svg>
+                    Destaques
+                  </h3>
+                  <ul class="semester-highlights-list">
+                    <li>
+                      Primeiros conceitos de padrões de arquitetura de software
+                    </li>
+                    <li>Primeira linguagem tipicamente Orientada a Objetos</li>
+                    <li>
+                      Primeira experiência de estágio profissional paralelo às
+                      aulas
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <p class="semester-reflection">
+                O terceiro semestre expandiu os horizontes apresentando o
+                conceitos de programação orientada a objetos, infraestrutura de
+                software e algoritmos. Foi um semetre divertido, onde o
+                professores traziam muito das experiências vividas e também o
+                periodo com mais projetos em paralelo para serem entregues,
+                exigindo um gerenciamento minucioso para os cronogramas e
+                Requisitos. Também foi durante esse período que inicei a
+                estagiar na Fundação Altino Ventura. O início foi desafiador,
+                pois a realidade da instituição utilizada ferramentas e uma
+                linguagem que ainda não havia tido contato. Dessa forma, também
+                um desafio aprender "na marra" e por alguns curso como criar
+                querys em SQL o utilizar o sistema ERP MV. A felicidade do
+                estágio também trouxe a tona a realidade de trabalhar e estudar
+                ao mesmo tempo, exigindo um gerenciamento de crornogramas e
+                escolher de forma inteligente onde investir meu tempo e energia
+                para conseguir executar todas as demandas.
+              </p>
+            </div>
+          </article>
+
+          <!-- ── SEMESTRE 4 ── -->
+          <article class="timeline-item timeline-item-right" id="semestre-4">
+            <div class="timeline-marker">
+              <div class="marker-dot marker-dot-4">
+                <span class="marker-number">4</span>
+              </div>
+            </div>
+
+            <div class="timeline-card timeline-card-4">
+              <div class="semester-card-header">
+                <div class="semester-title-block">
+                  <h2 class="semester-title">Negócios, Dados e Liderança</h2>
+                </div>
+                <span class="semester-badge sem-4">4º Semestre</span>
+              </div>
+
+              <!-- Bloco de imagem do semestre -->
+              <div class="semester-image-block">
+                <div class="semester-image-preview" id="preview-semestre-4">
+                  <img
+                    src="../assets/fotos/4-sem-REC'n'Play.jpg"
+                    alt="Imagem do 4º Semestre"
+                    class="preview-img"
+                  />
+                </div>
+              </div>
+
+              <div class="semester-content-grid">
+                <div class="semester-content-block">
+                  <h3 class="content-block-title">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                      <path
+                        d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"
+                      ></path>
+                    </svg>
+                    Disciplinas
+                  </h3>
+                  <ul class="semester-tags-list">
+                    <li class="tag tag-4">Projeto 4</li>
+                    <li class="tag tag-4">Engenharia de Software e IA</li>
+                    <li class="tag tag-4">
+                      Modelagem e Projeto de Banco de Dados
+                    </li>
+                    <li class="tag tag-4">
+                      Requisitos, Projeto de Software e Validação de Requisitos
+                    </li>
+                    <li class="tag tag-4">
+                      Fundamentos de Computação Concorrente, Paralela e
+                      Distribuída
+                    </li>
+                    <li class="tag tag-4">Desenvolvimento Web</li>
+                  </ul>
+                </div>
+                <div class="semester-content-block">
+                  <h3 class="content-block-title">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                      ></polygon>
+                    </svg>
+                    Destaques
+                  </h3>
+                  <ul class="semester-highlights-list">
+                    <li>Descobri o gosto pode Bancos de Dados</li>
+                    <li>Segundo voluntariado no REC'n'Play 2026</li>
+                  </ul>
+                </div>
+              </div>
+              <p class="semester-reflection">
+                Aqui eu gostaria de destacar que em 2024, durante o 2º semestre,
+                fui voluntariado pelo CESAR no REC'n'Play 2024 e também fui
+                voluntariado na edição de 2025. Essa experiência no REC'n'Play
+                ampliou muito as minhas habilidades de comunicação e trabalho em
+                equipe, pois com essa oportunidade puder interegir e me conectar
+                com diversas pessoas dos mais diversso cargos e percebi que eu
+                me comunicava melhor do que eu pensava e foram momento de
+                "destrave" na minha comunicação. Além disso, foi nesse período
+                que ao cursar a disciplina de Modelagem e Banco de Dados percebi
+                que eu gostava muito de banco de dados e comecei profundar meus
+                estudos em banco de dados e na linguagem SQL, que também atuo em
+                meu estágio. Falando em estágio, também comecei a propor ideias
+                e até o desenvolvimento de sistemas na FAV para melhorar nossos
+                processos internos.
+              </p>
+            </div>
+          </article>
+
+          <!-- ── SEMESTRE 5 ── -->
+          <article class="timeline-item timeline-item-current" id="semestre-5">
+            <div class="timeline-marker">
+              <div class="marker-dot marker-dot-5">
+                <span class="marker-number">5</span>
+              </div>
+            </div>
+
+            <div class="timeline-card timeline-card-5">
+              <!-- Badge "Em Andamento" -->
+              <div class="current-badge-wrapper">
+                <span class="current-badge">
+                  <span class="current-dot"></span>
+                  Em Andamento
+                </span>
+              </div>
+
+              <div class="semester-card-header">
+                <div class="semester-title-block">
+                  <h2 class="semester-title">
+                    Projeto Integrador e Síntese Final
+                  </h2>
+                </div>
+                <span class="semester-badge sem-5">5º Semestre</span>
+              </div>
+
+              <!-- Bloco de imagem do semestre -->
+              <div class="semester-image-block">
+                <div class="semester-image-preview" id="preview-semestre-5">
+                  <img
+                    src="../assets/fotos/5-sem-aluno-destaque.jpeg"
+                    alt="Imagem do 5º Semestre"
+                    class="preview-img"
+                  />
+                </div>
+              </div>
+
+              <div class="semester-content-grid">
+                <div class="semester-content-block">
+                  <h3 class="content-block-title">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                      <path
+                        d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"
+                      ></path>
+                    </svg>
+                    Disciplinas
+                  </h3>
+                  <ul class="semester-tags-list">
+                    <li class="tag tag-5">Projeto 5</li>
+                    <li class="tag tag-5">Segurança da Informação</li>
+                    <li class="tag tag-5">Negócios na Internet</li>
+                    <li class="tag tag-5">Desenvolvimento Mobile</li>
+                  </ul>
+                </div>
+                <div class="semester-content-block">
+                  <h3 class="content-block-title">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                      ></polygon>
+                    </svg>
+                    Destaques
+                  </h3>
+                  <ul class="semester-highlights-list">
+                    <li>
+                      Representação da equipe de front-end no Projeto Integrador
+                    </li>
+                    <li>
+                      Aluno destaque da etapa LeveUP da residência do Porto
+                      Digital
+                    </li>
+                    <li>Primeiras entrevistas para vagas de junior</li>
+                  </ul>
+                </div>
+              </div>
+
+              <p class="semester-reflection">
+                Percebi que a rotina de faculdade somada ao estágio estava
+                desgastante e eu não estava redendo o que eu esperava nos
+                projetos das faculdade e em estudar os conteúdos. Por isso,
+                decidi cursar apenas as disciplinas obrigatórias, ficando com
+                apenas 4 disciplinas e uma carga horário menor de aulas para
+                equilibrar melhor as responsabilidades. Foi uma tática que
+                funcionou ao longo do tempo, mas mesmo com 4 disciplinas
+                houveram deslizes com cronogramas já a intensa rotina. Então,
+                mesmo me formando mais tarde do que o previsto, consegui ter uma
+                melhor forma de equilibrar a minha rotina. Cabe destacar que a
+                disciplina de projetos 5 e a trilha de conhecimentos foram
+                focadas em soft skills o que acabou me ajudando a me posicionar
+                diante das entrevistas de entrego, onde consequentimente também
+                tive a oportunidade de realizar as primeiras entrevistas e
+                dinâmicas para essa posição. Com isso, também tomei a frente da
+                equipe de desenvolvimento front-end do projeto integrador, uma
+                posição que não havia me colocado antes. Assim como também fui
+                certificados como Aluno Destaque da última etapa do programa de
+                residência do Porto Digital para os alunos do Embarque Digital.
+                Agora também sou aluno de iniciação científica voluntário pela
+                CESAR School, o que ajudou a apertar um pouco mais a rotina, mas
+                que está trazendo uma boa carga de conhecimentos de
+                desenvolvimento mobile e inteligência artificial. Acredito que
+                esse está sendo e foi o período que mais me exigiu capacidade em
+                lidar com prazos, equipe, tarefas, organização e ansiedade. Mas,
+                um dos mais recompensadores em termos de aprendizados e
+                oportunidades.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Menu de Navegação Local -->
+      <nav class="subpage-isolated-nav">
+        <h3>Menu Dossiê</h3>
+        <ul>
+          <li><a href="../index.html">Página Inicial</a></li>
+          <li>
+            <a href="../01-perfil-profissional/index.html"
+              >01 — Perfil Profissional</a
+            >
+          </li>
+          <li>
+            <a href="../02-diagnostico-profissional/index.html"
+              >02 — Diagnóstico Profissional</a
+            >
+          </li>
+          <li>
+            <a href="../03-contexto-empregabilidade/index.html"
+              >03 — Contexto e Empregabilidade</a
+            >
+          </li>
+          <li>
+            <a href="../04-hipoteses-desenvolvimento/index.html"
+              >04 — Hipóteses de Desenvolvimento</a
+            >
+          </li>
+          <li>
+            <a href="../05-experimentacao-pratica/index.html"
+              >05 — Experimentação Prática</a
+            >
+          </li>
+          <li>
+            <a href="../06-evidencias-aprendizados/index.html"
+              >06 — Evidências e Aprendizados</a
+            >
+          </li>
+          <li>
+            <a
+              href="../07-projetos-percurso-academico/index.html"
+              class="active"
+              >07 — Percurso Acadêmico</a
+            >
+          </li>
+          <li>
+            <a href="../08-planejamento-pos-faculdade/index.html"
+              >08 — Planejamento Pós-Faculdade</a
+            >
+          </li>
+          <li>
+            <a href="../09-sintese-final/index.html">09 — Síntese Final</a>
+          </li>
+        </ul>
+      </nav>
+    </main>
+
+    <!-- Rodapé visível apenas na visualização isolada -->
+    <footer class="section-isolated-footer">
+      <p>© 2026 Luis Facunde. Dossiê de Carreira Acadêmica e Profissional.</p>
+    </footer>
+  </body>
 </html>
