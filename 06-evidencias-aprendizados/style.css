@@ -1,1 +1,494 @@
-/* Estilos locais para Página 6 - Evidências e Aprendizados */
+/* ==========================================================================
+   VARIÁVEIS E CONFIGURAÇÃO DO DESIGN SYSTEM
+   ========================================================================== */
+:root {
+  --bg-app: #f5f7fa;
+  --bg-card: #ffffff;
+  --text-main: #1a1f26;
+  --text-muted: #5c6470;
+  --accent: #e0533c; /* Laranja Burnt Orange Editorial */
+  --accent-glow: rgba(224, 83, 60, 0.15);
+  --accent-light: #fff0ed;
+  --border: #e8ecef;
+  --border-hover: rgba(224, 83, 60, 0.3);
+
+  --font-head: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  --font-body: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px rgba(26, 31, 38, 0.06);
+  --shadow-lg: 0 16px 48px rgba(26, 31, 38, 0.1);
+
+  --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --border-radius: 16px;
+}
+
+/* Reset Geral */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   ESTILOS DE VISUALIZAÇÃO ISOLADA (Ocultados dinamicamente no portal principal)
+   ========================================================================== */
+.section-isolated-header {
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  padding: 24px 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.isolated-logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.isolated-logo .logo-text {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: 0.08em;
+  color: var(--text-main);
+}
+
+.isolated-logo .logo-subtext {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.section-isolated-footer {
+  border-top: 1px solid var(--border);
+  padding: 30px 0;
+  margin-top: 60px;
+  text-align: center;
+  background-color: var(--bg-app);
+}
+
+.section-isolated-footer p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Menu de Navegação na Visão Isolada */
+.subpage-isolated-nav {
+  margin-top: 60px;
+  padding: 30px;
+  background-color: var(--bg-app);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.subpage-isolated-nav h3 {
+  font-family: var(--font-head);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-main);
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.subpage-isolated-nav ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.subpage-isolated-nav a {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+  display: block;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+
+.subpage-isolated-nav a:hover,
+.subpage-isolated-nav a.active {
+  color: var(--accent);
+  background-color: var(--accent-light);
+  border-color: rgba(224, 83, 60, 0.2);
+}
+
+/* ==========================================================================
+   CONTEÚDO PRINCIPAL (Main & Estrutura Editorial)
+   ========================================================================== */
+.evidence-main-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 0 60px 0;
+}
+
+/* Título de Seção estilo Editorial */
+.section-editorial-title {
+  margin-bottom: 30px;
+  position: relative;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 24px;
+}
+
+.editorial-badge {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  background-color: var(--accent-light);
+  padding: 4px 12px;
+  border-radius: 30px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.editorial-heading {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 2.2rem;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.editorial-lead {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 800px;
+}
+
+/* ==========================================================================
+   GRADE DE CARDS DE EVIDÊNCIAS
+   ========================================================================== */
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.evidence-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.evidence-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-hover);
+}
+
+.evidence-card.hidden {
+  display: none !important;
+}
+
+/* Imagem do Card e Overlays */
+.card-image-wrapper {
+  position: relative;
+  height: 190px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+.evidence-card:hover .card-img {
+  transform: scale(1.08);
+}
+
+.img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 31, 38, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.card-image-wrapper:hover .img-overlay {
+  opacity: 1;
+}
+
+.zoom-icon {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: var(--text-main);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  transform: scale(0.9);
+  transition: var(--transition);
+}
+
+.card-image-wrapper:hover .zoom-icon {
+  transform: scale(1);
+}
+
+/* Conteúdo Textual do Card */
+.card-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-period {
+  font-family: var(--font-head);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.card-title {
+  font-family: var(--font-head);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.card-context {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.card-context strong {
+  color: var(--text-main);
+}
+
+/* Sub-tabs internas nos cards */
+.card-tabs-nav {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 12px;
+}
+
+.tab-nav-btn {
+  flex: 1;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 8px 0;
+  font-family: var(--font-head);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.tab-nav-btn:hover {
+  color: var(--text-main);
+}
+
+.tab-nav-btn.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.card-tabs-content {
+  min-height: 90px;
+  margin-bottom: 16px;
+}
+
+.tab-panel {
+  display: none;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  animation: tabFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+@keyframes tabFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Habilidades (Rodapé do Card) */
+.card-skills-footer {
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skill-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background-color: var(--bg-app);
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+/* ==========================================================================
+   MODAL DE ZOOM DE IMAGEM (LIGHTBOX)
+   ========================================================================== */
+.zoom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(15, 23, 42, 0.85); /* Tom azul/cinza escuro premium */
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.zoom-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  background: none;
+  border: none;
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: var(--transition);
+  z-index: 1010;
+}
+
+.modal-close:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.modal-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 90%;
+  max-height: 85%;
+  transform: scale(0.95);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.zoom-modal.active .modal-content-container {
+  transform: scale(1);
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 72vh;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal-caption {
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 500;
+  max-width: 650px;
+  line-height: 1.5;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE E ADAPTAÇÕES DE TELA
+   ========================================================================== */
+@media (max-width: 900px) {
+  .evidence-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-isolated-header {
+    padding: 20px;
+  }
+
+  .editorial-heading {
+    font-size: 1.8rem;
+  }
+
+  .modal-close {
+    top: 20px;
+    right: 25px;
+    font-size: 2.8rem;
+  }
+}

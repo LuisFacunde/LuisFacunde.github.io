@@ -1,78 +1,663 @@
 <!doctype html>
 <html lang="pt-BR">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Página 6 — Evidências e Aprendizados | Luis Facunde</title>
-      <link rel="stylesheet" href="style.css" />
-      <script src="script.js" defer></script>
-   </head>
-   <body>
-      <header>
-         <h1>Dossiê de Carreira — Luis Facunde</h1>
-      </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evidências e Aprendizados | Luis Facunde</title>
+    <meta
+      name="description"
+      content="Banco de evidências com prints, certificados, cronogramas, documentos, apresentações, feedbacks e registros de projetos, cada um com contexto, explicação e aprendizado do percurso do Luis Facunde."
+    />
+    <!-- Google Fonts for elite, modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Cabeçalho visível apenas na visualização isolada -->
+    <header class="section-isolated-header">
+      <div class="isolated-logo">
+        <span class="logo-text">DOSSIÊ DE CARREIRA</span>
+        <span class="logo-subtext">Luis Henrique Facunde da Silva</span>
+      </div>
+    </header>
 
-      <main>
-         <section>
-            <h2>Página 6 — Evidências e Aprendizados</h2>
-            <p>Esqueleto básico para a página de Evidências e Aprendizados.</p>
-         </section>
+    <main class="evidence-main-content">
+      <!-- Título Interno Editorial -->
+      <div class="section-editorial-title">
+        <h1 class="editorial-heading">Evidências e Aprendizados</h1>
+        <p class="editorial-lead">
+          Compilado de prints, certificados, cronogramas, documentos e registros
+          de projetos que materializam minha evolução técnica e comportamental
+          ao longo do curso de ADS.
+        </p>
+      </div>
 
-         <nav>
-            <h3>Navegação</h3>
-            <ul>
-               <li><a href="../index.html">Página Inicial</a></li>
-               <li>
-                  <a href="../01-perfil-profissional/index.html"
-                     >Página 1 — Perfil Profissional</a
-                  >
-               </li>
-               <li>
-                  <a href="../02-diagnostico-profissional/index.html"
-                     >Página 2 — Diagnóstico Profissional</a
-                  >
-               </li>
-               <li>
-                  <a href="../03-contexto-empregabilidade/index.html"
-                     >Página 3 — Contexto e Empregabilidade</a
-                  >
-               </li>
-               <li>
-                  <a href="../04-hipoteses-desenvolvimento/index.html"
-                     >Página 4 — Hipóteses de Desenvolvimento</a
-                  >
-               </li>
-               <li>
-                  <a href="../05-experimentacao-pratica/index.html"
-                     >Página 5 — Experimentação Prática</a
-                  >
-               </li>
-               <li>
-                  <a href="../06-evidencias-aprendizados/index.html"
-                     >Página 6 — Evidências e Aprendizados</a
-                  >
-               </li>
-               <li>
-                  <a href="../07-projetos-percurso-academico/index.html"
-                     >Página 7 — Projetos e Percurso Acadêmico</a
-                  >
-               </li>
-               <li>
-                  <a href="../08-planejamento-pos-faculdade/index.html"
-                     >Página 8 — Planejamento Pós-Faculdade</a
-                  >
-               </li>
-               <li>
-                  <a href="../09-sintese-final/index.html"
-                     >Página 9 — Síntese Final</a
-                  >
-               </li>
-            </ul>
-         </nav>
-      </main>
+      <!-- Grid de Cards de Evidências -->
+      <div class="evidence-grid">
+        <!-- Card 1: Projeto DAVI -->
+        <div class="evidence-card">
+          <div class="card-image-wrapper">
+            <img
+              src="../assets/fotos/1-sem-DAVI-projeto.jpg"
+              alt="Projeto DAVI — 1º Semestre"
+              class="card-img"
+            />
+            <div class="img-overlay">
+              <span class="zoom-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-period">1º Semestre • Sistemas Digitais</span>
+            <h3 class="card-title">Projeto DAVI (Lixeira Inteligente)</h3>
+            <p class="card-context">
+              <strong>Contexto:</strong> Primeiro contato com prototipagem
+              física e lógica. Lixeira com abertura de tampa automatizada por
+              aproximação física, desenvolvida na disciplina de Sistemas
+              Digitais.
+            </p>
 
-      <footer>
-         <p>© 2026 Luis Facunde. Todos os direitos reservados.</p>
-      </footer>
-   </body>
+            <div class="card-tabs-nav">
+              <button class="tab-nav-btn active" data-tab="action">
+                Atuação
+              </button>
+              <button class="tab-nav-btn" data-tab="learning">
+                Aprendizados
+              </button>
+            </div>
+            <div class="card-tabs-content">
+              <div class="tab-panel active" data-panel="action">
+                Montagem física dos componentes de hardware (sensor ultrassônico
+                e servomotor), calibração do tempo de resposta físico para o
+                gatilho de aproximação e estruturação da lógica básica de código
+                em C/C++.
+              </div>
+              <div class="tab-panel" data-panel="learning">
+                Foi meu primeiro desafio técnico e de conciliação de rotina
+                (escrevia meu TCC em nutrição na UFPE na mesma época). Aprendi a
+                equilibrar as responsabilidades de equipe e compreendi
+                fundamentos palpáveis de eletrônica digital.
+              </div>
+            </div>
+
+            <div class="card-skills-footer">
+              <span class="skill-tag">Arduino</span>
+              <span class="skill-tag">C/C++</span>
+              <span class="skill-tag">Prototipagem</span>
+              <span class="skill-tag">Eletrônica</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Projeto I.D.E.I.A. (SJCC) -->
+        <div class="evidence-card">
+          <div class="card-image-wrapper">
+            <img
+              src="../assets/fotos/2-sem-Projeto-SJCC.jpg"
+              alt="Projeto I.D.E.I.A. (SJCC) — 2º Semestre"
+              class="card-img"
+            />
+            <div class="img-overlay">
+              <span class="zoom-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-period">2º Semestre • Residência</span>
+            <h3 class="card-title">Projeto I.D.E.I.A. (SJCC)</h3>
+            <p class="card-context">
+              <strong>Contexto:</strong> Desenvolvimento de um portal de ideação
+              e gestão inovadora para um cliente real, o Sistema Jornal do
+              Comércio de Comunicação.
+            </p>
+
+            <div class="card-tabs-nav">
+              <button class="tab-nav-btn active" data-tab="action">
+                Atuação
+              </button>
+              <button class="tab-nav-btn" data-tab="learning">
+                Aprendizados
+              </button>
+            </div>
+            <div class="card-tabs-content">
+              <div class="tab-panel active" data-panel="action">
+                Trabalhei como desenvolvedor front-end em telas dinâmicas usando
+                React.js na tela principal da aplicação.
+              </div>
+              <div class="tab-panel" data-panel="learning">
+                Primeiro contato com um projeto real e aprendizado de React.js.
+                O projeto ensinou a lidar com metodologias ágeis (Scrum) e a
+                coordenar tarefas em um equipe grande.
+              </div>
+            </div>
+
+            <div class="card-skills-footer">
+              <span class="skill-tag">React.js</span>
+              <span class="skill-tag">JavaScript ES6</span>
+              <span class="skill-tag">UX/UI</span>
+              <span class="skill-tag">Scrum</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Admissão FAV -->
+        <div class="evidence-card">
+          <div class="card-image-wrapper">
+            <img
+              src="../assets/fotos/3-sem-admissao-FAV.jpg"
+              alt="Ingresso na Fundação Altino Ventura — 3º Semestre"
+              class="card-img"
+            />
+            <div class="img-overlay">
+              <span class="zoom-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-period">3º Semestre • Inserção no Mercado</span>
+            <h3 class="card-title">Admissão de Estágio</h3>
+            <p class="card-context">
+              <strong>Contexto:</strong> Contratação como estagiário de
+              tecnologia na Fundação Altino Ventura (FAV).
+            </p>
+
+            <div class="card-tabs-nav">
+              <button class="tab-nav-btn active" data-tab="action">
+                Atuação
+              </button>
+              <button class="tab-nav-btn" data-tab="learning">
+                Aprendizados
+              </button>
+            </div>
+            <div class="card-tabs-content">
+              <div class="tab-panel active" data-panel="action">
+                Familiarização com a infraestrutura corporativa, treinamento nas
+                regras e tabelas do banco de dados do sistema SoulMV,
+                aprendizagem de SQL e primeiras manipulações práticas e
+                consultas de banco de dados Oracle.
+              </div>
+              <div class="tab-panel" data-panel="learning">
+                Desenvolvimento de forte adaptabilidade para aprender "na marra"
+                tecnologias não vistas em aulas. Exigiu gestão de tempo
+                minuciosa para conciliar o trabalho diário de 6 horas com as
+                disciplinas da faculdade.
+              </div>
+            </div>
+
+            <div class="card-skills-footer">
+              <span class="skill-tag">Oracle PL/SQL</span>
+              <span class="skill-tag">SoulMV</span>
+              <span class="skill-tag">Autonomia</span>
+              <span class="skill-tag">Gestão de Tempo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Voluntariado REC'n'Play -->
+        <div class="evidence-card">
+          <div class="card-image-wrapper">
+            <img
+              src="../assets/fotos/4-sem-REC'n'Play.jpg"
+              alt="Voluntariado REC'n'Play — 4º Semestre"
+              class="card-img"
+            />
+            <div class="img-overlay">
+              <span class="zoom-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-period"
+              >2º e 4º Semestre • Comunicação & Networking</span
+            >
+            <h3 class="card-title">Voluntariado no REC'n'Play</h3>
+            <p class="card-context">
+              <strong>Contexto:</strong> Atuação voluntária pelo CESAR nas
+              edições 2024 e 2025 no Recife Antigo.
+            </p>
+
+            <div class="card-tabs-nav">
+              <button class="tab-nav-btn active" data-tab="action">
+                Atuação
+              </button>
+              <button class="tab-nav-btn" data-tab="learning">
+                Aprendizados
+              </button>
+            </div>
+            <div class="card-tabs-content">
+              <div class="tab-panel active" data-panel="action">
+                Orientação de públicos diversos, suporte a palestrantes em
+                arenas de inovação, articulação entre equipes organizadoras e
+                representação da faculdade durante o evento.
+              </div>
+              <div class="tab-panel" data-panel="learning">
+                Momento de "destrave" pessoal de comunicação. Superação da
+                introversão, expansão de contatos profissionais, facilidade de
+                trabalho sob pressão e comunicação assertiva no ecossistema de
+                TI.
+              </div>
+            </div>
+
+            <div class="card-skills-footer">
+              <span class="skill-tag">Comunicação</span>
+              <span class="skill-tag">Networking</span>
+              <span class="skill-tag">Porto Digital</span>
+              <span class="skill-tag">Colaboração</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: Aluno Destaque LeveUP -->
+        <div class="evidence-card">
+          <div class="card-image-wrapper">
+            <img
+              src="../assets/fotos/5-sem-aluno-destaque.jpeg"
+              alt="Aluno Destaque LeveUP — 5º Semestre"
+              class="card-img"
+            />
+            <div class="img-overlay">
+              <span class="zoom-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-period">5º Semestre • Destaque & Carreira</span>
+            <h3 class="card-title">Premiação: Aluno Destaque LeveUP</h3>
+            <p class="card-context">
+              <strong>Contexto:</strong> Certificação de Destaque concedida pela
+              residência do Porto Digital aos alunos do programa Embarque
+              Digital na última etapa da residência tecnológica.
+            </p>
+
+            <div class="card-tabs-nav">
+              <button class="tab-nav-btn active" data-tab="action">
+                Atuação
+              </button>
+              <button class="tab-nav-btn" data-tab="learning">
+                Aprendizados
+              </button>
+            </div>
+            <div class="card-tabs-content">
+              <div class="tab-panel active" data-panel="action">
+                Engajamento em mentorias e trilha de conhecimentos em soft
+                skills durante a residência tecnológica do Porto Digital.
+              </div>
+              <div class="tab-panel" data-panel="learning">
+                Validação de esforço acadêmico e das soft skills exercitadas.
+                Coincidiu com a preparação para processos seletivos formais,
+                trazendo maturidade em dinâmicas e entrevistas para vagas de
+                junior.
+              </div>
+            </div>
+
+            <div class="card-skills-footer">
+              <span class="skill-tag">Porto Digital</span>
+              <span class="skill-tag">Embarque Digital</span>
+              <span class="skill-tag">Pitch</span>
+              <span class="skill-tag">Soft Skills</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: AppCardio -->
+        <div class="evidence-card">
+          <div class="card-image-wrapper">
+            <img
+              src="../assets/fotos/app-cardio-print.png"
+              alt="AppCardio — Iniciação Científica"
+              class="card-img"
+            />
+            <div class="img-overlay">
+              <span class="zoom-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-period">Iniciação Científica • Mobile & IA</span>
+            <h3 class="card-title">Aplicativo AppCardio (Pesquisa)</h3>
+            <p class="card-context">
+              <strong>Contexto:</strong> Desenvolvimento de app de monitoramento
+              cardíaco por imagens de eletrocardiograma interligado a uma API de
+              inteligência artificial.
+            </p>
+
+            <div class="card-tabs-nav">
+              <button class="tab-nav-btn active" data-tab="action">
+                Atuação
+              </button>
+              <button class="tab-nav-btn" data-tab="learning">
+                Aprendizados
+              </button>
+            </div>
+            <div class="card-tabs-content">
+              <div class="tab-panel active" data-panel="action">
+                Desenvolvimento front-end mobile usando o framework React
+                Native, criação do layout e UX das telas, e conexão assíncrona
+                com o back-end em Python que processa a rede neural profunda.
+              </div>
+              <div class="tab-panel" data-panel="learning">
+                Aprendi a desenvolver e integrar interfaces mobile com serviços
+                de Machine Learning e consumi APIs baseadas em dados de saúde.
+                Prática de versionamento avançado de código seguindo o padrão
+                GitFlow.
+              </div>
+            </div>
+
+            <div class="card-skills-footer">
+              <span class="skill-tag">React Native</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">APIs de IA</span>
+              <span class="skill-tag">GitFlow</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7: Automação & PL/SQL -->
+        <div class="evidence-card">
+          <div class="card-image-wrapper">
+            <img
+              src="../assets/fotos/pdf-compressor-fav.png"
+              alt="PDF Compressor & PL/SQL — FAV"
+              class="card-img"
+            />
+            <div class="img-overlay">
+              <span class="zoom-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-period">Estágio • Automação & Otimização</span>
+            <h3 class="card-title">Automações & Procedures PL/SQL (FAV)</h3>
+            <p class="card-context">
+              <strong>Contexto:</strong> Otimização operacional e de performance
+              dos bancos de dados hospitalares e processos administrativos da
+              Fundação Altino Ventura.
+            </p>
+
+            <div class="card-tabs-nav">
+              <button class="tab-nav-btn active" data-tab="action">
+                Atuação
+              </button>
+              <button class="tab-nav-btn" data-tab="learning">
+                Aprendizados
+              </button>
+            </div>
+            <div class="card-tabs-content">
+              <div class="tab-panel active" data-panel="action">
+                Desenvolvimento de script Python automatizado para compilar e
+                comprimir em lote PDFs de prontuários.
+              </div>
+              <div class="tab-panel" data-panel="learning">
+                Redução de 40 a 50% do armazenamento de servidores local com
+                arquivos de exames. Otimizando o espaço e o armazenamento para
+                exames futuros.
+              </div>
+            </div>
+
+            <div class="card-skills-footer">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">PL/SQL Oracle</span>
+              <span class="skill-tag">Query Tuning</span>
+              <span class="skill-tag">LGPD</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8: Fluxo Ágil Trello/Notion -->
+        <div class="evidence-card">
+          <div class="card-image-wrapper">
+            <img
+              src="../assets/fotos/trello-dashboard.png"
+              alt="Fluxo de Trabalho e Metodologias Ágeis — Trello e Notion"
+              class="card-img"
+            />
+            <div class="img-overlay">
+              <span class="zoom-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-period"
+              >5º Semestre • Organização e Liderança</span
+            >
+            <h3 class="card-title">Gestão e Liderança Front-end (noMEI)</h3>
+            <p class="card-context">
+              <strong>Contexto:</strong> Organização visual de UX/UI para a
+              coordenação da equipe de desenvolvimento front-end no Projeto
+              Integrador.
+            </p>
+
+            <div class="card-tabs-nav">
+              <button class="tab-nav-btn active" data-tab="action">
+                Atuação
+              </button>
+              <button class="tab-nav-btn" data-tab="learning">
+                Aprendizados
+              </button>
+            </div>
+            <div class="card-tabs-content">
+              <div class="tab-panel active" data-panel="action">
+                Liderança da equipe front-end estruturando e centralizando a
+                documentação, design system e identidade visual da aplicação
+                noMEI.
+              </div>
+              <div class="tab-panel" data-panel="learning">
+                Desenvolvi maturidade em liderança e atribuição de tarefas. A
+                comunicação em reuniões de sprint foi aprimorada, mantendo
+                transparência, mitigando gargalos de dependência física/digital
+                e focando no MVP.
+              </div>
+            </div>
+
+            <div class="card-skills-footer">
+              <span class="skill-tag">Scrum/Kanban</span>
+              <span class="skill-tag">Notion</span>
+              <span class="skill-tag">Liderança Técnica</span>
+              <span class="skill-tag">Gestão Visual</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Modal de Zoom de Imagens (Lightbox) -->
+    <div
+      class="zoom-modal"
+      id="zoomModal"
+      aria-hidden="true"
+      role="dialog"
+      aria-labelledby="modalCaption"
+    >
+      <button
+        class="modal-close"
+        id="modalClose"
+        aria-label="Fechar visualização ampliada"
+      >
+        &times;
+      </button>
+      <div class="modal-content-container">
+        <img
+          class="modal-image"
+          id="modalImg"
+          alt="Imagem ampliada de evidência"
+        />
+        <div class="modal-caption" id="modalCaption"></div>
+      </div>
+    </div>
+
+    <!-- Menu de Navegação na Visão Isolada -->
+    <nav class="subpage-isolated-nav">
+      <h3>Menu Dossiê</h3>
+      <ul>
+        <li><a href="../index.html">Página Inicial</a></li>
+        <li>
+          <a href="../01-perfil-profissional/index.html"
+            >01 — Perfil Profissional</a
+          >
+        </li>
+        <li>
+          <a href="../02-diagnostico-profissional/index.html"
+            >02 — Diagnóstico Profissional</a
+          >
+        </li>
+        <li>
+          <a href="../03-contexto-empregabilidade/index.html"
+            >03 — Contexto e Empregabilidade</a
+          >
+        </li>
+        <li>
+          <a href="../04-hipoteses-desenvolvimento/index.html"
+            >04 — Hipóteses de Desenvolvimento</a
+          >
+        </li>
+        <li>
+          <a href="../05-experimentacao-pratica/index.html"
+            >05 — Experimentação Prática</a
+          >
+        </li>
+        <li>
+          <a href="../06-evidencias-aprendizados/index.html" class="active"
+            >06 — Evidências e Aprendizados</a
+          >
+        </li>
+        <li>
+          <a href="../07-projetos-percurso-academico/index.html"
+            >07 — Percurso Acadêmico</a
+          >
+        </li>
+        <li>
+          <a href="../08-planejamento-pos-faculdade/index.html"
+            >08 — Planejamento Pós-Faculdade</a
+          >
+        </li>
+        <li><a href="../09-sintese-final/index.html">09 — Síntese Final</a></li>
+      </ul>
+    </nav>
+
+    <!-- Rodapé visível apenas na visualização isolada -->
+    <footer class="section-isolated-footer">
+      <p>
+        © 2026 Luis Facunde. Dossiê de Carreira Acadêmica e Profissional. Todos
+        os direitos reservados.
+      </p>
+    </footer>
+  </body>
 </html>
